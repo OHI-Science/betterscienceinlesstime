@@ -1,0 +1,16 @@
+---
+title: "What is Better Science?"
+output:
+  html_document:
+    fig_width: 1
+---
+
+
+
+Reproducible: 
+
+Collaborative:
+
+Xxxx
+
+Archive of stuff.

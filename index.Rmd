@@ -1,0 +1,14 @@
+---
+title: "Better Science in Less Time"
+output:
+  html_document:
+    fig_width: 1
+---
+
+Better science is more reproducible, transparent, and communicated.  
+It is faster when it's collaborative and open.  
+We use collaborative data science practices and tools for environmental science. 
+
+
+
+Video: 30 seconds. Julie. Intro to the website. Emotion, not content-driven. Hi, I'm a marine scientist and data scientist. You can do this. It's not as scary as you think. Here's stuff to help you learn, and a community.

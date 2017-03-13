@@ -1,0 +1,27 @@
+---
+title: "Our Story"
+output:
+  html_document:
+    fig_width: 1
+---
+
+We're marine scientists, and now we're also data scientists working openly. For us, this means coding collaboratively with R, RStudio, git, and GitHub.  
+We learned using [great resources created by the open data science community](). We're sharing our story because we were intimidated at the time and expertise involved to learn these tools, but we are living proof that it's possible, and that it will improve your science. This is the future of environmental science.
+
+
+left column: 
+Here's the paper, published xx. Github link.    
+Q&A
+Blog
+
+Follow us on Twitter:
+<!--- 
+@OHIscience
+@juliesquid
+@jafflerbach
+@oharac
+@ben_d_best
+@BSHalpern
+--->
+
+right column: ning's figure

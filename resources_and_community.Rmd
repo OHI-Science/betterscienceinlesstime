@@ -1,0 +1,17 @@
+---
+title: "Resources and Community"
+output:
+  html_document:
+    fig_width: 1
+---
+
+We work and code openly and collaboratively with R, RStudio, git, and GitHub. 
+We learned using the following resources, which are all available online for free. They have been created the open data science community, and you should learn with a community too. 
+
+**Community Calls** <!---https://github.com/ropensci/commcalls/issues--->
+
+We will host community calls to share stories bridging environmental science and data science. 
+
+- Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
+
+Box 1, Box 2
