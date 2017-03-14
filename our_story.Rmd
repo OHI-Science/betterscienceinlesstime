@@ -8,6 +8,8 @@ output:
 We're marine scientists, and now we're also data scientists working openly. For us, this means coding collaboratively with R, RStudio, git, and GitHub.  
 We learned using [great resources created by the open data science community](). We're sharing our story because we were intimidated at the time and expertise involved to learn these tools, but we are living proof that it's possible, and that it will improve your science. This is the future of environmental science.
 
+This is a test
+
 
 left column: 
 Here's the paper, published xx. Github link.    
