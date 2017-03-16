@@ -14,4 +14,21 @@ We will host community calls to share stories bridging environmental science and
 
 - Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
 
+**Resources** (listed from the paper):
+
 Box 1, Box 2
+
+**Build the environmental data science community**
+
+Follow us on Twitter
+<!--- 
+@OHIscience
+@juliesquid
+@jafflerbach
+@oharac
+@ben_d_best
+@BSHalpern
+--->  
+  
+eco-data-science
+
