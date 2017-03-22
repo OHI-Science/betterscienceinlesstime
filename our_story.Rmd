@@ -9,13 +9,10 @@ We are marine scientists, and we are using open data science tools to understand
 
 We're sharing our story because we were intimidated at the time and expertise involved to learn these tools, but we are living proof that it's possible, and that it will improve your science. This is the future of environmental science.
 
-We learned using [great resources created by the open data science community](). 
-
-left column: 
-
-- Here's the paper, published xx. Github link.    
+- Linked to published paper.
+- Github link
 - Q&A
-- Blogs
 - Press
+- Blog
 
 
