@@ -1,8 +1,0 @@
----
-title: "Publication"
-output:
-  html_document:
-    fig_width: 1
----
-
-Here's the paper, published xx
