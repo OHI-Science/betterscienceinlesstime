@@ -3,10 +3,10 @@ output_dir: "."
 navbar:
   title: "Better Science in Less Time"
   left:
-    - text: "Our Story"
-      href: our_story.html
-    - text: "Resources and Community"
-      href: resources_and_community.html
+#    - text: "Our Story"
+#      href: our_story.html
+#    - text: "Resources and Community"
+#      href: resources_and_community.html
 output:
   html_document:
     theme: yeti

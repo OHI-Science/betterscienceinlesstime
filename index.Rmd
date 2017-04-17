@@ -5,18 +5,16 @@ output:
     fig_width: 1
 ---
 
+Better science in less time is more reproducible, transparent, collaborative open, and communicated well.  
+
 **THIS WEBSITE IS UNDER DEVELOPMENT**
 
 <br>
 <br>
 
-Better science in less time is more reproducible, transparent, collaborative open, and communicated well.  
 
 
-<!---We do better science in less time by using the same software tools to tackle... --->
-
-
-<!--- Image? Probably not a video, but maybe?--->
+<!--- SCREENSHOT OF NATURE PAPER, link to the paper  --->
 
 <!---
 
