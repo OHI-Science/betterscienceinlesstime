@@ -16,6 +16,15 @@ Better science in less time is more reproducible, transparent, collaborative ope
 <!---We do better science in less time by using the same software tools to tackle... --->
 
 
+<!--- Image? Probably not a video, but maybe?--->
 
+<!---
 
-<!--- 30-sec Video? Julie: Intro to the website. Emotion, not content-driven. Hi, I'm a marine scientist and data scientist. You can do this. It's not as scary as you think. Here's stuff to help you learn, and a community. --->
+TODO Julie: add footer with logo, see _footer.Rmd
+<br>
+<br>
+[<img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=240" width="150px">](http://ohi-science.org)  
+
+[ohi-science.org home](http://ohi-science.org)
+
+--->

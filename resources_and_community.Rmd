@@ -16,7 +16,7 @@ We will host community calls to share stories bridging environmental science and
 
 **Resources** 
 
-<!--- from Box 1, Box 2 --->
+<!--- TODO NING: format Box 1, Box 2 --->
 
 **Build the environmental data science community**
 
@@ -30,5 +30,5 @@ Follow us on Twitter
 @BSHalpern
 --->  
   
-eco-data-science
+Note about eco-data-science
 
