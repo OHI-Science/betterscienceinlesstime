@@ -9,6 +9,7 @@ _Better Science in Less Time_ is more reproducible, transparent, collaborative o
 
 We are marine scientists who also code. In the past five years, within the Ocean Health Index context, we have dramatically improved the way we collaborate, combine marine science and programming, and develop scientific tools for coastal management. The [story](link to story page) of how we were able to achieve better science more efficiently, and thus in less time, is told in this new paper in Nature. 
 
+
 <!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder - the image didn't show up properly, but linking works  --->
 
 <!DOCTYPE html>
@@ -16,9 +17,10 @@ We are marine scientists who also code. In the past five years, within the Ocean
 <body>
 
 <p>
-An image that is a link:
 <a href="http://ohi-science.org/">
-<center><img src="../figures/better_sci_less_time_pyramid_draft.pdf" width="42" height="42" border="0"><center>
+
+<center><img src="https://docs.google.com/drawings/d/1r-s7kWnz70GkWHCV_3_mo5RebDcf0ZhPGvi6WFPzAR8/pub?w=960&h=600" alt="Pyramid" width="700" height="700" border="0"><center>
+
 </a>
 </p>
 
