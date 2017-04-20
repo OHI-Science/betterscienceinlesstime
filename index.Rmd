@@ -5,18 +5,34 @@ output:
     fig_width: 1
 ---
 
-Better science in less time is more reproducible, transparent, collaborative open, and communicated well.  
+_Better Science in Less Time_ is more reproducible, transparent, collaborative open, and communicated well.  
+
+We are marine scientists who also code. In the past five years, within the Ocean Health Index context, we have dramatically improved the way we collaborate, combine marine science and programming, and develop scientific tools for coastal management. The [story](link to story page) of how we were able to achieve better science more efficiently, and thus in less time, is told in this new paper in Nature. 
+
+<!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder - the image didn't show up properly, but linking works  --->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+An image that is a link:
+<a href="http://ohi-science.org/">
+<center><img src="../figures/better_sci_less_time_pyramid_draft.pdf" width="42" height="42" border="0"><center>
+</a>
+</p>
+
+</body>
+</html>
+
+
+Through sharing our journey, we would like to connect with other scientists in the [Open Science community](link to resources and community page), share resources, and learn together!
 
 **THIS WEBSITE IS UNDER DEVELOPMENT**
 
 <br>
 <br>
 
-ning: add a brief introduction of what this site is about: 
-- share our open sci experiences: how we pushed boundaries of environmental science using open sci tools, developing sci for practical managements.[link to our story page] 
-- but a greater purpose: building a community of practice for scientists who also code 
-
-<!--- SCREENSHOT OF NATURE PAPER, link to the paper  --->
 
 <!---
 
