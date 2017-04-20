@@ -12,7 +12,9 @@ Better science in less time is more reproducible, transparent, collaborative ope
 <br>
 <br>
 
-
+ning: add a brief introduction of what this site is about: 
+- share our open sci experiences: how we pushed boundaries of environmental science using open sci tools, developing sci for practical managements.[link to our story page] 
+- but a greater purpose: building a community of practice for scientists who also code 
 
 <!--- SCREENSHOT OF NATURE PAPER, link to the paper  --->
 

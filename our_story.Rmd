@@ -5,7 +5,9 @@ output:
     fig_width: 1
 ---
 
-We are marine scientists, and we are using open data science tools to understand ocean health. <!--- tackle  science///FOR A BETTER FUTURE.. --->
+We are marine scientists, and we are using open data science tools to understand ocean health <!--- tackle  science///FOR A BETTER FUTURE.. --->
+
+ning: add: developing tools to be used by coastal managers with real time feedbacks from the end users. 
 
 We're sharing our story because we were intimidated at the time and expertise involved to learn these tools, but we are living proof that it's possible, and that it will improve your science. This is the future of environmental science.
 
