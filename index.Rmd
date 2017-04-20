@@ -10,23 +10,13 @@ _Better Science in Less Time_ is more reproducible, transparent, collaborative o
 We are marine scientists who also code as a team. In the past few years through the Ocean Health Index project, we have dramatically improved how we collaborate, combine marine science and programming, and develop scientific tools for coastal management. We share [our story](/our_story) of how we now practice better science more efficiently in our new paper in *Nature Ecology & Evolution*. 
 
 
-<!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder - the image didn't show up properly, but linking works  --->
+<!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder  --->
 
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>
 <a href="http://ohi-science.org/">
 
 <center><img src="https://docs.google.com/drawings/d/1r-s7kWnz70GkWHCV_3_mo5RebDcf0ZhPGvi6WFPzAR8/pub?w=960&h=600" alt="Pyramid" width="700" height="700" border="0"><center>
 
 </a>
-</p>
-
-</body>
-</html>
-
 
 Through sharing our journey, we would like to connect with other scientists in the [Open Science community](link to resources and community page), share resources, and learn together!
 
@@ -34,7 +24,6 @@ Through sharing our journey, we would like to connect with other scientists in t
 
 <br>
 <br>
-
 
 <!---
 
