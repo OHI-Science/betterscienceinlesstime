@@ -6,17 +6,15 @@ output:
 ---
 
 We work and code openly and collaboratively with R, RStudio, git, and GitHub. 
-We learned using the following resources, which are all available online for free. They have been created the awesome open data science community, and you should learn with a community too. 
-
-**Community Calls** <!---https://github.com/ropensci/commcalls/issues--->
-
-We will host community calls to share stories bridging environmental science and data science. 
-
-- Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
+We learned using the following resources, which are all available online for free, and developed and used by a welcoming community.
 
 **Resources** 
 
-<!--- TODO NING: format Box 1, Box 2 --->
+<!--- TODO NING: format Box 1, Box 2 
+- MEAM webinar: telling our story to a wider audience
+
+--->
+
 
 **Build the environmental data science community**
 
@@ -32,3 +30,12 @@ Follow us on Twitter
   
 Note about eco-data-science
 
+<!---
+
+**Community Calls** https://github.com/ropensci/commcalls/issues
+
+We will host community calls to share stories bridging environmental science and data science. 
+
+- Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
+
+--->

@@ -5,12 +5,17 @@ output:
     fig_width: 1
 ---
 
-_Better Science in Less Time_ is more reproducible, transparent, collaborative open, and communicated well.  
+_Better Science in Less Time_ is more reproducible, transparent, collaborative, and open, and emphasizes communication.  
 
-We are marine scientists who also code as a team. In the past few years through the Ocean Health Index project, we have dramatically improved how we collaborate, combine marine science and programming, and develop scientific tools for coastal management. We share [our story](/our_story) of how we now practice better science more efficiently in our new paper in *Nature Ecology & Evolution*. 
+We are marine scientists who have dramatically transformed how we work by embracing open data science tools, which means coding collaboratively and developing scientific tools for coastal management. 
 
 
-<!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder  --->
+**THIS WEBSITE IS UNDER DEVELOPMENT**
+
+<!--- We share [our story](/our_story) in our new publication in *Nature Ecology & Evolution* and in an accompanying Q&A in *Nature*. We’ve been teaching open and reproducible practices through the Ocean Health Index, but we also want to [help others embrace these practices and tools](/resources_and_community) too--->
+
+
+<!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder 
 
 <a href="http://ohi-science.org/">
 
@@ -18,20 +23,16 @@ We are marine scientists who also code as a team. In the past few years through 
 
 </a>
 
-Through sharing our journey, we would like to connect with other scientists in the [Open Science community](link to resources and community page), share resources, and learn together!
 
-**THIS WEBSITE IS UNDER DEVELOPMENT**
+
+--->
 
 <br>
 <br>
 
-<!---
-
-TODO Julie: add footer with logo, see _footer.Rmd
-<br>
-<br>
-[<img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=240" width="150px">](http://ohi-science.org)  
+<a href="http://ohi-science.org/">
+  <img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=240" width="150">
+</a>  
 
 [ohi-science.org home](http://ohi-science.org)
 
---->
