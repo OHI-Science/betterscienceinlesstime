@@ -5,18 +5,16 @@ output:
     fig_width: 1
 ---
 
-We are marine scientists, and we are using open data science tools to understand ocean health <!--- tackle  science///FOR A BETTER FUTURE.. --->
+We are marine scientists, and we are using open data science tools to help understand ocean health all over the world.
 
-Science-based decision-making to protect the environment relies on collaborating with scientists across social and scientific disciplines, and developing transparent science the public can understand and trust. It is also time-sensitive given the rapidly changing environment. We as scientists have the responsibility and opportunity to make our science transparent, reproducible, and well communicated. Only in this way we can effectively assist policy makers make decisions based on the best science available. 
+Science-based environmental decision-making relies on collaborating across social and scientific disciplines, and working transparently and reproducibly. For the past four years, our team at the Ocean Health Index has improved the way we do science by embracing data science and open science — we code collaboratively and openly share our work online. As a result, our work is more reproducible and streamlined, and more than 20 countries around the world are building off our science and code to assess ocean health in their own jurisdictions. 
 
-For the past five years, at the Ocean Health Index, our team have improved the way we do science by embracing data science and open science, and made OHI toolbox accessible to more than 20 countries around the world, who are able to build off our science and code to assess their ocean health. 
-
-We're sharing our story because we were intimidated at the time and expertise involved to learn these tools, but we are living proof that it's possible, and that it will improve your science and make it accessible and usable for management. This is the future of environmental science.
+We're sharing our story because at the time we thought this transformation was intimidating, but we are living proof that it's possible. We want to encourage others to also embrace open data science practices and tools, so we can all do better science in less time. 
 
 
 
 <!---TODO JULIE--->
-- Linked to published paper.
+- [Publication: **Lowndes *et al.* 2017, *Nature Ecology and Evolution***]()
 - Github link <!---TODO JULIE--->
 - Q&A
 - Press
