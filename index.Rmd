@@ -17,12 +17,8 @@ We are marine scientists who have dramatically transformed how we work by embrac
 
 <!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder 
 
-<a href="http://ohi-science.org/">
-
-<center><img src="https://docs.google.com/drawings/d/1r-s7kWnz70GkWHCV_3_mo5RebDcf0ZhPGvi6WFPzAR8/pub?w=960&h=600" alt="Pyramid" width="700" height="700" border="0"><center>
-
-</a>
-
+THIS IS HOW YOU LINK IN MARKDOWN
+[![Predicted range of Little Tunny (Euthynnus alletteratus)](../assets/downloads/other/ohara_plos_blog.png)](http://ohi-science.nceas.ucsb.edu/plos_marine_rangemaps)
 
 
 --->
