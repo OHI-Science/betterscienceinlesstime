@@ -5,6 +5,7 @@ output:
     self-contained: false
 ---
 
+<!---- 
 <br>
 
 We work openly and collaboratively with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
@@ -47,7 +48,7 @@ And we're also on Twitter:
 - [\@oharac](https://twitter.com/oharac)
 - [\@ben_d_best](https://twitter.com/ben_d_best)
   
-  
+--->  
 
 <!--- TODO NING: format Box 1, Box 2 
 - MEAM webinar: telling our story to a wider audience
