@@ -1,0 +1,27 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+
+#### Primarily `R`
+- [**R for Data Science**](http://r4ds.had.co.nz) (book by Hadley Wickham and Garrett Grolemund
+- [**RStudio's webinars**](https://www.rstudio.com/resources/webinars/) (on-demand videos by RStudio)   
+- [**RStudio's cheatsheets**](https://www.rstudio.com/resources/cheatsheets/) (PDFs by RStudio)  
+- [**CRAN Task Views**](cran.r-project.org/web/views) (to identify useful packages by category of task)  
+- [**R Packages**](http://r-pkgs.had.co.nz/) (book by Hadley Wickham)  
+
+#### Combination RStudio-GitHub
+
+- [**Happy Git With R**](http://happygitwithr.com/) (short-course by Jenny Bryan)  
+- [**UBC Stats545: Data Wrangling, Exploration, and Analysis with R**](https://stat545.com) (university course by Jenny Bryan)  
+- [**Software Carpentry**](http://software-carpentry.org/) (workshops, teaching and learning communities)  
+    - [example 2-day course: "Reproducible Science with RStudio and GitHub"](http://jules32.github.io/2016-07-12-Oxford/overview/)  
+
+#### Community discussion
+
+- [**#rstats on Twitter**](twitter.com/search?q=%23rstats&src=typd) (online discussions)  
+- [**Not So Standard Deviations**](https://soundcloud.com/nssd-podcast) (podcast by Roger Peng and Hilary Parker)  
+- [**R-Bloggers blog**](https://www.r-bloggers.com)   
+- [**RStudio** blog**](https://blog.rstudio.org/) 
+- [**Data Carpentry** blog](www.datacarpentry.org/blog)  

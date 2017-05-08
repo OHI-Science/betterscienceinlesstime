@@ -3,7 +3,19 @@ title: "Resources and Community"
 output:
   html_document:
     fig_width: 1
+    toc: true
+    toc_float: true
 ---
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
 
 We work and code openly and collaboratively with R, RStudio, git, and GitHub. 
 We learned using the following resources, which are all available online for free, and developed and used by a welcoming community.
@@ -14,6 +26,28 @@ We learned using the following resources, which are all available online for fre
 - MEAM webinar: telling our story to a wider audience
 
 --->
+
+## Learn open data science tools 
+
+<div class="col2">
+
+
+```{r, child='box1_web.Rmd'}
+```
+
+</div>
+
+<br>
+<br>
+
+## Strategies to learn in an intentional way
+
+```{r, child='../opensci-manuscript/manuscript/box2.Rmd'}
+```
+
+
+
+<br>
 
 
 **Build the environmental data science community**
@@ -29,6 +63,10 @@ Follow us on Twitter
 --->  
   
 Note about eco-data-science
+
+See also: 
+
+[The importance of open data science tools in science: a list of references](http://ohi-science.org/news/importance-of-open-data-science-tools)
 
 <!---
 

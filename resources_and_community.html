@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
@@ -161,6 +164,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -193,12 +291,76 @@ $(document).ready(function () {
 </div>
 
 
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
 <p>We work and code openly and collaboratively with R, RStudio, git, and GitHub. We learned using the following resources, which are all available online for free, and developed and used by a welcoming community.</p>
 <p><strong>Resources</strong></p>
 <!--- TODO NING: format Box 1, Box 2 
 - MEAM webinar: telling our story to a wider audience
 
 --->
+<div id="learn-open-data-science-tools" class="section level2">
+<h2>Learn open data science tools</h2>
+<div class="col2">
+<h4 id="primarily-r">Primarily <code>R</code></h4>
+<ul>
+<li><a href="http://r4ds.had.co.nz"><strong>R for Data Science</strong></a> (book by Hadley Wickham and Garrett Grolemund</li>
+<li><a href="https://www.rstudio.com/resources/webinars/"><strong>RStudio’s webinars</strong></a> (on-demand videos by RStudio)<br />
+</li>
+<li><a href="https://www.rstudio.com/resources/cheatsheets/"><strong>RStudio’s cheatsheets</strong></a> (PDFs by RStudio)<br />
+</li>
+<li><a href="cran.r-project.org/web/views"><strong>CRAN Task Views</strong></a> (to identify useful packages by category of task)<br />
+</li>
+<li><a href="http://r-pkgs.had.co.nz/"><strong>R Packages</strong></a> (book by Hadley Wickham)</li>
+</ul>
+<h4 id="combination-rstudio-github">Combination RStudio-GitHub</h4>
+<ul>
+<li><a href="http://happygitwithr.com/"><strong>Happy Git With R</strong></a> (short-course by Jenny Bryan)<br />
+</li>
+<li><a href="https://stat545.com"><strong>UBC Stats545: Data Wrangling, Exploration, and Analysis with R</strong></a> (university course by Jenny Bryan)<br />
+</li>
+<li><a href="http://software-carpentry.org/"><strong>Software Carpentry</strong></a> (workshops, teaching and learning communities)
+<ul>
+<li><a href="http://jules32.github.io/2016-07-12-Oxford/overview/">example 2-day course: “Reproducible Science with RStudio and GitHub”</a></li>
+</ul></li>
+</ul>
+<h4 id="community-discussion">Community discussion</h4>
+<ul>
+<li><a href="twitter.com/search?q=%23rstats&amp;src=typd"><strong>#rstats on Twitter</strong></a> (online discussions)<br />
+</li>
+<li><a href="https://soundcloud.com/nssd-podcast"><strong>Not So Standard Deviations</strong></a> (podcast by Roger Peng and Hilary Parker)<br />
+</li>
+<li><a href="https://www.r-bloggers.com"><strong>R-Bloggers blog</strong></a><br />
+</li>
+<li><a href="https://blog.rstudio.org/"><strong>RStudio</strong> blog**</a></li>
+<li><a href="www.datacarpentry.org/blog"><strong>Data Carpentry</strong> blog</a></li>
+</ul>
+</div>
+<p><br> <br></p>
+</div>
+<div id="strategies-to-learn-in-an-intentional-way" class="section level2">
+<h2>Strategies to learn in an intentional way</h2>
+<p><strong>Self-paced learning</strong><br />
+Box 1 lists resources to learn open data science principles and tools that you can use at your own pace. The books and courses provide in-depth philosophies and are good for initial learning as well as for reference later on. Webinars and podcasts are generally under an hour.</p>
+<p><strong>Join and/or create communities</strong><br />
+Learning together and supporting each other peer-to-peer can be more fun and rewarding. You can become a “champion” for others by showing leadership as you learn. Start off by watching a webinar with a friend or group during lunch or a happy hour. Learn enough about a useful R package to share in your lab meetings; you learn best by teaching. In traditional journal clubs or lab meetings, discuss an academic article on importance of reproducibility, collaboration, and coding <span class="citation">[@baker_scientific_2017; @perkel_scientific_2014; @white_nine_2013; @perez-riverol_ten_2016]</span>. Search if your institution or city has local Meetup.com groups, or create your own.</p>
+<p>Additionally, join or keep tabs on communities online. Mozilla Study Groups are a network of ‘journal-clubs’ where scientists teach scientists computing skills (<a href="https://science.mozilla.org/programs/studygroups/join">science.mozilla.org/programs/studygroups/join</a>). rOpenSci is a developer collective building R-based tools to facilitate open science (<a href="https://ropensci.org/">ropensci.org</a>). Also look on Twitter for #rstats discussions and then follow individuals from those conversations.</p>
+<p><strong>Ask for help</strong><br />
+Local and online communities are a great resource to ask when you need help. Expecting that someone has already asked your question can help you both articulate the problem clearly and identify useful answers. Often, pasting error messages directly into Google will get you to the best answers quickly. Many answers come from online forums, including <a href="http://stackoverflow.com/">StackOverflow.com</a> <span class="citation">[@baker_scientific_2017]</span>, or even Twitter itself (e.g., ‘How Twitter Improved My Ecological Model’) <span class="citation">[@rbloggers_how_2015]</span>.</p>
+<p><strong>Attend in-person workshops and conferences</strong><br />
+In-person workshops can be extremely valuable and give you an opportunity to get direct help from instructors and helpers. Software Carpentry and Data Carpentry run 2-day bootcamps that teach skills for research computing; you can attend a scheduled workshop or request your own (<a href="https://software-carpentry.org/">software-carpentry.org</a>; <a href="http://www.datacarpentry.org/">datacarpentry.org</a>). Attend conferences like useR (example: <a href="http://www.user2017.brussels/">user2017.brussels</a>) both for skill-building and to learn how others are using these tools.</p>
+<p><strong>Watch presentations from past conferences</strong><br />
+More and more, slide decks and videos of presentations are appearing online. For example, you can see presentations from the the 2016 useR conference (<a href="http://user2016.org/">user2016.org</a>) and the 2017 RStudio conference (<a href="https://www.rstudio.com/conference">rstudio.com/conference</a>).</p>
+<p><strong>Read Blogs</strong></p>
+<p>There are many individuals who blog about open data science concepts, <code>R</code> packages, workflows, etc. Try Googling a package you’re using, or going to the website of someone you are following on Twitter.</p>
+<p><br></p>
 <p><strong>Build the environmental data science community</strong></p>
 <p>Follow us on Twitter <!--- 
 @OHIscience
@@ -209,6 +371,8 @@ $(document).ready(function () {
 @BSHalpern
 ---></p>
 <p>Note about eco-data-science</p>
+<p>See also:</p>
+<p><a href="http://ohi-science.org/news/importance-of-open-data-science-tools">The importance of open data science tools in science: a list of references</a></p>
 <!---
 
 **Community Calls** https://github.com/ropensci/commcalls/issues
@@ -218,9 +382,12 @@ We will host community calls to share stories bridging environmental science and
 - Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
 
 --->
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
