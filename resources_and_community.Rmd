@@ -2,78 +2,54 @@
 title: "Resources and Community"
 output:
   html_document:
-    fig_width: 1
-    toc: true
-    toc_float: true
+    self-contained: false
 ---
-<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
-Put in your css file or directly in rmarkdown--->
-<style>
-  .col2 {
-    columns: 2 200px;         /* number of columns and width in pixels*/
-    -webkit-columns: 2 200px; /* chrome, safari */
-    -moz-columns: 2 200px;    /* firefox */
-  }
-</style>
+
+<br>
+
+We work openly and collaboratively with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
+
+<center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=1152&h=144"></center>
+
+<br>
+
+## How we learned 
+
+We saw what was possible and learned using the following resources, which are all available online for free, and developed and used by a welcoming community. These lists are by no means exhaustive! 
+
+- [**Resources for learning R and open data science tools**](http://ohi-science.org/news/Resources-for-R-and-Data-Science)
+
+- [**References about the importance of open data science tools in science**](http://ohi-science.org/news/importance-of-open-data-science-tools)
 
 
-We work and code openly and collaboratively with R, RStudio, git, and GitHub. 
-We learned using the following resources, which are all available online for free, and developed and used by a welcoming community.
+<br>
+<br>
 
-**Resources** 
+## Learning in an intentional way
+
+```{r, child='box2_web.Rmd'}
+```
+
+<br>
+
+
+## Join the community
+
+We are passionate about building the environmental data science community. 
+
+In addition to the [training materials we developed for the Ocean Health Index](http://ohi-science.org/training/), we started [eco-data-science](http://eco-data-science.github.io/) at the University of California at Santa Barbara, which is a [skill-sharing and community-building Study Group](https://science.mozilla.org/programs/studygroups/join).
+
+And we're also on Twitter:
+
+- [\@OHIscience](https://twitter.com/OHIscience)
+- [\@juliesquid](https://twitter.com/juliesquid)
+- [\@jafflerbach](https://twitter.com/jafflerbach)
+- [\@oharac](https://twitter.com/oharac)
+- [\@ben_d_best](https://twitter.com/ben_d_best)
+  
+  
 
 <!--- TODO NING: format Box 1, Box 2 
 - MEAM webinar: telling our story to a wider audience
 
---->
-
-## Learn open data science tools 
-
-<div class="col2">
-
-
-```{r, child='box1_web.Rmd'}
-```
-
-</div>
-
-<br>
-<br>
-
-## Strategies to learn in an intentional way
-
-```{r, child='../opensci-manuscript/manuscript/box2.Rmd'}
-```
-
-
-
-<br>
-
-
-**Build the environmental data science community**
-
-Follow us on Twitter
-<!--- 
-@OHIscience
-@juliesquid
-@jafflerbach
-@oharac
-@ben_d_best
-@BSHalpern
 --->  
-  
-Note about eco-data-science
-
-See also: 
-
-[The importance of open data science tools in science: a list of references](http://ohi-science.org/news/importance-of-open-data-science-tools)
-
-<!---
-
-**Community Calls** https://github.com/ropensci/commcalls/issues
-
-We will host community calls to share stories bridging environmental science and data science. 
-
-- Community Call 1: Ocean Health Index Science Team: Our Path to Better Science in Less Time
-
---->

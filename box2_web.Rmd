@@ -1,0 +1,25 @@
+---
+output:
+  html_document: default
+---
+
+ - **Use online resources for self-paced learning**  
+The books and courses above provide in-depth philosophies and are good for initial learning as well as for reference later on. 
+
+- **Join and/or create communities**  
+Watch a webinar with a friend or group during lunch or a happy hour, or discuss an academic article on these topics during lab meeting or journal club.
+Additionally, join or keep tabs on communities online, like [#rstats on Twitter](https://twitter.com/search?q=%23rstats&src=tyah).
+
+- **Ask for help**  
+Expect that someone has already asked your question — try pasting your error messages directly into Google.  
+
+- **Attend in-person workshops and conferences**  
+[Software Carpentry](https://software-carpentry.org/) and [Data Carpentry]http://www.datacarpentry.org/ run bootcamps that teach skills for research computing, and you can also attend conferences like [useR](http://www.user2017.brussels/) both for skill-building and to learn how others are using these tools.  
+
+- **Watch presentations from past conferences**  
+More and more, slide decks and videos of presentations are appearing online. For example, you can see presentations from the the [2016 useR conference](http://user2016.org/) and the [2017 RStudio conference](https://www.rstudio.com/conference). 	
+
+- **Read Blogs**  
+There are many individuals who blog about open data science concepts, `R` packages, workflows, etc. Try Googling a package you’re using, or going to the website of someone you are following on Twitter.
+
+

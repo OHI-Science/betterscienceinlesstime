@@ -1,8 +1,7 @@
 ---
 title: "Our Story"
 output:
-  html_document:
-    fig_width: 1
+  html_document
 ---
 
 We are marine scientists using open data science tools to help understand ocean health all over the world.

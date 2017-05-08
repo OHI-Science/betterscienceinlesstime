@@ -1,7 +1,6 @@
 ---
 output:
   html_document: default
-  word_document: default
 ---
 
 #### Primarily `R`
@@ -23,5 +22,5 @@ output:
 - [**#rstats on Twitter**](twitter.com/search?q=%23rstats&src=typd) (online discussions)  
 - [**Not So Standard Deviations**](https://soundcloud.com/nssd-podcast) (podcast by Roger Peng and Hilary Parker)  
 - [**R-Bloggers blog**](https://www.r-bloggers.com)   
-- [**RStudio** blog**](https://blog.rstudio.org/) 
-- [**Data Carpentry** blog](www.datacarpentry.org/blog)  
+- [**RStudio blog**](https://blog.rstudio.org/) 
+- [**Data Carpentry blog**](www.datacarpentry.org/blog)  

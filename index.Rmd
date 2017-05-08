@@ -1,8 +1,7 @@
 ---
 title: "Better Science in Less Time"
 output:
-  html_document:
-    fig_width: 1
+  html_document
 ---
 
 _Better Science in Less Time_ is more reproducible, transparent, collaborative, and open, and emphasizes communication.  
@@ -17,18 +16,10 @@ We are marine scientists who have dramatically transformed how we work by embrac
 
 <!--- SCREENSHOT OF NATURE PAPER, link to the paper - dummy placeholder 
 
-THIS IS HOW YOU LINK IN MARKDOWN
-[![Predicted range of Little Tunny (Euthynnus alletteratus)](../assets/downloads/other/ohara_plos_blog.png)](http://ohi-science.nceas.ucsb.edu/plos_marine_rangemaps)
-
 
 --->
 
 <br>
 <br>
 
-<a href="http://ohi-science.org/">
-  <img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=240" width="150">
-</a>  
-
-[ohi-science.org home](http://ohi-science.org)
-
+[![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
