@@ -4,29 +4,21 @@ output:
   html_document:
     self-contained: false
 ---
-
-<!---- 
 <br>
 
-We work openly and collaboratively with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
+Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
 
-<center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=1152&h=144"></center>
+<center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=700"></center>
+
+<br>
+
+[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn R and other open data science practices and tools. They are developed and used by a welcoming, inclusive community, and are all available online for free. 
+
+[**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
 
 <br>
 
-## How we learned 
-
-We saw what was possible and learned using the following resources, which are all available online for free, and developed and used by a welcoming community. These lists are by no means exhaustive! 
-
-- [**Resources for learning R and open data science tools**](http://ohi-science.org/news/Resources-for-R-and-Data-Science)
-
-- [**References about the importance of open data science tools in science**](http://ohi-science.org/news/importance-of-open-data-science-tools)
-
-
-<br>
-<br>
-
-## Learning in an intentional way
+Here are some suggestions to use these resources and learn in an intentional way:  
 
 ```{r, child='box2_web.Rmd'}
 ```
@@ -34,7 +26,7 @@ We saw what was possible and learned using the following resources, which are al
 <br>
 
 
-## Join the community
+## Let's build the environmental data science community
 
 We are passionate about building the environmental data science community. 
 
@@ -48,7 +40,7 @@ And we're also on Twitter:
 - [\@oharac](https://twitter.com/oharac)
 - [\@ben_d_best](https://twitter.com/ben_d_best)
   
---->  
+
 
 <!--- TODO NING: format Box 1, Box 2 
 - MEAM webinar: telling our story to a wider audience

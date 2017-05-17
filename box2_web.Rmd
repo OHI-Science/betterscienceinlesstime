@@ -14,7 +14,7 @@ Additionally, join or keep tabs on communities online, like [#rstats on Twitter]
 Expect that someone has already asked your question — try pasting your error messages directly into Google.  
 
 - **Attend in-person workshops and conferences**  
-[Software Carpentry](https://software-carpentry.org/) and [Data Carpentry]http://www.datacarpentry.org/ run bootcamps that teach skills for research computing, and you can also attend conferences like [useR](http://www.user2017.brussels/) both for skill-building and to learn how others are using these tools.  
+[Software Carpentry](https://software-carpentry.org/) and [Data Carpentry](http://www.datacarpentry.org/) run bootcamps that teach skills for research computing, and you can also attend conferences like [useR](http://www.user2017.brussels/) both for skill-building and to learn how others are using these tools.  
 
 - **Watch presentations from past conferences**  
 More and more, slide decks and videos of presentations are appearing online. For example, you can see presentations from the the [2016 useR conference](http://user2016.org/) and the [2017 RStudio conference](https://www.rstudio.com/conference). 	
