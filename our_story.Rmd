@@ -1,8 +1,10 @@
 ---
-title: "Our Story"
+title: ""
 output:
   html_document
 ---
+
+<br>
 
 For the past four years, we have dramatically improved how we work with the Ocean Health Index by embracing open data science practices and tools. We now work in a way that is more reproducible, transparent, collaborative, and open, with more emphasis on communication. Our work is more reproducible and streamlined, and more than 20 countries around the world are building off our science and our code to assess ocean health in their own jurisdictions. 
 

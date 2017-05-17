@@ -1,15 +1,15 @@
 name: "Better Science in Less Time"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "Better science in less time"
   left:
-    - text: "Our Story"
+    - text: "Our story"
       href: our_story.html
-    - text: "Resources and Community"
+    - text: "Resources and community"
       href: resources_and_community.html
 output:
   html_document:
-    theme: yeti
+    theme: cerulean
     highlight: textmate
 #    include:
 #      after_body: _footer.html

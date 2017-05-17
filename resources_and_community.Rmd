@@ -1,9 +1,19 @@
 ---
-title: "Resources and Community"
+title: ""
 output:
   html_document:
     self-contained: false
 ---
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
 <br>
 
 Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
@@ -12,21 +22,24 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 <br>
 
+## Resources
+
 [**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn R and other open data science practices and tools. They are developed and used by a welcoming, inclusive community, and are all available online for free. 
 
 [**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
 
 <br>
 
-Here are some suggestions to use these resources and learn in an intentional way:  
+#### Suggestions to learn in an intentional way
 
+<div class="col2">
 ```{r, child='box2_web.Rmd'}
 ```
-
+</div>
 <br>
 
 
-## Let's build the environmental data science community
+## Community
 
 We are passionate about building the environmental data science community. 
 
@@ -46,3 +59,4 @@ And we're also on Twitter:
 - MEAM webinar: telling our story to a wider audience
 
 --->  
+

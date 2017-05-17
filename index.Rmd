@@ -1,8 +1,15 @@
 ---
-title: "Better science in less time"
+title: ""
 output:
   html_document
 ---
+<br>
+
+<center>
+<img src="figures/nature-screenshot.png" width="700px">
+</center>
+
+<br>
 
 We are marine scientists who now do better science in less time.  
 
@@ -11,14 +18,11 @@ We learned the hard way that we needed to transform how we worked to efficiently
 We're sharing [our story](/our_story) and how we use open and reproducible practices for the Ocean Health Index. By providing concrete examples of how we work and [how we learned](/resources_and_community), we hope to encourage others to do the same.
 
 
-<center>
-<img src="figures/nature-screenshot.png" width="500px">
-</center>
+
 
 
 <br>
 <br>
 [![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
 
-[![](figures/sticker3.png)](http://ohi-science.org)
 
