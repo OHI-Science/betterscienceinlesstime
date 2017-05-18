@@ -16,7 +16,7 @@ Put in your css file or directly in rmarkdown--->
 
 <br>
 
-Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). 
+Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). They're how we built this website.
 
 <center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=700"></center>
 
@@ -30,23 +30,21 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 <br>
 
-#### Suggestions to learn in an intentional way
+#### Learn in an intentional way
 
 <div class="col2">
 ```{r, child='box2_web.Rmd'}
 ```
-*formatting in progress*
 </div>
-<br>
 
 
 ## Community
 
-We are passionate about building the environmental data science community. 
+#### We are passionate about building the environmental data science community!
 
-In addition to the [training materials we developed for the Ocean Health Index](http://ohi-science.org/training/), we started [eco-data-science](http://eco-data-science.github.io/) at the University of California at Santa Barbara, which is a [skill-sharing and community-building Study Group](https://science.mozilla.org/programs/studygroups/join).
+Check out our skill-sharing and community-building [eco-data-science](http://eco-data-science.github.io/) study and use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see an example of what's possible for environmental science and management.
 
-And we're also on Twitter:
+Follow us on Twitter — we joined to learn [#rstats](https://twitter.com/search?q=%23rstats&src=typd):
 
 - [\@OHIscience](https://twitter.com/OHIscience)
 - [\@juliesquid](https://twitter.com/juliesquid)
@@ -55,9 +53,5 @@ And we're also on Twitter:
 - [\@ben_d_best](https://twitter.com/ben_d_best)
   
 
-
-<!--- TODO NING: format Box 1, Box 2 
-- MEAM webinar: telling our story to a wider audience
-
---->  
-
+<br>
+[![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)

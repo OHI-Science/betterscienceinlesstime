@@ -4,6 +4,17 @@ output:
   html_document
 ---
 
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
+
 <br>
 
 ### Our story
@@ -24,28 +35,28 @@ Here are ways to learn more about our story:
 
 ### More science, less time
 
-Legend is painfully long. Summarize/snippet. change the fig to be snappier and tell the story on its own
+<br>
 
-punchy takehome: by figuring out the data methods we've been able to focus on the science in recent years, all in less time. Reduce our overall time and also spend more time on the science. 
+<div class="col2">
 
-
-Make bigger, text bigger, wrapped figure with punchy takehomes as a second column/wrapped
-<center><img src="https://docs.google.com/drawings/d/13iwi2QQCNlMyRsaNKzgoh73sEULK7J6NiJi8B11w88Y/pub?w=960&h=816" width="400px"></center>
-
-<font size="2">**Figure 1 from Lowndes *et al.* 2017.  
-Better science in less time, illustrated by the Ocean Health Index project.** Every year since 2012 we have repeated Ocean Health Index (OHI) methods to track change in global ocean health. Increased reproducibility and collaboration has reduced the amount of time required to repeat methods (size of bubbles) with updated data annually, allowing us to focus on improving methods each year (biggest innovations written as text). The original assessment in 2012 focused solely on scientific methods (e.g., obtaining and analyzing data; developing models; calculating and presenting results (dark shading)). In 2013, by necessity we gave more focus to data science (e.g., data organisation and wrangling; coding; versioning; documentation (light shading)), using open data science tools. We established `R` as the main language for all data preparation and modeling (using RStudio), which drastically decreased the time involved to complete the assessment. In 2014, we adopted Git and GitHub for version control, project management, and collaboration. This further decreased the time required to repeat the assessment. We also created the OHI Toolbox, which includes our `R` package `ohicore` for core analytical operations used in all OHI assessments. In subsequent years we have continued (and plan to continue) this trajectory towards better science in less time by improving code with principles of tidy data; standardising file and data structure; and focusing more on communication, in part by creating websites with the same open data science tools and workflow.
-</font>
+<img src="https://docs.google.com/drawings/d/1MMQi0lGkVIBJV-ItZvEaLoiJZkgsm-lOoE1eNcjZY8w/pub?w=960&h=816" width="400px">
 
 
+<br>
+<br>
+
+
+With the [Ocean Health Index](http://ohi-science.org), we've been measuring and tracking the health of [global oceans every year since 2012](http://ohi-science.org/ohi-global/). By becoming more efficient and reproducible, we've greatly reduced the time involved to repeat our work, which lets us focus more on the science.  
+
+And since it's all openly online, anyone can build directly off our science and our code without reinventing the wheel. Currently there are [20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) assessing ocean health in their own jurisdictions. 
+
+</div>
+
+<br>
+[![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
 
 <!---- 
 - Press
 - Blog
-
-
-[20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) are building off our science and our code to assess ocean health in their own jurisdictions. 
-
-
-### How we work 
 --->
 

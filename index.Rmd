@@ -23,20 +23,16 @@ Put in your css file or directly in rmarkdown--->
 
 <br>
 
-
 <div class="col2">
 
-<font size="3" strong>
+<font size="4"><strong>
 We are marine scientists who do better science in less time with the [Ocean Health Index](http://ohi-science.org).  
-
 
 By sharing [our story](/our_story) and [how we learned](/resources_and_community) we hope to encourage others to do the same.
 </font>
 </div>
 
 
-
-<br>
 <br>
 [![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
 

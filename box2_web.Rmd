@@ -4,22 +4,23 @@ output:
 ---
 
  - **Use online resources for self-paced learning**  
-Online resources provide in-depth philosophies great for initial learning as well as for reference later on. 
+Online resources like books, tutorials, slide decks, archived webinars and presentations provide in-depth philosophies great for initial learning as well as for reference later on. 
 
 - **Learn together by joining and/or creating communities**  
 Discuss academic articles or watch webinars during lab meetings, journal clubs, lunch, or happy hours.
-Additionally, join or keep tabs on communities online, like [#rstats](https://twitter.com/search?q=%23rstats&src=tyah).
+Additionally, join or keep tabs on communities online.
 
 - **Ask for help**  
-Expect that someone has already asked your question and look for it. And paste your error messages directly into Google.  
+Expect that someone has already asked your question and learn to look for what they asked and what responses seem useful. Copy-paste your error messages directly into Google.  
 
-- **Watch webinars and archived presentations**  COME BACK
-More and more, slide decks and videos of presentations are appearing online. For example, you can see presentations from the the [2016 useR conference](http://user2016.org/) and the [2017 RStudio conference](https://www.rstudio.com/conference). 	
+<br>
+<br>
 
 - **Attend in-person workshops and conferences**  
-Take a [Software Carpentry](https://software-carpentry.org/) or [Data Carpentry](http://www.datacarpentry.org/) bootcamp to learn skills for research computing, and attend conferences like [useR](http://www.user2017.brussels/) both for skill-building and to see how others use these tools.  
+Take a bootcamp to learn skills for research computing, and attend conferences both for skill-building and to see how others use these tools.  
 
 - **Read Blogs**  
 There are many individuals who blog about open data science concepts, `R` packages, workflows, etc. Try Googling a package you’re using, or going to the website of someone you are following on Twitter.
 
+<br>
 
