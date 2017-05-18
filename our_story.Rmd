@@ -6,10 +6,14 @@ output:
 
 <br>
 
-For the past four years, we have dramatically improved how we work with the Ocean Health Index by embracing open data science practices and tools. We now work in a way that is more reproducible, transparent, collaborative, and open, with more emphasis on communication. Our work is more reproducible and streamlined, and more than 20 countries around the world are building off our science and our code to assess ocean health in their own jurisdictions. 
+### Our story
 
-We're sharing our story because at the time we thought this transformation was intimidating, but we are living proof that it's possible, and we want to encourage others to do the same. Here are ways to learn more about our story: 
+Over the past four years we have dramatically improved how we do science by embracing open data science practices and tools. We now emphasize communication and work in ways that are more reproducible, streamlined, transparent, collaborative, and open.  
 
+
+We're sharing our story because although the transformation was intimidating, we are living proof that it's possible and we want to encourage others to adopt these practices.  
+
+Here are ways to learn more about our story: 
 
 - [**Lowndes *et al.* 2017, *Nature Ecology and Evolution***]()
     - [Manuscript on GitHub]()
@@ -18,6 +22,14 @@ We're sharing our story because at the time we thought this transformation was i
 <br>
 <br>
 
+### More science, less time
+
+Legend is painfully long. Summarize/snippet. change the fig to be snappier and tell the story on its own
+
+punchy takehome: by figuring out the data methods we've been able to focus on the science in recent years, all in less time. Reduce our overall time and also spend more time on the science. 
+
+
+Make bigger, text bigger, wrapped figure with punchy takehomes as a second column/wrapped
 <center><img src="https://docs.google.com/drawings/d/13iwi2QQCNlMyRsaNKzgoh73sEULK7J6NiJi8B11w88Y/pub?w=960&h=816" width="400px"></center>
 
 <font size="2">**Figure 1 from Lowndes *et al.* 2017.  
@@ -29,7 +41,11 @@ Better science in less time, illustrated by the Ocean Health Index project.** Ev
 <!---- 
 - Press
 - Blog
+
+
+[20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) are building off our science and our code to assess ocean health in their own jurisdictions. 
+
+
+### How we work 
 --->
-
-
 

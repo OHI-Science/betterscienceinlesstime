@@ -24,7 +24,7 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 ## Resources
 
-[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn R and other open data science practices and tools. They are developed and used by a welcoming, inclusive community, and are all available online for free. 
+[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn R and other open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
 
 [**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
 
@@ -35,6 +35,7 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 <div class="col2">
 ```{r, child='box2_web.Rmd'}
 ```
+*formatting in progress*
 </div>
 <br>
 
