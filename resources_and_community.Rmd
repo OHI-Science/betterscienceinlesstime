@@ -16,7 +16,7 @@ Put in your css file or directly in rmarkdown--->
 
 <br>
 
-Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/). They're how we built this website.
+Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/) — even to build this website.
 
 <center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=700"></center>
 
@@ -24,7 +24,7 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 ## Resources
 
-[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn R and other open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
+[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
 
 [**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
 
@@ -42,15 +42,15 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 #### We are passionate about building the environmental data science community!
 
-Check out our skill-sharing and community-building [eco-data-science](http://eco-data-science.github.io/) study and use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see an example of what's possible for environmental science and management.
+Check out our skill-sharing and community-building [eco-data-science](http://eco-data-science.github.io/) study group. Also, please use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see these tools used in the context of environmental science and management.
 
-Follow us on Twitter — we joined to learn [#rstats](https://twitter.com/search?q=%23rstats&src=typd):
+And follow us on Twitter — we joined to learn [#rstats](https://twitter.com/search?q=%23rstats&src=typd):
 
 - [\@OHIscience](https://twitter.com/OHIscience)
 - [\@juliesquid](https://twitter.com/juliesquid)
 - [\@jafflerbach](https://twitter.com/jafflerbach)
-- [\@oharac](https://twitter.com/oharac)
 - [\@ben_d_best](https://twitter.com/ben_d_best)
+- [\@oharac](https://twitter.com/oharac)
   
 
 <br>

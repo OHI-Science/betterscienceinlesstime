@@ -53,6 +53,14 @@ And since it's all openly online, anyone can build directly off our science and 
 </div>
 
 <br>
+
+### The Ocean Health Index
+
+The Ocean Health Index (OHI) is a scientific framework to quantify and track the health of our oceans. We are an academic-nonprofit partnership from the [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/) and [Conservation International](http://www.conservation.org/Pages/default.aspx), which lets us push boundaries in collaborative scientific and management contexts.   
+
+Learn more at our overview website [oceanhealthindex.org](www.oceanhealthindex.org) and our science website [ohi-science.org](http://ohi-science.org).
+
+<br>
 [![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
 
 <!---- 
