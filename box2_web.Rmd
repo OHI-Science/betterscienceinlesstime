@@ -19,7 +19,7 @@ Expect that someone has already asked your question and learn to look for what t
 - **Attend in-person workshops and conferences**  
 Take a bootcamp to learn skills for research computing, and attend conferences both for skill-building and to see how others use these tools.  
 
-- **Read Blogs**  
+- **Read blogs**  
 There are many individuals who blog about open data science concepts, `R` packages, workflows, etc. Try Googling a package you’re using, or going to the website of someone you are following on Twitter.
 
 <br>

@@ -24,6 +24,8 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 ## Resources
 
+<br> 
+
 [**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
 
 [**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
@@ -42,7 +44,21 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 #### We are passionate about building the environmental data science community!
 
-Check out our skill-sharing and community-building [eco-data-science](http://eco-data-science.github.io/) study group. Also, please use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see these tools used in the context of environmental science and management.
+<br>
+
+<div class="col2">
+
+<br>
+
+![](figures/nature_graphic_ohi_smith.jpg)
+
+We think that by embracing existing tools and systems we can more efficiently find environmental solutions, together. 
+
+Please use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see these tools used in the context of environmental science and management.
+
+You can also check out our skill-sharing and community-building study group: [eco-data-science](http://eco-data-science.github.io/). 
+
+<br>
 
 And follow us on Twitter — we joined to learn [#rstats](https://twitter.com/search?q=%23rstats&src=typd):
 
@@ -51,7 +67,10 @@ And follow us on Twitter — we joined to learn [#rstats](https://twitter.com/se
 - [\@jafflerbach](https://twitter.com/jafflerbach)
 - [\@ben_d_best](https://twitter.com/ben_d_best)
 - [\@oharac](https://twitter.com/oharac)
-  
+
+</div>
 
 <br>
 [![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
+
+<div align="right"><font size="1" >graphic by Christel Smith</font></div>

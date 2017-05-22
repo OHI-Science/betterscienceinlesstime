@@ -11,5 +11,3 @@ output:
   html_document:
     theme: cerulean
     highlight: textmate
-#    include:
-#      after_body: _footer.html
