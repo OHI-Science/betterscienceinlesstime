@@ -1,0 +1,42 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+
+**Primarily `R`**   
+
+**R for Data Science** book by Hadley Wickham and Garrett Grolemund  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([r4ds.had.co.nz](http://r4ds.had.co.nz))  
+**RStudio's webinars** on-demand videos by RStudio  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([rstudio.com/resources/webinars](https://www.rstudio.com/resources/webinars/))  
+**RStudio's cheatsheets** PDFs by RStudio  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([rstudio.com/resources/cheatsheets](https://www.rstudio.com/resources/cheatsheets/))  
+**CRAN Task Views** to identify useful packages by category of task  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(cran.r-project.org/web/views)  
+**R Packages** book by Hadley Wickham  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([r-pkgs.had.co.nz](http://r-pkgs.had.co.nz/))    
+
+**Combination RStudio-GitHub**   
+
+**Happy Git With R** short-course by Jenny Bryan  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([happygitwithr.com](http://happygitwithr.com/))  
+**UBC Stats545: Data Wrangling, Exploration, and Analysis with R** university course by Jenny Bryan  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([stat545.com](https://stat545.com))  
+**Software Carpentry** workshops, teaching and learning communities  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([software-carpentry.org](http://software-carpentry.org/))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example 2-day course: "Reproducible Science with RStudio and GitHub"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[jules32.github.io/2016-07-12-Oxford/overview](http://jules32.github.io/2016-07-12-Oxford/overview/)  
+
+**Community discussion**   
+
+**#rstats on Twitter** online discussions  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([twitter.com/search?q=%23rstats&src=typd](twitter.com/search?q=%23rstats&src=typd))  
+**Not So Standard Deviations** podcast by Roger Peng and Hilary Parker  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([soundcloud.com/nssd-podcast](https://soundcloud.com/nssd-podcast))  
+**R-Bloggers** blog   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([r-bloggers.com](https://www.r-bloggers.com))  
+**RStudio** blog  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([blog.rstudio.org](https://blog.rstudio.org/))  
+**Data Carpentry** blog  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([datacarpentry.org/blog](www.datacarpentry.org/blog))  

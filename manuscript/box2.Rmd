@@ -1,0 +1,43 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+
+**Self-paced learning**  
+Box 1 lists resources to learn open data science principles and tools that you can use at your own pace. 
+The books and courses provide in-depth philosophies and are good for initial learning as well as for reference later on. 
+Webinars and podcasts are generally under an hour. 
+
+**Join and/or create communities**  
+Learning together and supporting each other peer-to-peer can be more fun and rewarding. 
+You can become a "champion" for others by showing leadership as you learn. 
+Start off by watching a webinar with a friend or group during lunch or a happy hour. 
+Learn enough about a useful R package to share in your lab meetings; you learn best by teaching. 
+In traditional journal clubs or lab meetings, discuss an academic article on importance of reproducibility, collaboration, and coding [@baker_scientific_2017; @perkel_scientific_2014; @white_nine_2013; @perez-riverol_ten_2016]. 
+Search if your institution or city has local Meetup.com groups, or create your own.  
+
+Additionally, join or keep tabs on communities online. 
+Mozilla Study Groups are a network of 'journal-clubs' where scientists teach scientists computing skills  ([science.mozilla.org/programs/studygroups/join](https://science.mozilla.org/programs/studygroups/join)). 
+rOpenSci is a developer collective building R-based tools to facilitate open science ([ropensci.org](https://ropensci.org/)). 
+Also look on Twitter for #rstats discussions and then follow individuals from those conversations.
+
+**Ask for help**  
+Local and online communities are a great resource to ask when you need help. 
+Expecting that someone has already asked your question can help you both articulate the problem clearly and identify useful answers. 
+Often, pasting error messages directly into Google will get you to the best answers quickly. 
+Many answers come from online forums, including [StackOverflow.com](http://stackoverflow.com/) [@baker_scientific_2017], or even Twitter itself (e.g., 'How Twitter Improved My Ecological Model') [@rbloggers_how_2015].
+
+**Attend in-person workshops and conferences**  
+In-person workshops can be extremely valuable and give you an opportunity to get direct help from instructors and helpers. 
+Software Carpentry and Data Carpentry run 2-day bootcamps that teach skills for research computing; you can attend a scheduled workshop or request your own ([software-carpentry.org](https://software-carpentry.org/); [datacarpentry.org](http://www.datacarpentry.org/)). 
+Attend conferences like useR (example: [user2017.brussels](http://www.user2017.brussels/)) both for skill-building and to learn how others are using these tools. 
+
+**Watch presentations from past conferences**  
+More and more, slide decks and videos of presentations are appearing online. For example, you can see presentations from the the 2016 useR conference ([user2016.org](http://user2016.org/)) and the 2017 RStudio conference ([rstudio.com/conference](https://www.rstudio.com/conference)). 	
+
+**Read Blogs**  
+
+There are many individuals who blog about open data science concepts, `R` packages, workflows, etc. Try Googling a package you’re using, or going to the website of someone you are following on Twitter.
+
+

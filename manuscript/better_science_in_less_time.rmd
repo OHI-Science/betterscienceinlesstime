@@ -1,0 +1,338 @@
+---
+title: "Our path to better science in less time using open data science tools"
+csl: nature.csl
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Julia S. Stewart Lowndes^1^*, Benjamin D. Best^2^, Courtney Scarborough^1^, Jamie C. Afflerbach^1^, Melanie R. Frazier^1^, Casey C. O'Hara^1^, Ning Jiang^1^, Benjamin S. Halpern^1,3,4^
+
+^1^National Center for Ecological Analysis and Synthesis, University of California at Santa Barbara, Santa Barbara, CA, United States  
+^2^EcoQuants.com, Santa Barbara, CA, United States  
+^3^Bren School for Environmental Science and Management, University of California, Santa Barbara, CA, United States  
+^4^Silwood Park Campus, Imperial College London, Ascot, United Kingdom  
+  
+*corresponding author: lowndes\@nceas.ucsb.edu
+
+
+# Preface
+
+Reproducibility has long been a tenet of science but has been challenging to achieve — we learned this the hard way when our old approaches proved inadequate to efficiently reproduce our own work. 
+Here we describe how several free software tools have fundamentally upgraded our approach to collaborative research, making our entire workflow more transparent and streamlined. 
+By describing specific tools and how we incrementally began using them for the Ocean Health Index project, we hope to encourage others in the scientific community to do the same — so we can all produce better science in less time.
+
+
+# Keywords
+
+collaboration, data science, Ocean Health Index, open science, reproducibility, transparency
+
+
+# Scientists need data science 
+
+Science, now more than ever, demands reproducibility, collaboration, and effective communication to strengthen public trust and effectively inform policy. 
+Recent high-profile difficulties in reproducing and repeating scientific studies have put the spotlight on psychology and cancer biology [@baker_over_2015; @baker_cancer_2017; @collaboration_estimating_2015], but it is widely acknowledged that reproducibility challenges persist across scientific disciplines [@baker_1500_2016; @aschwanden_science_2015; @buck_solving_2015].
+Environmental scientists face potentially unique challenges in achieving goals of transparency and reproducibility because they rely on vast amounts of data spanning natural, economic, and social sciences that create semantic and synthesis issues exceeding those for most other disciplines [@frew_environmental_2012; @jones_new_2006; @michener_ecoinformatics:_2012]. 
+Furthermore, proposed environmental solutions can be complex, controversial, and resource intensive, increasing the need for scientists to work transparently and efficiently with data to foster understanding and trust. 
+
+Environmental scientists are expected to work effectively with ever-increasing quantities of highly heterogeneous data even though they are seldom formally trained to do so [@check_hayden_mozilla_2013; @boettiger_building_2015; @wilson_good_2016; @wilson_wheres_2006; @baker_scientific_2017]. 
+This was recently highlighted by a survey of 704 US National Science Foundation principle investigators in the biological sciences that found training in data skills to be the largest unmet need [@barone_unmet_2017]. 
+Without training, scientists tend to develop their own bespoke workarounds to keep pace, but with this comes wasted time struggling to create their own conventions for managing, wrangling, and versioning data. 
+If done haphazardly or without a clear protocol, these efforts are likely to result in work that is not reproducible — by the scientist’s own ‘future self’ or by anyone else [@wilson_good_2016]. 
+As a team of environmental scientists tasked with reproducing our own science annually, we experienced this struggle first-hand. 
+When we began our project, we worked with data in the same way as we always had, taking extra care to make our methods reproducible for planned future re-use. 
+But when we began to reproduce our workflow a second time and repeat our methods with updated data, we found our approaches to reproducibility were insufficient. 
+However, by borrowing philosophies, tools, and workflows primarily created for software development, we have been able to dramatically improve the ability for ourselves and others to reproduce our science, while also reducing the time involved to do so: the result is better science in less time.  
+
+Here we share a tangible narrative of our transformation to better science in less time — meaning more transparent, reproducible, collaborative, and openly shared and communicated science — with an aim of inspiring others. 
+Our story is only one potential path because there are many ways to upgrade scientific practices — whether collaborating only with your 'future self' or as a team — and they depend on the shared commitment of individuals, institutions, and publishers [@wolkovich_advances_2012; @buck_solving_2015; @nosek_promoting_2015]. 
+We do not review the important, ongoing work regarding data management architecture and archiving [@reichman_challenges_2011; @jones_new_2006], workflows [@shade_computing_2015; @goodman_ten_2014; @boettiger_building_2015; @sandve_ten_2013], sharing and publishing data [@white_nine_2013; @kervin_common_2013; @lewandowsky_research_2016; @michener_ten_2015] and code [@mislan_elevating_2016; @kratz_data_2014; @michener_ten_2015], or how to tackle reproducibility and openness in science [@munafo_manifesto_2017; @martinez_reproducibility_2014; @tuyl_water_2016; @baker_why_2016; @kidwell_badges_2016]. 
+Instead, we focus on our experience, because it required changing the way we had always worked, which was extraordinarily intimidating. 
+We give concrete examples of how we use tools and practices from data science, the discipline of ‘turning raw data into understanding’ [@wickham_r_2016]. 
+It was out of necessity that we began to engage in data science, which we did incrementally by introducing new tools, learning new skills, and creating deliberate workflows — all while maintaining annual deadlines. 
+Through our work with academics, governments, and non-profit groups around the world, we have seen that the need to improve practices is common if not ubiquitous.
+In this narrative we describe specific software tools, why we use them, how we use them in our workflow, and how we work openly as a collaborative team. 
+In doing so we underscore two key lessons we learned that we hope encourage others to incorporate these practices into their own research. 
+The first is that powerful tools exist and are freely available to use; the barriers to entry seem to be exposure to relevant tools and building confidence using them. 
+The second is that engagement may best be approached as an evolution rather than as a revolution that may never come.  
+
+# Improving reproducibility and collaboration 
+
+## From then to now 
+
+The Ocean Health Index (OHI) operates at the interface of data-intensive marine science, coastal management and policy, and now, data science [@lowndes_best_2015; @lowndes_biography_2017]. 
+It is a scientific framework to quantify ocean-derived benefits to humans and to help inform sustainable ocean management using the best available information [@halpern_index_2012; @halpern_patterns_2015]. 
+Assessments using the OHI framework require synthesising heterogeneous data from nearly one hundred different sources, ranging from categorical tabular data to high-resolution rasters. Methods must be reproducible, so that others can produce the same results, and also repeatable, so that newly available data can be incorporated in subsequent assessments. 
+Repeated assessments using the same methods enable quantifiable comparison of changes in ocean health through time, which can be used to inform policy and track progress [@lowndes_best_2015].  
+
+Using the OHI framework, we lead annual global assessments of 220 coastal nations and territories, completing our first assessment in 2012 [@halpern_index_2012,@halpern_patterns_2015]. 
+Despite our best efforts, we struggled to efficiently repeat our own work during the second assessment in 2013 because of our approaches to data preparation [@halpern_patterns_2015]. 
+Data preparation is a critical aspect of making science reproducible but is seldom explicitly reported in research publications; we thought we had documented our methods sufficiently in 130-pages of published supplemental materials [@halpern_index_2012], but we had not.  
+
+However, by adopting data science principles and freely available tools that we describe below, we began building an OHI 'Toolbox' and fundamentally changed our approach to science (Figure 1).
+The OHI Toolbox provides a file structure, data, code, and instruction, operates across computer operating systems, and is shared online for free so that anyone can begin building directly from previous OHI assessments without reinventing the wheel [@lowndes_best_2015]. 
+While these changes required an investment of our team’s time to learn and develop the necessary skills, the pay-off has been substantial. 
+Most significantly we are now able to share and extend our workflow with a growing community of government, non-profit, and academic collaborations around the world that use the OHI for science-driven marine management. 
+There are currently two dozen OHI assessments underway, most of which are led by independent groups [@lowndes_best_2015], and the Toolbox has helped lower the barriers to entry. 
+Further, our own team has just released the fifth annual global OHI assessment [@ocean_health_index_five_2016] and continues to lead assessments at smaller spatial scales, including the Northeastern United States, where the OHI is included in President Obama’s first Ocean Plan [@goldfuss_nations_2016]. 
+
+## We thought we were doing reproducible science
+
+For the first global OHI assessment in 2012 we employed an approach to reproducibility that is standard to our field, which focused on scientific methods, not data science methods [@halpern_index_2012]. 
+Data from nearly one hundred sources were prepared manually — i.e. without coding, typically in Microsoft Excel — which included organising, transforming, rescaling, gap-filling, and formatting data. 
+Processing decisions were documented primarily within the Excel files themselves, emails, and Microsoft Word documents. 
+We programmatically coded models and meticulously documented their development, (resulting in the 130-page supplemental materials) [@halpern_index_2012], and upon publication, we also made the model inputs (i.e., prepared data and metadata) freely available to download.
+This level of documentation and transparency is beyond the norm for environmental science [@wolkovich_advances_2012; @hampton_tao_2015].  
+
+We also worked collaboratively in the same ways we always had. 
+Our team included scientists and analysts with diverse skill sets and disciplines, and we had distinct, domain-specific roles assigned to scientists and to a single analytical programmer. 
+Scientists were responsible for developing the models conceptually, preparing data, and interpreting modeled results, and the programmer was responsible for coding the models. 
+We communicated and shared files frequently, with long, often-forwarded, and vaguely-titled email chains (e.g. `Re: Fwd: data question`) with manually versioned data files (e.g. `data_final_updated2.xls`). 
+All team members were responsible for organising those files with their own conventions on their local computers. 
+Final versions of prepared files were stored on the servers and used in models, but records of the data processing itself were scattered.  
+
+Upon beginning the second annual assessment in 2013, we realised that our approach was insufficient since it took too much time and relied heavily on individuals’ data organisation, email chains, and memory — particularly problematic as original team members moved on and new team members joined. 
+We quickly realised we needed a nimble and robust approach to sharing data, methods, and results within and outside our team — we needed to completely upgrade our workflow.
+
+
+## Actually doing reproducible science
+
+As we began the second global OHI assessment in 2013 we faced challenges across three main fronts: 1) *reproducibility*, including transparency and repeatability, particularly in data preparation; 2) *collaboration*, including team record keeping and internal collaboration; and 3) *communication* with scientific and broader communities.
+Environmental scientists are increasingly using `R` [@boettiger_building_2015] because it is free, cross-platform, and open source, and also because of the training and support provided by developers [@wickham_r_2016] and independent groups [@wilson_good_2016; @mills_introducing_2015] alike. We decided to base our work in `R` [@the_r_core_team_r:_2016] and RStudio [@rstudio_team_rstudio:_2016] for coding and visualisation, Git [@git_team_git_2016] for version control, GitHub [@github_github:_2016] for collaboration, and a combination of GitHub and RStudio for organisation, documentation, project management, online publishing, distribution, and communication (Table 1). 
+These tools can help scientists organise, document, version, and easily share data and methods, thus not only increasing reproducibility but also reducing the amount of time involved to do so [@wilson_software_2006; @broman_initial_2016; @baker_scientific_2017]. 
+Many available tools are free so long as work is shared publicly online, which enables open science, defined by Hampton et al. [@hampton_tao_2015] as "the concept of transparency at all stages of the research process, coupled with free and open access to data, code, and papers". 
+When integrated into the scientific process, data science tools that enable open science — let’s call them "open data science" tools — can help realise reproducibility in collaborative scientific research [@wolkovich_advances_2012; @buck_solving_2015; @hampton_tao_2015; @mckiernan_how_2016; @seltenrich_scaling_2016].  
+
+Open data science tools helped us upgrade our approach to reproducible, collaborative, and transparent science, but they did require a substantial investment to learn, which we did incrementally over time (Figure 1; Box 1). 
+Previous to this evolution, most team members with any coding experience — not necessarily in `R` — had learned just enough to accomplish whatever task had been before them using their own unique conventions. 
+Given the complexity of the OHI project, we needed to learn to code collaboratively and incorporate best [@wilson_best_2014; @haddock_practical_2011] or good enough practices [@wilson_good_2016; @barnes_publish_2010] into our coding, so that our methods could be co-developed and vetted by multiple team members. 
+Using a version control system not only improved our file and data management, but allowed individuals to feel less inhibited about their coding contributions, since files could always be reverted back to previous versions if there were problems.
+We built confidence using these tools by sharing our imperfect code, discussing our challenges, and learning as a team. 
+These tools quickly became the keystone of how we work, and have overhauled our approach to science, perhaps as much as email did in decades prior. 
+They have changed the way we think about science and about what is possible. 
+The following describes how we have been using open data science practices and tools to overcome the biggest challenges we encountered to reproducibility, collaboration, and communication.  
+
+## Reproducibility
+
+### Data preparation - coding and documenting
+
+Our first priority was to code all data preparation, create a standard format for final data layers, and do so using a single programmatic language, `R` [@the_r_core_team_r:_2016]. 
+Code enables us to reproduce the full process of data preparation, from data download to final model inputs [@halpern_patterns_2015; @frazier_mapping_2016], and a single language makes it more practical for our team to learn and contribute collaboratively. 
+We code in `R` and use RStudio [@rstudio_team_rstudio:_2016] to power our workflow because it has a user-friendly interface and built-in tools useful for coders of all skill levels, and, importantly, it can be configured with Git to directly sync with GitHub online. 
+We have succeeded in transitioning to `R` as our primary coding language for data preparation, including for spatial data, although some operations still require additional languages and tools such as ArcGIS, QGIS, and Python [@esri_arcgis_2016; @the_qgis_team_qgis_2016; @the_python_team_python.org_2016]. 
+
+All our code is underpinned by the principles of tidy data, the grammar of data manipulation, and the `tidyverse` `R` packages developed by Wickham [@wickham_r_2016; @wickham_tidy_2014; @wickham_tidyverse_2017; @wickham_tidyverse:_2016]. 
+This deliberate philosophy for thinking about data helped bridge our scientific questions with the data processing required to get there, and the readability and conciseness of `tidyverse` operations makes our data analysis read more as a story arc. 
+Operations require less syntax — which can mean fewer potential errors that are easier to identify — and they can be chained together, minimising intermediate steps and data objects that can cause clutter and confusion [@wickham_r_2016; @fischetti_how_2014].
+`tidyverse` tools for wrangling data have expedited our transformation as coders and made `R` less intimidating to learn. 
+We heavily rely on a few packages for data wrangling and visualisation that are bundled in the `tidyverse` package [@wickham_tidyverse:_2016; @wickham_tidyverse_2017] — particularly `dplyr`, `tidyr`, and `ggplot2` — as well as accompanying books, cheatsheets, and archived webinars (Box 1).  
+
+We keep detailed documentation describing metadata (e.g., source, date of access, links) and data processing decisions — trying to capture not only the processing we decided to do, but what we decided against. 
+We started with small plain text files accompanying each `R` file, but have transitioned to documenting with R Markdown [@rstudio_team_r_2016; @allaire_rmarkdown:_2016] because it combines plain text and executable chunks of `R` code within the same file and serves as a living lab notebook. 
+Every time R Markdown output files are regenerated the `R` code is rerun so the text and figures will also be regenerated and reflect any updates to the code or underlying data. 
+R Markdown files increase our reproducibility and efficiency by streamlining documentation and eliminating the need to constantly paste updated figures into reports as they are developed. 
+
+
+### Modeling – `R` functions and packages
+
+Once the data are prepared, we develop assessment-specific models to calculate OHI scores. 
+Models were originally coded in multiple languages to accommodate disparate data types and formatting. 
+By standardising our approach to data preparation and final data layer format, we have been able to translate all models into `R`. 
+In addition to assessment-specific models, the OHI framework includes core analytical operations that are used by all OHI assessments [@lowndes_best_2015], and thus we created an `R` package called `ohicore`[@ocean_health_index_ocean_2016], which was greatly facilitated by the `devtools` and `roxygen2` packages [@wickham_r_2015; @wickham_devtools:_2016; @wickham_roxygen2:_2015]. 
+The `ohicore` package is maintained in and installed from a dedicated GitHub repository — using `devtools::install_github(‘ohi-science/ohicore’)` — from any computer with `R` and an internet connection, enabling groups leading independent OHI assessments to use it for their own work [@lowndes_best_2015].
+
+### Version control
+
+We use Git [@git_team_git_2016] as a version control system. 
+Version control systems track changes within files and allow you to examine or rewind to previous versions. 
+This saves time that would otherwise be spent duplicating, renaming, and organising files to preserve past versions. 
+It also makes folders easier to navigate since they are no longer overcrowded with multiple files suffixed with dates or initials (e.g. `final_JL-2012-02-26.csv`) [@ram_git_2013; @blischak_quick_2016; @perez-riverol_ten_2016]. 
+Once Git is configured on each team member's machine, they work as before but frequently commit to saving a snapshot of their files, along with a human-readable "commit message" [@ram_git_2013; @blischak_quick_2016]. 
+Any line modified in a file tracked by Git will then be attributed to that user.  
+
+We interface with Git primarily through RStudio, using the command line for infrequently encountered tasks. 
+Using RStudio to interact with Git was key for our team’s uptake of a version control system, since the command line can be an intimidating hurdle or even a barrier for beginners to get onboard with using version control. 
+We were less resistant because we could use a familiar interface, and as we gained fluency in Git’s operations through RStudio we translated that confidence to the command line. 
+
+### Organisation
+
+Our team developed conventions to standardise the structure and names of files to improve consistency and organisation. 
+Along with the GitHub workflow (see Collaboration section), having a structured approach to file organisation and naming has helped those within and outside our team navigate our methods more easily. 
+We organise parts of the project in folders that are both RStudio "projects" and GitHub "repositories", which has also helped us collaborate using shared conventions rather than each team member spending time duplicating and organising files. 
+
+## Collaboration within our team
+
+### Coding collaboratively
+
+We transitioned from a team of distinct roles (scientists-and-programmer) to becoming a team with overlapping skill sets (scientists-as-programmers, or simply, data scientists). 
+Having both environmental expertise and coding skills in the same person increases project efficiency, enables us to vet code as a team, and reduces the bottleneck of relying on a single programmer. 
+We, like Duhigg [@duhigg_what_2016], have found that "groups tend to innovate faster, see mistakes more quickly and find better solutions to problems".
+Developing these skills and creating the team culture around them requires leadership with the understanding that fostering more efficient and productive scientists is worth the long-term investment. 
+Our team had the freedom to experiment with available tools and their value was recognised with a commitment that we, as a team, would adopt and pursue these methods further. 
+In addition to supportive leadership, having a "champion" with experience of how tools can be introduced over time and interoperate can expedite the process, but is not the only path (Box 2). 
+Taking the time to experiment and invest in learning data science principles, tools, and skills enabled our team to establish a system of best practices for developing, using, and teaching the OHI Toolbox.
+
+
+### Our (simplified) GitHub workflow
+
+GitHub is one of many web-based platforms that enables files tracked with Git to be collaboratively shared online so contributors can keep their work synchronised [@github_github:_2016; @blischak_quick_2016; @perez-riverol_ten_2016], and it is increasingly being adopted by scientific communities for project management [@perkel_democratic_2016]. 
+Versioned files are synced online with GitHub similar to the way Dropbox operates, except syncs require a committed, human-readable message and reflect deliberate snapshots of changes made that are attributed to the user, line-by-line, through time. 
+Built for large, distributed teams of software developers, GitHub provides many features that we as a scientific team, new to data science, do not immediately need, and thus we mostly ignore features such as branching, forking, and pull requests. 
+Our team uses a simplified GitHub workflow whereby all members have administrative privileges to the repositories within our `ohi-science` organisation. 
+Each team member is able to sync their local work to GitHub.com, making it easier to attribute contribution, as well as identify to whom to direct questions.  
+
+GitHub is now central to many facets of our collaboration as a team and with other communities — we use it along with screensharing to teach and troubleshoot with groups leading OHI assessments, as well as to communicate our ongoing work and final results (see Communication section below). 
+Now there are very few files emailed back and forth within our team since we all have access to all repositories within the `ohi-science` organisation, and can navigate to and edit whatever we need. 
+Additionally, these organised files are always found with the same file path, whether on GitHub.com or on someone’s local computer; this, along with RStudio `.Rproj` files, eases the file path problems that can plague collaborative coding and frustrate new coders.
+
+
+### Internal communication
+
+We use a feature of GitHub called 'Issues' in place of email for discussions about data preparation and analysis. 
+We use Issues in a separate private repository to keep our conservations private but our work public. 
+All team members can see and contribute to all conversations, which are a record of all our decisions and discussions across the project and are searchable in a single place. 
+Team members can communicate clearly by linking to specific lines of code in current or past versions of specific files since they are stored on GitHub and thus have a URL, as well as paste images and screenshots, link to other websites, and send an email to  specific team members directly by mentioning their GitHub username. 
+In addition to discussing analytical options, we use Issues to track ongoing tasks, tricks we have learned, and future ideas. 
+Issues provide a written reference of institutional memory so new team members can get up to speed more easily. 
+Most importantly, GitHub Issues have helped us move past the never-ending forwarded email chains and instead to conversations available to any current or future team member.  
+
+## Communication outside the project
+
+### Sharing data and code
+
+Our code is online in GitHub repositories, publicly available for any researcher or interested person to see and access ([github.com/ohi-science](https://github.com/ohi-science)). 
+As we work, GitHub renders code, text, images, and tabular and spatial data and displays differences between versions, essentially creating webpages that can be easily shared with collaborators, whether or not they use GitHub. 
+Additionally, we create 'Releases' for each global assessment [@halpern_index_2012; @halpern_patterns_2015] so the code and data we use for peer-reviewed publication are preserved while we continue our work (https://github.com/OHI-Science/ohi-global/releases).
+
+### Sharing methods and instruction 
+
+We use R Markdown not only for data preparation but also for broader communication. 
+R Markdown files can be generated into a wide variety of formatted outputs, including PDFs, slides, Microsoft Word documents, HTML files, books, or full websites [@rstudio_team_r_2016; @allaire_rmarkdown:_2016]. 
+These can all be published online for free through GitHub using the same RStudio-GitHub workflow that we use for our analyses, which has made communication an ongoing part of our work, instead of a final step in completed analyses. 
+
+We built a website using the same software and workflows that we use for our analyses, which has made communication an ongoing part of our work, instead of a final step in completed analyses ([ohi-science.org](http://ohi-science.org)). 
+The combination of GitHub and RStudio publishing tools makes website-building efficient, enables team members to update content directly, and makes us more likely to keep it current. 
+Our website is intended for scientists interested in our methods as well as those leading their own assessments [@lowndes_best_2015]. Thus, the website provides scientific methods, publications, data, and code, as well as instruction, news, blog posts, and a map displaying where all ongoing OHI assessments are taking place so that groups can learn directly from and build off of each other's code. 
+[ohi-science.org](http://ohi-science.org) provides technical information to complement [oceanhealthindex.org](www.oceanhealthindex.org), our overview website intended for more general audiences. 
+
+
+# Meeting scientists where they are
+
+We are environmental scientists whose impetus for upgrading approaches to collaborative, data-intensive science was driven by our great difficulty reproducing our own methods. 
+Many researchers do not attempt to reproduce their own work [@nosek_promoting_2015; @casadevall_reproducible_2010] — ourselves included before 2013 — and thus may not realise that there could be reproducibility issues in their own approaches. 
+But they can likely identify inefficiencies. 
+Integrating open data science practices and tools into science can save time, while also improving reproducibility for our most important collaborator: our ‘future selves’. 
+We have found this as individuals and as a team: We could not be as productive [@lowndes_best_2015; @lowndes_biography_2017] without open data science practices and tools. 
+We would also not be able to efficiently share and communicate our work while it is ongoing rather than only post-publication, which is particularly important for bridging science and policy. 
+As environmental scientists who are still learning, we hope sharing our experiences will empower other scientists to upgrade their own approaches, helping further shift the scientific culture to value transparency and openness as a benefit to all instead of as a vulnerability [@wolkovich_advances_2012; @hampton_tao_2015; @mckiernan_how_2016]. 
+
+From our own experience and from teaching other academic, non-profit, and government groups through the Ocean Health Index project [@lowndes_best_2015], we find that the main barriers to engagement boil down to exposure and confidence: first knowing which tools exist that can be directly useful to one's research, and then having the confidence to develop the skills to use them. 
+These two points are simple but critical. 
+We are among the many environmental scientists who were never formally trained to work deliberately with data.
+Thus, we were unaware of how significantly open data science tools could directly benefit our research [@boettiger_building_2015; @wilson_software_2016], and upon learning about them we were hesitant, or even resistant, to engage. 
+However, we were able to develop confidence in large part because of the open, inclusive, and encouraging online developer community that builds tools and creates tutorials that meet scientists where they are (Box 1, Box 2). 
+It takes motivation, patience, diligence, and time to overcome the conceptual and technical challenges involved in developing computing skills, but resources are available to help scientists get started [@wilson_software_2016; @boettiger_building_2015; @haddock_practical_2011].
+Coding is "as important to modern scientific research as telescopes and test tubes" [@wilson_best_2014], but it is critical to "dispel the misconception that these skills are intuitive, obvious, or in any way inherent" [@mills_introducing_2015]. 
+
+There is ongoing and important work by the informatics community on the architecture and systems for data management and archiving [@reichman_challenges_2011; @frew_environmental_2012; @jones_new_2006; @hampton_big_2013], as well as efforts to enable scientists to publish the code that they do have [@barnes_publish_2010; @mislan_elevating_2016; @baker_why_2016]. 
+This work is critical, but comes with the *a priori* assumption that scientists are already thinking about data and coding in a way that they would seek out further resources. 
+In reality, this is not always the case, and without visible examples of how to use these tools within their scientific fields, common stumbling blocks will be continually combatted with individual workarounds instead of addressed with intention.
+These workarounds can greatly delay focusing on actual scientific research, particularly when scientific questions that may not yet have answers — e.g., how the behavior of X changes with Y — are conflated with data science questions that have many existing answers — e.g., how to operate on only criteria X and Y. 
+
+Scientific advancement comes from building off the past work of others; scientists can also embrace this principle for using software tools to tackle some of the challenges encountered in modern scientific research. 
+In a recent survey in *Nature*, 90% of the 1,500 respondents across scientific fields agreed that there was a reproducibility crisis in science, and one third of the respondents reported not having their own "established procedures for reproducibility" [@baker_1500_2016]. 
+While reproducibility means distinct things within the protocols of each sub-discipline or specialty, underpinning reproducibility across all disciplines in modern science is working effectively and collaboratively with data, including wrangling, formatting, and other tasks that can take 50-80% of a data scientist’s time [@lohr_for_2014]. 
+While reaching full reproducibility is extremely difficult [@fitzjohn_reproducible_2014; @aschwanden_science_2015], incrementally incorporating open data science practices and tools into scientific workflows has the potential to alleviate many of the troubles plaguing science, including collaboration and preserving institutional memory [@wilson_good_2016].
+Further, sharing openly is fundamental to truly expediting scientific progress because others can build directly off previous work if well-documented, re-usable code are available [@wolkovich_advances_2012; @mckiernan_how_2016; @broman_initial_2016; @boland_ten_2017]. 
+Until quite recently, making research open required a great deal of extra work for researchers and was less likely to be done. 
+Now, with available tools, the benefits of openness can be a byproduct of time-saving efficiencies, because tools that reduce data headaches also result in science that is more transparent, reproducible, collaborative, and freely accessible to others. 
+
+Ecologists and environmental scientists arguably have a heightened responsibility for transparency and openness, as data products provide important snapshots of systems that may be forever altered due to climate change and other human pressures [@wolkovich_advances_2012; @reichman_challenges_2011].
+There is particular urgency for efficiency and transparency, as well as opportunity to democratise science in fields that operate at the interface of science and policy.
+Individuals play an important part by promoting good practices and creating supportive communities [@wolkovich_advances_2012; @mills_introducing_2015; @mckiernan_how_2016]. 
+But it is also critical for the broader science community to build a culture where openness and reproducibility are valued, formally taught, and practiced, where we all agree that they are worth the investment.
+
+# References
+
+# Acknowledgements
+
+The Ocean Health Index is a collaboration between Conservation International and the National Center for Ecological Analysis and Synthesis at the University of California at Santa Barbara. We thank Johanna Polsenberg, Steve Katona, Erich Pacheco, and Lindsay Mosher who are our partners at Conservation International. We thank all past contributors and funders that have supported the Ocean Health Index, including Beau and Heather Wrigley and The Pacific Life Foundation. We also thank all the individuals and groups that openly make their data, tools, and tutorials freely available to others. Finally, we thank Hadley Wickham, Karthik Ram, Kara Woo, and Mark Schildhauer for friendly review of the developing manuscript.  
+  
+See [ohi-science.org/betterscienceinlesstime](http://ohi-science.org/betterscienceinlesstime) as an example of a website built with RMarkdown and the RStudio-GitHub workflow, and for links and resources referenced in the paper.
+
+# Author Contributions
+
+All authors developed concepts and wrote the paper. 
+
+# Competing interests
+
+The authors declare no competing financial interests. 
+
+# Corresponding author
+
+Correspondence to Julia Lowndes: lowndes\@nceas.ucsb.edu
+
+# Figures
+
+## Figure 1
+
+**Better science in less time, illustrated by the Ocean Health Index project**. Every year since 2012 we have repeated Ocean Health Index (OHI) methods to track change in global ocean health [@halpern_index_2012; @lowndes_biography_2017]. 
+Increased reproducibility and collaboration has reduced the amount of time required to repeat methods (size of bubbles) with updated data annually, allowing us to focus on improving methods each year (biggest innovations written as text). 
+The original assessment in 2012 focused solely on scientific methods (e.g., obtaining and analyzing data; developing models; calculating and presenting results (dark shading)).
+In 2013, by necessity we gave more focus to data science (e.g., data organisation and wrangling; coding; versioning; documentation (light shading)), using open data science tools. 
+We established `R` as the main language for all data preparation and modeling (using RStudio), which drastically decreased the time involved to complete the assessment. 
+In 2014, we adopted Git and GitHub for version control, project management, and collaboration. 
+This further decreased the time required to repeat the assessment.
+We also created the OHI Toolbox, which includes our `R` package `ohicore` for core analytical operations used in all OHI assessments. 
+In subsequent years we have continued (and plan to continue) this trajectory towards better science in less time by improving code with principles of tidy data [@wickham_r_2016]; standardising file and data structure; and focusing more on communication, in part by creating websites with the same open data science tools and workflow. 
+See text and Table 1 for more details.
+
+
+# Tables
+
+## Table 1
+
+**Summary of the primary open data science tools used to upgrade reproducibility, collaboration, and communication, by task**. 
+The transition to using open data science tools was incremental (see Figure 1). 
+All tasks are accomplished with the RStudio–GitHub workflow that is underpinned by R and Git. 
+This workflow streamlines collaboration by capturing each individual’s contribution to the project – thus taking care of bookkeeping – for tasks from data processing and analysis to creating documents and websites with embedded results that are updatable. 
+Note that collaboration is not only for labs and teams, but also for each individual's 'future self'.
+
+```{r, echo=FALSE}
+library(readr) # install.packages('tidyverse')
+library(knitr) # install.packages('knitr')
+tbl <- readr::read_csv('table1.csv')
+tbl[is.na(tbl)] <- ""
+names(tbl)[1]   <- ""
+
+knitr::kable(tbl)
+```
+
+# Boxes
+
+## Box 1
+**Resources to learn open data science tools.** 
+These are some of the free, online resources that we used to learn and develop a workflow with `R`, RStudio, Git, and GitHub. 
+These resources exposed us to what was possible, and helped us build skills to incorporate concepts and tools into our own workflow. 
+This is by no means an exhaustive list. 
+See also Box 2 for strategies of how to get started.
+
+```{r, child='box1.Rmd', results='asis', echo=FALSE}
+```
+
+## Box 2
+**Strategies to learn in an intentional way.** 
+The resources listed in Box 1 have helped us learn open data science principles and tools in an intentional way: We felt empowered (vs. panicked), we learned to think ahead (vs. quick fixes for single purposes), and we learned with a community (vs. in isolation). 
+There is a whole ecosystem of open data science principles, practices, and tools (including `R`, RStudio, Git, and GitHub) and no single way to begin learning.
+These are a few strategies you can consider as you get engaged.
+
+```{r, child='box2.Rmd', results='asis', echo=FALSE}
+```
+
+# References
