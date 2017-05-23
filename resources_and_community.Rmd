@@ -39,6 +39,7 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 ```
 </div>
 
+<br>
 
 ## Community
 
@@ -52,7 +53,7 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 ![](figures/nature_graphic_ohi_smith.jpg)
 
-We think that by embracing existing tools and systems we can more efficiently find environmental solutions, together. 
+We think that with existing data science tools and open practices, together we can find environmental solutions more efficiently.
 
 Please use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see these tools used in the context of environmental science and management.
 

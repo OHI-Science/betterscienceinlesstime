@@ -22,9 +22,9 @@ Put in your css file or directly in rmarkdown--->
 Over the past four years we have dramatically improved how we do science by embracing open data science practices and tools. We now emphasize communication and work in ways that are more reproducible, streamlined, transparent, collaborative, and open.  
 
 
-We're sharing our story because although the transformation to open data science seemed intimidating, we are living proof that it's possible and we want to encourage others to adopt these practices.  
+We're sharing our story because although the transformation to open data science seemed intimidating, we are living proof that it's possible and we want to encourage others to adopt these practices in their own work.  
 
-Here are ways to learn more about our story: 
+**Here are ways to learn more about our story:** 
 
 - [**Lowndes *et al.* 2017, *Nature Ecology and Evolution***](https://www.nature.com/articles/s41559-017-0160)
     - [Manuscript on GitHub](https://github.com/OHI-Science/betterscienceinlesstime/tree/gh-pages/manuscript)
@@ -48,7 +48,7 @@ Here are ways to learn more about our story:
 
 With the [Ocean Health Index](http://ohi-science.org), we've been measuring and tracking the health of [global oceans every year since 2012](http://ohi-science.org/ohi-global/). By becoming more efficient and reproducible, we've greatly reduced the time involved to repeat our work, which lets us focus more on science.  
 
-And since it's all open online, anyone can build directly off our science and our code without reinventing the wheel. Currently there are [20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) assessing ocean health in their own jurisdictions. 
+And since it's all open online, anyone can build directly off our work without reinventing the wheel. Currently there are [20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) building off our science and our code to assess ocean health in their own jurisdictions. 
 
 </div>
 
@@ -58,7 +58,14 @@ And since it's all open online, anyone can build directly off our science and ou
 
 The Ocean Health Index (OHI) is a scientific framework to quantify and track the health of our oceans. We are an academic-nonprofit partnership from the [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/) and [Conservation International](http://www.conservation.org/Pages/default.aspx).   
 
-Learn more at our overview website [oceanhealthindex.org](www.oceanhealthindex.org) and our science website [ohi-science.org](http://ohi-science.org).
+Open data science tools enable us to work efficiently and emphasize communication for science and management. Learn more at our overview website [oceanhealthindex.org](www.oceanhealthindex.org) and our science website [ohi-science.org](http://ohi-science.org).
+
+
+
+<center><img src="figures/open-science-graphic.png" width="500px"></center>
+
+
+
 
 <br>
 [![](https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150)](http://ohi-science.org)
