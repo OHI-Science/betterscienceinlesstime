@@ -28,10 +28,11 @@ We're sharing our story because although the transformation to open data science
 
 - [**Our path to better science in less time using open data science tools**](https://www.nature.com/articles/s41559-017-0160) (Lowndes *et al.* 2017, *Nature Ecology and Evolution*)
     - [Manuscript on GitHub](https://github.com/OHI-Science/betterscienceinlesstime/tree/gh-pages/manuscript) and [blog on ohi-science.org](http://ohi-science.org/news/better-science-faster)
-- [**TechBlog: My digital toolbox: Julia Stewart Lowndes**](http://blogs.nature.com/naturejobs/2017/05/23/techblog-julia-stewart-lowndes/) (Perkel 2017, *Nature*)
-- [**Better Science Faster**](http://www.news.ucsb.edu/2017/017990/better-science-faster) (Cohen 2017, *UCSB Current*)
-- [**Scientists transform how complex marine data from the Ocean Health Index is synthesized, communicated**](https://phys.org/news/2017-05-scientists-complex-marine-ocean-health.html) (Cohen 2017, *Phys.org*)
-- [**Transforming how complex marine data is synthesized**](https://www.sciencedaily.com/releases/2017/05/170523144113.htm) (University of California - Santa Barbara 2017, *ScienceDaily*)
+         
+- [TechBlog: My digital toolbox: Julia Stewart Lowndes](http://blogs.nature.com/naturejobs/2017/05/23/techblog-julia-stewart-lowndes/) (Perkel 2017, *Nature*)
+- [Better Science Faster](http://www.news.ucsb.edu/2017/017990/better-science-faster) (Cohen 2017, *UCSB Current*)
+- [Scientists transform how complex marine data from the Ocean Health Index is synthesized, communicated](https://phys.org/news/2017-05-scientists-complex-marine-ocean-health.html) (Cohen 2017, *Phys.org*)
+- [Transforming how complex marine data is synthesized](https://www.sciencedaily.com/releases/2017/05/170523144113.htm) (University of California - Santa Barbara 2017, *ScienceDaily*)
 
 <br>
 <br>
@@ -54,6 +55,10 @@ With the [Ocean Health Index](http://ohi-science.org), we've been measuring and 
 And since it's all open online, anyone can build directly off our work without reinventing the wheel. Currently there are [20 groups around the world](http://ohi-science.org/projects/ohi-assessments/) building off our science and our code to assess ocean health in their own jurisdictions. 
 
 </div>
+
+<br>
+**Citation:**  
+Lowndes JSS, Best BD, Scarborough C, Afflerbach JC, Frazier MR, O'Hara CC, Jiang N, Halpern BS (2017). Our path to better science in less time using open data science tools. *Nature Ecology & Evolution*, 1 Article number: 0160. [doi:10.1038/s41559-017-0160](https://www.nature.com/articles/s41559-017-0160)  
 
 <br>
 
