@@ -28,7 +28,7 @@ Put in your css file or directly in rmarkdown--->
 <font size="4"><strong>
 We are marine scientists who do better science in less time with the [Ocean Health Index](http://ohi-science.org).  
 
-By sharing [our story](/our_story) and [how we learned](/resources_and_community) we hope to encourage others to do the same.
+By sharing [our story](http://ohi-science.org/betterscienceinlesstime/our_story.html) and [how we learned](http://ohi-science.org/betterscienceinlesstime/resources_and_community.html) we hope to encourage others to do the same.
 </font>
 </div>
 
