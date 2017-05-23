@@ -28,7 +28,7 @@ We're sharing our story because although the transformation to open data science
 
 - [**Lowndes *et al.* 2017, *Nature Ecology and Evolution***](https://www.nature.com/articles/s41559-017-0160)
     - [Manuscript on GitHub](https://github.com/OHI-Science/betterscienceinlesstime/tree/gh-pages/manuscript)
-<!---- [**Perkel 2017, *Nature***](http://www.nature.com/news/toolbox) --->
+
 
 <br>
 <br>
