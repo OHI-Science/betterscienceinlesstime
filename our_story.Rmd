@@ -36,6 +36,7 @@ We're sharing our story because although the transformation to open data science
 - [The Common Language of Conservation](http://www.lastwordonnothing.com/2017/05/24/the-common-language-of-conservation/) (Nijhuis 2017, *The Last Word On Nothing*)
 - [Awash in Sea of Data, Ecologists Turn to Open Access Tools](https://www.quantamagazine.org/awash-in-sea-of-data-ecologists-turn-to-open-access-tools-20170524/) (Rennie 2017, *Quanta Magazine*)
 - [Ecologists Are Drowning in Sea of Data. These Tools Could Help](https://www.wired.com/2017/05/ecologists-drowning-sea-data-open-access-tools-help) (Rennie 2017, *WIRED*)
+- [UCSB Scientists Making Waves in Coastal Management](https://www.noozhawk.com/article/ucsb_science) (University of California - Santa Barbara 2017, *NOOZHAWK*)
 
 <!---
 https://www.openchannels.org/news/news/julia-stewart-lowndes-interview-ocean-health-index-and-improving-science-management?utm_source=OpenChannels+Community+Members&utm_campaign=91c04dadaf-Weekly_Update_05_26_2017&utm_medium=email&utm_term=0_96f5655e1e-91c04dadaf-107336605
