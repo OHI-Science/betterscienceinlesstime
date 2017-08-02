@@ -32,7 +32,7 @@ Put in your css file or directly in rmarkdown--->
 <font size="4"><strong>
 We are marine scientists working reproducibly and openly with the [Ocean Health Index](http://ohi-science.org). We find this produces better science in less time.
 
-By sharing [our story](http://ohi-science.org/betterscienceinlesstime/our_story.html) and [the resources and community](http://ohi-science.org/betterscienceinlesstime/resources_and_community.html) that taught and encouraged us, we hope to stimulate others to do the same.
+By sharing [our story](http://ohi-science.org/betterscienceinlesstime/our_story.html) and [the resources and community](http://ohi-science.org/betterscienceinlesstime/resources_and_community.html) that taught and encouraged us, we hope to encourage others to do the same.
 </font>
 </div>
 
