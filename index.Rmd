@@ -30,9 +30,9 @@ Put in your css file or directly in rmarkdown--->
 <div class="col2">
 
 <font size="4"><strong>
-We are marine scientists who do better science in less time with the [Ocean Health Index](http://ohi-science.org).  
+We are marine scientists working reproducibly and openly with the [Ocean Health Index](http://ohi-science.org). We find this produces better science in less time.
 
-By sharing [our story](http://ohi-science.org/betterscienceinlesstime/our_story.html) and [how we learned](http://ohi-science.org/betterscienceinlesstime/resources_and_community.html) we hope to encourage others to do the same.
+By sharing [our story](http://ohi-science.org/betterscienceinlesstime/our_story.html) and [the resources and community](http://ohi-science.org/betterscienceinlesstime/resources_and_community.html) that taught and enabled us, we hope to encourage others to do the same.
 </font>
 </div>
 
