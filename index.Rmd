@@ -18,8 +18,12 @@ Put in your css file or directly in rmarkdown--->
 
 
 <center>
-<img src="figures/nature-screenshot.png" width="700px">
+  <a href="https://www.nature.com/articles/s41559-017-0160">
+    <img src="figures/nature-screenshot.png" width="700px">
+  </a>
 </center>
+
+<!---for rmarkdown: [![Alt text](Web link or path)](web link to website) --->
 
 <br>
 
