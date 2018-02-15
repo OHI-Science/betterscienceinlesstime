@@ -46,6 +46,9 @@ Over the past four years we have dramatically improved how we do science by embr
 - [For better, faster ocean science, researchers look to the cloud](http://blog.conservation.org/2017/06/for-better-faster-ocean-science-researchers-look-to-the-cloud/) (Mosher 2017, *Conservation International blog*)
 - [Better science faster — our *Nature Ecology & Evolution* pub](http://ohi-science.org/news/better-science-faster) (Lowndes 2017, *OHI-Science blog*)
 - [Ocean Health Index: Better Science In Less Time](https://www.youtube.com/watch?v=x4uzVAZvFCA) (Lowndes 2017, *NCEAS Roundtable webcast*)
+- [.rprofile: Julia Stewart Lowndes](https://ropensci.org/blog/2018/02/09/rprofile-julia-stewart-lowndes/) (Kross & O'Briant 2018, *rOpenSci blog*) (reposted by [R-bloggers](https://www.r-bloggers.com/rprofile-julia-stewart-lowndes/))
+<!---- [Scientists Programming](http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html) (McNamara 2018 *Personal blog*)--->
+
 
 <!---
 https://www.openchannels.org/news/news/julia-stewart-lowndes-interview-ocean-health-index-and-improving-science-management?utm_source=OpenChannels+Community+Members&utm_campaign=91c04dadaf-Weekly_Update_05_26_2017&utm_medium=email&utm_term=0_96f5655e1e-91c04dadaf-107336605
