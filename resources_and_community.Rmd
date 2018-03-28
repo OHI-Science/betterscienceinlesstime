@@ -26,9 +26,12 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 <br> 
 
-[**These resources**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
+[**<font size="4" color="red">These resources</font>**](http://ohi-science.org/news/Resources-for-R-and-Data-Science) helped us learn open data science practices and tools. They are developed and used by a welcoming, inclusive community and are all available online for free. 
 
-[**These references**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
+- We also created an [**Introduction to Open Data Science**](http://ohi-science.org/data-science-training) hands-on training book to teach the collaborative, reproducible, open practices we describe in Lowndes et al. 2017.
+
+
+[**<font size="4" color="red">These references</font>**](http://ohi-science.org/news/importance-of-open-data-science-tools) in the academic literature and media discuss the importance of open data science tools in science.
 
 <br>
 
@@ -55,13 +58,13 @@ Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStud
 
 We think that with existing data science tools and open practices, together we can find environmental solutions more efficiently.
 
-Please use our [Ocean Health Index training materials](http://ohi-science.org/training/) to learn open data science practices and see these tools used in the context of environmental science and management.
+We are proud members of the [rOpenSci](https://ropensci.org/), [RStudio](http://rstudio.com/), [R-Ladies](https://rladies.org/), and [#rstats](https://twitter.com/search?q=%23rstats&src=typd) communities. 
 
 You can also check out our skill-sharing and community-building study group: [eco-data-science](http://eco-data-science.github.io/). 
 
 <br>
 
-And follow us on Twitter — we joined to learn [#rstats](https://twitter.com/search?q=%23rstats&src=typd):
+Follow us on Twitter:
 
 - [\@OHIscience](https://twitter.com/OHIscience)
 - [\@juliesquid](https://twitter.com/juliesquid)
