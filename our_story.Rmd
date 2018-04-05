@@ -57,6 +57,8 @@ http://www.unep.org/nairobiconvention/marine-and-coastal-news-round-western-indi
 
 #### Invited seminars and keynote lectures
 
+- [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/1frhNFr-Lf5KZCzJtYMRSim2-iZ72zAJZ__0YrqAdbs8/edit?usp=sharing) (seminar, Moss Landing Marine Laboratories, USA *2018-04-05*)
+
 - [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit?usp=sharing) (keynote, Royal Belgian Institute of Natural Sciences, Brussels, Belgium *2018-02-27*)
 
 - [Better science in less time using open data science tools](https://docs.google.com/presentation/d/1CVK8HRDubFU4UEduBK5q6JJebhbyVjB6SpTpjZI6q6Y/edit?usp=sharing) (seminar, California State University Monterey Bay, USA *2017-12-04*)
