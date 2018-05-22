@@ -57,18 +57,13 @@ http://www.unep.org/nairobiconvention/marine-and-coastal-news-round-western-indi
 
 #### Invited seminars and keynote lectures
 
-- [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/1frhNFr-Lf5KZCzJtYMRSim2-iZ72zAJZ__0YrqAdbs8/edit?usp=sharing) (seminar, Moss Landing Marine Laboratories, USA *2018-04-05*)
-
+- [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/14TteMSsHbzcEXG9zs9_mAOv0ivURTeJd7PewkSVqX2M/edit?usp=sharing) (seminar, National University of Samoa, *2018-05-22*)
+- [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/1frhNFr-Lf5KZCzJtYMRSim2-iZ72zAJZ__0YrqAdbs8/edit?usp=sharing) (seminar, Moss Landing Marine Labs, USA *2018-04-05*)
 - [The power of open science: experience from the Ocean Health Index](https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit?usp=sharing) (keynote, Royal Belgian Institute of Natural Sciences, Brussels, Belgium *2018-02-27*)
-
 - [Better science in less time using open data science tools](https://docs.google.com/presentation/d/1CVK8HRDubFU4UEduBK5q6JJebhbyVjB6SpTpjZI6q6Y/edit?usp=sharing) (seminar, California State University Monterey Bay, USA *2017-12-04*)
-
 - [Reproducible Research: Better science in less time](https://docs.google.com/presentation/d/141gf6dIkQsOXJ74xWEeMFYOQEL41lZydywRRf_4RBPE/edit) (webinar, DataONE, USA *2017-10-10*)
-
 - [Better science in less time using data science tools: How open data science tools have improved our science](https://docs.google.com/presentation/d/1IkxMgJwtJ17n51ENGudmL9rRmhgh3njGB0ivrracZIg/edit?usp=sharing) (seminar, California Polytechnical University, USA *2017-09-29*)
-
 - [Better science in less time — open data science for marine science and management \[]()[**video**\]](https://www.youtube.com/watch?v=x4uzVAZvFCA) (seminar, NCEAS, USA *2017-05-24*)
-
 - [Transforming how we approach marine science for management](https://docs.google.com/presentation/d/1KDwUPVI12ioYzkhzzhnUEZbFJObuDzHPPSaOaN77Ye8/edit?usp=sharing) [\[]()[**video**\]](https://www.openchannels.org/webinars/2017/using-ocean-health-index-integrated-tool-implementing-ebm-and-coastal-management) (webinar, EBM Tools Network, USA *2017-05-02*)
 
 
