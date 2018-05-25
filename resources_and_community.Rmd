@@ -16,6 +16,9 @@ Put in your css file or directly in rmarkdown--->
 
 <br>
 
+
+We are in Samoa! 
+
 Our Ocean Health Index team works with [R](https://cloud.r-project.org/), [RStudio](http://www.rstudio.com/download), [Git](https://git-scm.com/downloads), and [GitHub](https://github.com/) — even to build this website.
 
 <center><img src="https://docs.google.com/drawings/d/1z-55KY2tmnL3lkCsvPp8mQWEPqXoKq5TvbTXPO9yPbw/pub?w=700"></center>
