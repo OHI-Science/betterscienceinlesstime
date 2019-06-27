@@ -3,7 +3,7 @@ Reproducibility,data preparation,"manually (i.e., Excel)",coded in `R`,"`R` pack
 ,modeling,multiple programming languages,`R` functions and `ohicore` package,"`R` packages: `tidyverse`, `devtools`, `roxygen2`, `git2r`"
 ,version control,file duplication and renaming,Git,Git; interface with Git and GitHub primarily through RStudio
 ,organisation,individual conventions,standardised team convention,"RStudio projects, GitHub repositories. File structure protocols"
-Collaboration,coding,separate languages and conventions,"`R`; standardised team convention","Principles of tidy data; `tidyverse`" 
+"Collaboration","coding","separate languages and conventions","`R`; standardised team convention","Principles of tidy data; `tidyverse`" 
 ,workflow and project management,individual conventions,(simplified) GitHub workflow,"GitHub, RStudio"
 ,internal collaboration,email,"centralised, archived conversations",GitHub issues
 Communication,sharing data,ftp download,all versions and Releases available online,"ohi-science.org/ohi-global"
