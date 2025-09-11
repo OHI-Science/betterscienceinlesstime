@@ -307,7 +307,7 @@ Note that collaboration is not only for labs and teams, but also for each indivi
 ```{r, echo=FALSE}
 library(readr) # install.packages('tidyverse')
 library(knitr) # install.packages('knitr')
-tbl <- readr::read_csv('table1.csv')
+tbl <- readr::read_csv('table1.csv', show_col_types = FALSE, name_repair = "unique_quiet")
 tbl[is.na(tbl)] <- ""
 names(tbl)[1]   <- ""
 
