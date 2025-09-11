@@ -3,6 +3,8 @@ output_dir: "."
 navbar:
   title: "Better science in less time"
   left:
+    - text: "Article"
+      href: article.html
     - text: "Our story"
       href: our_story.html
     - text: "Resources and community"

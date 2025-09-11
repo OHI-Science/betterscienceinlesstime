@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>article.knit</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Better science in less time</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="article.html">Article</a>
+</li>
+<li>
+  <a href="our_story.html">Our story</a>
+</li>
+<li>
+  <a href="resources_and_community.html">Resources and community</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+<p><br></p>
+<div
+id="our-path-to-better-science-in-less-time-using-open-data-science-tools"
+class="section level1">
+<h1>Our path to better science in less time using open data science
+tools</h1>
+<p>This article was published in May 2017 at Nature Ecology &amp;
+Evolution (DOI: <a
+href="https://doi.org/10.1038/s41559-017-0160">10.1038/s41559-017-0160</a>.
+Below is the full text of the article (<a
+href="https://github.com/OHI-Science/betterscienceinlesstime">source
+repository</a>).</p>
+<div id="article-text." class="section level2">
+<h2>Article text.</h2>
+<p>Julia S. Stewart Lowndes<sup>1</sup>*, Benjamin D. Best<sup>2</sup>,
+Courtney Scarborough<sup>1</sup>, Jamie C. Afflerbach<sup>1</sup>,
+Melanie R. Frazier<sup>1</sup>, Casey C. O’Hara<sup>1</sup>, Ning
+Jiang<sup>1</sup>, Benjamin S. Halpern<sup>1,3,4</sup></p>
+<p><sup>1</sup>National Center for Ecological Analysis and Synthesis,
+University of California at Santa Barbara, Santa Barbara, CA, United
+States<br />
+<sup>2</sup>EcoQuants.com, Santa Barbara, CA, United States<br />
+<sup>3</sup>Bren School for Environmental Science and Management,
+University of California, Santa Barbara, CA, United States<br />
+<sup>4</sup>Silwood Park Campus, Imperial College London, Ascot, United
+Kingdom</p>
+<p>*corresponding author: lowndes@nceas.ucsb.edu</p>
+</div>
+</div>
+<div id="preface" class="section level1">
+<h1>Preface</h1>
+<p>Reproducibility has long been a tenet of science but has been
+challenging to achieve — we learned this the hard way when our old
+approaches proved inadequate to efficiently reproduce our own work. Here
+we describe how several free software tools have fundamentally upgraded
+our approach to collaborative research, making our entire workflow more
+transparent and streamlined. By describing specific tools and how we
+incrementally began using them for the Ocean Health Index project, we
+hope to encourage others in the scientific community to do the same — so
+we can all produce better science in less time.</p>
+</div>
+<div id="keywords" class="section level1">
+<h1>Keywords</h1>
+<p>collaboration, data science, Ocean Health Index, open science,
+reproducibility, transparency</p>
+</div>
+<div id="scientists-need-data-science" class="section level1">
+<h1>Scientists need data science</h1>
+<p>Science, now more than ever, demands reproducibility, collaboration,
+and effective communication to strengthen public trust and effectively
+inform policy. Recent high-profile difficulties in reproducing and
+repeating scientific studies have put the spotlight on psychology and
+cancer biology <span class="citation">(Baker 2015; Baker and Dolgin
+2017; Collaboration 2015)</span>, but it is widely acknowledged that
+reproducibility challenges persist across scientific disciplines <span
+class="citation">(Baker 2016a; Aschwanden 2015; Buck 2015)</span>.
+Environmental scientists face potentially unique challenges in achieving
+goals of transparency and reproducibility because they rely on vast
+amounts of data spanning natural, economic, and social sciences that
+create semantic and synthesis issues exceeding those for most other
+disciplines <span class="citation">(Frew and Dozier 2012; Jones et al.
+2006; Michener and Jones 2012)</span>. Furthermore, proposed
+environmental solutions can be complex, controversial, and resource
+intensive, increasing the need for scientists to work transparently and
+efficiently with data to foster understanding and trust.</p>
+<p>Environmental scientists are expected to work effectively with
+ever-increasing quantities of highly heterogeneous data even though they
+are seldom formally trained to do so <span class="citation">(Check
+Hayden 2013; Boettiger et al. 2015; G. Wilson et al. 2016; G. V. Wilson
+2006b; Baker 2017)</span>. This was recently highlighted by a survey of
+704 US National Science Foundation principle investigators in the
+biological sciences that found training in data skills to be the largest
+unmet need <span class="citation">(Barone, Williams, and Micklos
+2017)</span>. Without training, scientists tend to develop their own
+bespoke workarounds to keep pace, but with this comes wasted time
+struggling to create their own conventions for managing, wrangling, and
+versioning data. If done haphazardly or without a clear protocol, these
+efforts are likely to result in work that is not reproducible — by the
+scientist’s own ‘future self’ or by anyone else <span
+class="citation">(G. Wilson et al. 2016)</span>. As a team of
+environmental scientists tasked with reproducing our own science
+annually, we experienced this struggle first-hand. When we began our
+project, we worked with data in the same way as we always had, taking
+extra care to make our methods reproducible for planned future re-use.
+But when we began to reproduce our workflow a second time and repeat our
+methods with updated data, we found our approaches to reproducibility
+were insufficient. However, by borrowing philosophies, tools, and
+workflows primarily created for software development, we have been able
+to dramatically improve the ability for ourselves and others to
+reproduce our science, while also reducing the time involved to do so:
+the result is better science in less time.</p>
+<p>Here we share a tangible narrative of our transformation to better
+science in less time — meaning more transparent, reproducible,
+collaborative, and openly shared and communicated science — with an aim
+of inspiring others. Our story is only one potential path because there
+are many ways to upgrade scientific practices — whether collaborating
+only with your ‘future self’ or as a team — and they depend on the
+shared commitment of individuals, institutions, and publishers <span
+class="citation">(Wolkovich, Regetz, and O’Connor 2012; Buck 2015; Nosek
+et al. 2015)</span>. We do not review the important, ongoing work
+regarding data management architecture and archiving <span
+class="citation">(Reichman, Jones, and Schildhauer 2011; Jones et al.
+2006)</span>, workflows <span class="citation">(Shade and Teal 2015;
+Goodman et al. 2014; Boettiger et al. 2015; Sandve et al. 2013)</span>,
+sharing and publishing data <span class="citation">(White et al. 2013;
+Kervin, Michener, and Cook 2013; Lewandowsky and Bishop 2016; Michener
+2015)</span> and code <span class="citation">(Mislan, Heer, and White
+2016; Kratz and Strasser 2014; Michener 2015)</span>, or how to tackle
+reproducibility and openness in science <span class="citation">(Munafò
+et al. 2017; Martinez et al. 2014; Tuyl and Whitmire 2016; Baker 2016b;
+Kidwell et al. 2016)</span>. Instead, we focus on our experience,
+because it required changing the way we had always worked, which was
+extraordinarily intimidating. We give concrete examples of how we use
+tools and practices from data science, the discipline of ‘turning raw
+data into understanding’ <span class="citation">(Wickham and Grolemund
+2016)</span>. It was out of necessity that we began to engage in data
+science, which we did incrementally by introducing new tools, learning
+new skills, and creating deliberate workflows — all while maintaining
+annual deadlines. Through our work with academics, governments, and
+non-profit groups around the world, we have seen that the need to
+improve practices is common if not ubiquitous. In this narrative we
+describe specific software tools, why we use them, how we use them in
+our workflow, and how we work openly as a collaborative team. In doing
+so we underscore two key lessons we learned that we hope encourage
+others to incorporate these practices into their own research. The first
+is that powerful tools exist and are freely available to use; the
+barriers to entry seem to be exposure to relevant tools and building
+confidence using them. The second is that engagement may best be
+approached as an evolution rather than as a revolution that may never
+come.</p>
+</div>
+<div id="improving-reproducibility-and-collaboration"
+class="section level1">
+<h1>Improving reproducibility and collaboration</h1>
+<div id="from-then-to-now" class="section level2">
+<h2>From then to now</h2>
+<p>The Ocean Health Index (OHI) operates at the interface of
+data-intensive marine science, coastal management and policy, and now,
+data science <span class="citation">(Lowndes et al. 2015; Lowndes
+2017)</span>. It is a scientific framework to quantify ocean-derived
+benefits to humans and to help inform sustainable ocean management using
+the best available information <span class="citation">(Halpern et al.
+2012; Halpern et al. 2015)</span>. Assessments using the OHI framework
+require synthesising heterogeneous data from nearly one hundred
+different sources, ranging from categorical tabular data to
+high-resolution rasters. Methods must be reproducible, so that others
+can produce the same results, and also repeatable, so that newly
+available data can be incorporated in subsequent assessments. Repeated
+assessments using the same methods enable quantifiable comparison of
+changes in ocean health through time, which can be used to inform policy
+and track progress <span class="citation">(Lowndes et al.
+2015)</span>.</p>
+<p>Using the OHI framework, we lead annual global assessments of 220
+coastal nations and territories, completing our first assessment in 2012
+<span class="citation">Halpern et al. (2015)</span>. Despite our best
+efforts, we struggled to efficiently repeat our own work during the
+second assessment in 2013 because of our approaches to data preparation
+<span class="citation">(Halpern et al. 2015)</span>. Data preparation is
+a critical aspect of making science reproducible but is seldom
+explicitly reported in research publications; we thought we had
+documented our methods sufficiently in 130-pages of published
+supplemental materials <span class="citation">(Halpern et al.
+2012)</span>, but we had not.</p>
+<p>However, by adopting data science principles and freely available
+tools that we describe below, we began building an OHI ‘Toolbox’ and
+fundamentally changed our approach to science (Figure 1). The OHI
+Toolbox provides a file structure, data, code, and instruction, operates
+across computer operating systems, and is shared online for free so that
+anyone can begin building directly from previous OHI assessments without
+reinventing the wheel <span class="citation">(Lowndes et al.
+2015)</span>. While these changes required an investment of our team’s
+time to learn and develop the necessary skills, the pay-off has been
+substantial. Most significantly we are now able to share and extend our
+workflow with a growing community of government, non-profit, and
+academic collaborations around the world that use the OHI for
+science-driven marine management. There are currently two dozen OHI
+assessments underway, most of which are led by independent groups <span
+class="citation">(Lowndes et al. 2015)</span>, and the Toolbox has
+helped lower the barriers to entry. Further, our own team has just
+released the fifth annual global OHI assessment <span
+class="citation">(Index 2016a)</span> and continues to lead assessments
+at smaller spatial scales, including the Northeastern United States,
+where the OHI is included in President Obama’s first Ocean Plan <span
+class="citation">(Goldfuss and Holdren 2016)</span>.</p>
+</div>
+<div id="we-thought-we-were-doing-reproducible-science"
+class="section level2">
+<h2>We thought we were doing reproducible science</h2>
+<p>For the first global OHI assessment in 2012 we employed an approach
+to reproducibility that is standard to our field, which focused on
+scientific methods, not data science methods <span
+class="citation">(Halpern et al. 2012)</span>. Data from nearly one
+hundred sources were prepared manually — i.e. without coding, typically
+in Microsoft Excel — which included organising, transforming, rescaling,
+gap-filling, and formatting data. Processing decisions were documented
+primarily within the Excel files themselves, emails, and Microsoft Word
+documents. We programmatically coded models and meticulously documented
+their development, (resulting in the 130-page supplemental materials)
+<span class="citation">(Halpern et al. 2012)</span>, and upon
+publication, we also made the model inputs (i.e., prepared data and
+metadata) freely available to download. This level of documentation and
+transparency is beyond the norm for environmental science <span
+class="citation">(Wolkovich, Regetz, and O’Connor 2012; Stephanie E.
+Hampton et al. 2015)</span>.</p>
+<p>We also worked collaboratively in the same ways we always had. Our
+team included scientists and analysts with diverse skill sets and
+disciplines, and we had distinct, domain-specific roles assigned to
+scientists and to a single analytical programmer. Scientists were
+responsible for developing the models conceptually, preparing data, and
+interpreting modeled results, and the programmer was responsible for
+coding the models. We communicated and shared files frequently, with
+long, often-forwarded, and vaguely-titled email chains
+(e.g. <code>Re: Fwd: data question</code>) with manually versioned data
+files (e.g. <code>data_final_updated2.xls</code>). All team members were
+responsible for organising those files with their own conventions on
+their local computers. Final versions of prepared files were stored on
+the servers and used in models, but records of the data processing
+itself were scattered.</p>
+<p>Upon beginning the second annual assessment in 2013, we realised that
+our approach was insufficient since it took too much time and relied
+heavily on individuals’ data organisation, email chains, and memory —
+particularly problematic as original team members moved on and new team
+members joined. We quickly realised we needed a nimble and robust
+approach to sharing data, methods, and results within and outside our
+team — we needed to completely upgrade our workflow.</p>
+</div>
+<div id="actually-doing-reproducible-science" class="section level2">
+<h2>Actually doing reproducible science</h2>
+<p>As we began the second global OHI assessment in 2013 we faced
+challenges across three main fronts: 1) <em>reproducibility</em>,
+including transparency and repeatability, particularly in data
+preparation; 2) <em>collaboration</em>, including team record keeping
+and internal collaboration; and 3) <em>communication</em> with
+scientific and broader communities. Environmental scientists are
+increasingly using <code>R</code> <span class="citation">(Boettiger et
+al. 2015)</span> because it is free, cross-platform, and open source,
+and also because of the training and support provided by developers
+<span class="citation">(Wickham and Grolemund 2016)</span> and
+independent groups <span class="citation">(G. Wilson et al. 2016; Mills
+2015)</span> alike. We decided to base our work in <code>R</code> <span
+class="citation">(T. R. C. Team 2016)</span> and RStudio <span
+class="citation">(Rs. Team 2016b)</span> for coding and visualisation,
+Git <span class="citation">(G. Team 2016)</span> for version control,
+GitHub <span class="citation">(GitHub 2016)</span> for collaboration,
+and a combination of GitHub and RStudio for organisation, documentation,
+project management, online publishing, distribution, and communication
+(Table 1). These tools can help scientists organise, document, version,
+and easily share data and methods, thus not only increasing
+reproducibility but also reducing the amount of time involved to do so
+<span class="citation">(G. V. Wilson 2006a; Broman 2016; Baker
+2017)</span>. Many available tools are free so long as work is shared
+publicly online, which enables open science, defined by Hampton et al.
+<span class="citation">(Stephanie E. Hampton et al. 2015)</span> as “the
+concept of transparency at all stages of the research process, coupled
+with free and open access to data, code, and papers”. When integrated
+into the scientific process, data science tools that enable open science
+— let’s call them “open data science” tools — can help realise
+reproducibility in collaborative scientific research <span
+class="citation">(Wolkovich, Regetz, and O’Connor 2012; Buck 2015;
+Stephanie E. Hampton et al. 2015; McKiernan et al. 2016; Seltenrich
+2016)</span>.</p>
+<p>Open data science tools helped us upgrade our approach to
+reproducible, collaborative, and transparent science, but they did
+require a substantial investment to learn, which we did incrementally
+over time (Figure 1; Box 1). Previous to this evolution, most team
+members with any coding experience — not necessarily in <code>R</code> —
+had learned just enough to accomplish whatever task had been before them
+using their own unique conventions. Given the complexity of the OHI
+project, we needed to learn to code collaboratively and incorporate best
+<span class="citation">(G. Wilson et al. 2014; Haddock and Dunn
+2011)</span> or good enough practices <span class="citation">(G. Wilson
+et al. 2016; Barnes 2010)</span> into our coding, so that our methods
+could be co-developed and vetted by multiple team members. Using a
+version control system not only improved our file and data management,
+but allowed individuals to feel less inhibited about their coding
+contributions, since files could always be reverted back to previous
+versions if there were problems. We built confidence using these tools
+by sharing our imperfect code, discussing our challenges, and learning
+as a team. These tools quickly became the keystone of how we work, and
+have overhauled our approach to science, perhaps as much as email did in
+decades prior. They have changed the way we think about science and
+about what is possible. The following describes how we have been using
+open data science practices and tools to overcome the biggest challenges
+we encountered to reproducibility, collaboration, and communication.</p>
+</div>
+<div id="reproducibility" class="section level2">
+<h2>Reproducibility</h2>
+<div id="data-preparation---coding-and-documenting"
+class="section level3">
+<h3>Data preparation - coding and documenting</h3>
+<p>Our first priority was to code all data preparation, create a
+standard format for final data layers, and do so using a single
+programmatic language, <code>R</code> <span class="citation">(T. R. C.
+Team 2016)</span>. Code enables us to reproduce the full process of data
+preparation, from data download to final model inputs <span
+class="citation">(Halpern et al. 2015; Frazier, Longo, and Halpern
+2016)</span>, and a single language makes it more practical for our team
+to learn and contribute collaboratively. We code in <code>R</code> and
+use RStudio <span class="citation">(Rs. Team 2016b)</span> to power our
+workflow because it has a user-friendly interface and built-in tools
+useful for coders of all skill levels, and, importantly, it can be
+configured with Git to directly sync with GitHub online. We have
+succeeded in transitioning to <code>R</code> as our primary coding
+language for data preparation, including for spatial data, although some
+operations still require additional languages and tools such as ArcGIS,
+QGIS, and Python <span class="citation">(ESRI 2016; T. Q. Team 2016; T.
+P. Team 2016)</span>.</p>
+<p>All our code is underpinned by the principles of tidy data, the
+grammar of data manipulation, and the <code>tidyverse</code>
+<code>R</code> packages developed by Wickham <span
+class="citation">(Wickham and Grolemund 2016; Wickham 2014, 2017,
+2016)</span>. This deliberate philosophy for thinking about data helped
+bridge our scientific questions with the data processing required to get
+there, and the readability and conciseness of <code>tidyverse</code>
+operations makes our data analysis read more as a story arc. Operations
+require less syntax — which can mean fewer potential errors that are
+easier to identify — and they can be chained together, minimising
+intermediate steps and data objects that can cause clutter and confusion
+<span class="citation">(Wickham and Grolemund 2016; Fischetti
+2014)</span>. <code>tidyverse</code> tools for wrangling data have
+expedited our transformation as coders and made <code>R</code> less
+intimidating to learn. We heavily rely on a few packages for data
+wrangling and visualisation that are bundled in the
+<code>tidyverse</code> package <span class="citation">(Wickham 2016,
+2017)</span> — particularly <code>dplyr</code>, <code>tidyr</code>, and
+<code>ggplot2</code> — as well as accompanying books, cheatsheets, and
+archived webinars (Box 1).</p>
+<p>We keep detailed documentation describing metadata (e.g., source,
+date of access, links) and data processing decisions — trying to capture
+not only the processing we decided to do, but what we decided against.
+We started with small plain text files accompanying each <code>R</code>
+file, but have transitioned to documenting with R Markdown <span
+class="citation">(Rs. Team 2016a; Allaire et al. 2016)</span> because it
+combines plain text and executable chunks of <code>R</code> code within
+the same file and serves as a living lab notebook. Every time R Markdown
+output files are regenerated the <code>R</code> code is rerun so the
+text and figures will also be regenerated and reflect any updates to the
+code or underlying data. R Markdown files increase our reproducibility
+and efficiency by streamlining documentation and eliminating the need to
+constantly paste updated figures into reports as they are developed.</p>
+</div>
+<div id="modeling-r-functions-and-packages" class="section level3">
+<h3>Modeling – <code>R</code> functions and packages</h3>
+<p>Once the data are prepared, we develop assessment-specific models to
+calculate OHI scores. Models were originally coded in multiple languages
+to accommodate disparate data types and formatting. By standardising our
+approach to data preparation and final data layer format, we have been
+able to translate all models into <code>R</code>. In addition to
+assessment-specific models, the OHI framework includes core analytical
+operations that are used by all OHI assessments <span
+class="citation">(Lowndes et al. 2015)</span>, and thus we created an
+<code>R</code> package called <code>ohicore</code><span
+class="citation">(Index 2016b)</span>, which was greatly facilitated by
+the <code>devtools</code> and <code>roxygen2</code> packages <span
+class="citation">(Wickham 2015; Wickham and Chang 2016; Wickham,
+Danenberg, and Eugster 2015)</span>. The <code>ohicore</code> package is
+maintained in and installed from a dedicated GitHub repository — using
+<code>devtools::install_github(‘ohi-science/ohicore’)</code> — from any
+computer with <code>R</code> and an internet connection, enabling groups
+leading independent OHI assessments to use it for their own work <span
+class="citation">(Lowndes et al. 2015)</span>.</p>
+</div>
+<div id="version-control" class="section level3">
+<h3>Version control</h3>
+<p>We use Git <span class="citation">(G. Team 2016)</span> as a version
+control system. Version control systems track changes within files and
+allow you to examine or rewind to previous versions. This saves time
+that would otherwise be spent duplicating, renaming, and organising
+files to preserve past versions. It also makes folders easier to
+navigate since they are no longer overcrowded with multiple files
+suffixed with dates or initials
+(e.g. <code>final_JL-2012-02-26.csv</code>) <span class="citation">(Ram
+2013; Blischak, Davenport, and Wilson 2016; Perez-Riverol et al.
+2016)</span>. Once Git is configured on each team member’s machine, they
+work as before but frequently commit to saving a snapshot of their
+files, along with a human-readable “commit message” <span
+class="citation">(Ram 2013; Blischak, Davenport, and Wilson
+2016)</span>. Any line modified in a file tracked by Git will then be
+attributed to that user.</p>
+<p>We interface with Git primarily through RStudio, using the command
+line for infrequently encountered tasks. Using RStudio to interact with
+Git was key for our team’s uptake of a version control system, since the
+command line can be an intimidating hurdle or even a barrier for
+beginners to get onboard with using version control. We were less
+resistant because we could use a familiar interface, and as we gained
+fluency in Git’s operations through RStudio we translated that
+confidence to the command line.</p>
+</div>
+<div id="organisation" class="section level3">
+<h3>Organisation</h3>
+<p>Our team developed conventions to standardise the structure and names
+of files to improve consistency and organisation. Along with the GitHub
+workflow (see Collaboration section), having a structured approach to
+file organisation and naming has helped those within and outside our
+team navigate our methods more easily. We organise parts of the project
+in folders that are both RStudio “projects” and GitHub “repositories”,
+which has also helped us collaborate using shared conventions rather
+than each team member spending time duplicating and organising
+files.</p>
+</div>
+</div>
+<div id="collaboration-within-our-team" class="section level2">
+<h2>Collaboration within our team</h2>
+<div id="coding-collaboratively" class="section level3">
+<h3>Coding collaboratively</h3>
+<p>We transitioned from a team of distinct roles
+(scientists-and-programmer) to becoming a team with overlapping skill
+sets (scientists-as-programmers, or simply, data scientists). Having
+both environmental expertise and coding skills in the same person
+increases project efficiency, enables us to vet code as a team, and
+reduces the bottleneck of relying on a single programmer. We, like
+Duhigg <span class="citation">(Duhigg 2016)</span>, have found that
+“groups tend to innovate faster, see mistakes more quickly and find
+better solutions to problems”. Developing these skills and creating the
+team culture around them requires leadership with the understanding that
+fostering more efficient and productive scientists is worth the
+long-term investment. Our team had the freedom to experiment with
+available tools and their value was recognised with a commitment that
+we, as a team, would adopt and pursue these methods further. In addition
+to supportive leadership, having a “champion” with experience of how
+tools can be introduced over time and interoperate can expedite the
+process, but is not the only path (Box 2). Taking the time to experiment
+and invest in learning data science principles, tools, and skills
+enabled our team to establish a system of best practices for developing,
+using, and teaching the OHI Toolbox.</p>
+</div>
+<div id="our-simplified-github-workflow" class="section level3">
+<h3>Our (simplified) GitHub workflow</h3>
+<p>GitHub is one of many web-based platforms that enables files tracked
+with Git to be collaboratively shared online so contributors can keep
+their work synchronised <span class="citation">(GitHub 2016; Blischak,
+Davenport, and Wilson 2016; Perez-Riverol et al. 2016)</span>, and it is
+increasingly being adopted by scientific communities for project
+management <span class="citation">(J. Perkel 2016)</span>. Versioned
+files are synced online with GitHub similar to the way Dropbox operates,
+except syncs require a committed, human-readable message and reflect
+deliberate snapshots of changes made that are attributed to the user,
+line-by-line, through time. Built for large, distributed teams of
+software developers, GitHub provides many features that we as a
+scientific team, new to data science, do not immediately need, and thus
+we mostly ignore features such as branching, forking, and pull requests.
+Our team uses a simplified GitHub workflow whereby all members have
+administrative privileges to the repositories within our
+<code>ohi-science</code> organisation. Each team member is able to sync
+their local work to GitHub.com, making it easier to attribute
+contribution, as well as identify to whom to direct questions.</p>
+<p>GitHub is now central to many facets of our collaboration as a team
+and with other communities — we use it along with screensharing to teach
+and troubleshoot with groups leading OHI assessments, as well as to
+communicate our ongoing work and final results (see Communication
+section below). Now there are very few files emailed back and forth
+within our team since we all have access to all repositories within the
+<code>ohi-science</code> organisation, and can navigate to and edit
+whatever we need. Additionally, these organised files are always found
+with the same file path, whether on GitHub.com or on someone’s local
+computer; this, along with RStudio <code>.Rproj</code> files, eases the
+file path problems that can plague collaborative coding and frustrate
+new coders.</p>
+</div>
+<div id="internal-communication" class="section level3">
+<h3>Internal communication</h3>
+<p>We use a feature of GitHub called ‘Issues’ in place of email for
+discussions about data preparation and analysis. We use Issues in a
+separate private repository to keep our conservations private but our
+work public. All team members can see and contribute to all
+conversations, which are a record of all our decisions and discussions
+across the project and are searchable in a single place. Team members
+can communicate clearly by linking to specific lines of code in current
+or past versions of specific files since they are stored on GitHub and
+thus have a URL, as well as paste images and screenshots, link to other
+websites, and send an email to specific team members directly by
+mentioning their GitHub username. In addition to discussing analytical
+options, we use Issues to track ongoing tasks, tricks we have learned,
+and future ideas. Issues provide a written reference of institutional
+memory so new team members can get up to speed more easily. Most
+importantly, GitHub Issues have helped us move past the never-ending
+forwarded email chains and instead to conversations available to any
+current or future team member.</p>
+</div>
+</div>
+<div id="communication-outside-the-project" class="section level2">
+<h2>Communication outside the project</h2>
+<div id="sharing-data-and-code" class="section level3">
+<h3>Sharing data and code</h3>
+<p>Our code is online in GitHub repositories, publicly available for any
+researcher or interested person to see and access (<a
+href="https://github.com/ohi-science">github.com/ohi-science</a>). As we
+work, GitHub renders code, text, images, and tabular and spatial data
+and displays differences between versions, essentially creating webpages
+that can be easily shared with collaborators, whether or not they use
+GitHub. Additionally, we create ‘Releases’ for each global assessment
+<span class="citation">(Halpern et al. 2012; Halpern et al. 2015)</span>
+so the code and data we use for peer-reviewed publication are preserved
+while we continue our work (<a
+href="https://github.com/OHI-Science/ohi-global/releases"
+class="uri">https://github.com/OHI-Science/ohi-global/releases</a>).</p>
+</div>
+<div id="sharing-methods-and-instruction" class="section level3">
+<h3>Sharing methods and instruction</h3>
+<p>We use R Markdown not only for data preparation but also for broader
+communication. R Markdown files can be generated into a wide variety of
+formatted outputs, including PDFs, slides, Microsoft Word documents,
+HTML files, books, or full websites <span class="citation">(Rs. Team
+2016a; Allaire et al. 2016)</span>. These can all be published online
+for free through GitHub using the same RStudio-GitHub workflow that we
+use for our analyses, which has made communication an ongoing part of
+our work, instead of a final step in completed analyses.</p>
+<p>We built a website using the same software and workflows that we use
+for our analyses, which has made communication an ongoing part of our
+work, instead of a final step in completed analyses (<a
+href="http://ohi-science.org">ohi-science.org</a>). The combination of
+GitHub and RStudio publishing tools makes website-building efficient,
+enables team members to update content directly, and makes us more
+likely to keep it current. Our website is intended for scientists
+interested in our methods as well as those leading their own assessments
+<span class="citation">(Lowndes et al. 2015)</span>. Thus, the website
+provides scientific methods, publications, data, and code, as well as
+instruction, news, blog posts, and a map displaying where all ongoing
+OHI assessments are taking place so that groups can learn directly from
+and build off of each other’s code. <a
+href="http://ohi-science.org">ohi-science.org</a> provides technical
+information to complement <a
+href="www.oceanhealthindex.org">oceanhealthindex.org</a>, our overview
+website intended for more general audiences.</p>
+</div>
+</div>
+</div>
+<div id="meeting-scientists-where-they-are" class="section level1">
+<h1>Meeting scientists where they are</h1>
+<p>We are environmental scientists whose impetus for upgrading
+approaches to collaborative, data-intensive science was driven by our
+great difficulty reproducing our own methods. Many researchers do not
+attempt to reproduce their own work <span class="citation">(Nosek et al.
+2015; Casadevall and Fang 2010)</span> — ourselves included before 2013
+— and thus may not realise that there could be reproducibility issues in
+their own approaches. But they can likely identify inefficiencies.
+Integrating open data science practices and tools into science can save
+time, while also improving reproducibility for our most important
+collaborator: our ‘future selves’. We have found this as individuals and
+as a team: We could not be as productive <span class="citation">(Lowndes
+et al. 2015; Lowndes 2017)</span> without open data science practices
+and tools. We would also not be able to efficiently share and
+communicate our work while it is ongoing rather than only
+post-publication, which is particularly important for bridging science
+and policy. As environmental scientists who are still learning, we hope
+sharing our experiences will empower other scientists to upgrade their
+own approaches, helping further shift the scientific culture to value
+transparency and openness as a benefit to all instead of as a
+vulnerability <span class="citation">(Wolkovich, Regetz, and O’Connor
+2012; Stephanie E. Hampton et al. 2015; McKiernan et al.
+2016)</span>.</p>
+<p>From our own experience and from teaching other academic, non-profit,
+and government groups through the Ocean Health Index project <span
+class="citation">(Lowndes et al. 2015)</span>, we find that the main
+barriers to engagement boil down to exposure and confidence: first
+knowing which tools exist that can be directly useful to one’s research,
+and then having the confidence to develop the skills to use them. These
+two points are simple but critical. We are among the many environmental
+scientists who were never formally trained to work deliberately with
+data. Thus, we were unaware of how significantly open data science tools
+could directly benefit our research <span class="citation">(Boettiger et
+al. 2015; G. Wilson 2016)</span>, and upon learning about them we were
+hesitant, or even resistant, to engage. However, we were able to develop
+confidence in large part because of the open, inclusive, and encouraging
+online developer community that builds tools and creates tutorials that
+meet scientists where they are (Box 1, Box 2). It takes motivation,
+patience, diligence, and time to overcome the conceptual and technical
+challenges involved in developing computing skills, but resources are
+available to help scientists get started <span class="citation">(G.
+Wilson 2016; Boettiger et al. 2015; Haddock and Dunn 2011)</span>.
+Coding is “as important to modern scientific research as telescopes and
+test tubes” <span class="citation">(G. Wilson et al. 2014)</span>, but
+it is critical to “dispel the misconception that these skills are
+intuitive, obvious, or in any way inherent” <span
+class="citation">(Mills 2015)</span>.</p>
+<p>There is ongoing and important work by the informatics community on
+the architecture and systems for data management and archiving <span
+class="citation">(Reichman, Jones, and Schildhauer 2011; Frew and Dozier
+2012; Jones et al. 2006; Stephanie E. Hampton et al. 2013)</span>, as
+well as efforts to enable scientists to publish the code that they do
+have <span class="citation">(Barnes 2010; Mislan, Heer, and White 2016;
+Baker 2016b)</span>. This work is critical, but comes with the <em>a
+priori</em> assumption that scientists are already thinking about data
+and coding in a way that they would seek out further resources. In
+reality, this is not always the case, and without visible examples of
+how to use these tools within their scientific fields, common stumbling
+blocks will be continually combatted with individual workarounds instead
+of addressed with intention. These workarounds can greatly delay
+focusing on actual scientific research, particularly when scientific
+questions that may not yet have answers — e.g., how the behavior of X
+changes with Y — are conflated with data science questions that have
+many existing answers — e.g., how to operate on only criteria X and
+Y.</p>
+<p>Scientific advancement comes from building off the past work of
+others; scientists can also embrace this principle for using software
+tools to tackle some of the challenges encountered in modern scientific
+research. In a recent survey in <em>Nature</em>, 90% of the 1,500
+respondents across scientific fields agreed that there was a
+reproducibility crisis in science, and one third of the respondents
+reported not having their own “established procedures for
+reproducibility” <span class="citation">(Baker 2016a)</span>. While
+reproducibility means distinct things within the protocols of each
+sub-discipline or specialty, underpinning reproducibility across all
+disciplines in modern science is working effectively and collaboratively
+with data, including wrangling, formatting, and other tasks that can
+take 50-80% of a data scientist’s time <span class="citation">(Lohr
+2014)</span>. While reaching full reproducibility is extremely difficult
+<span class="citation">(FitzJohn et al. 2014; Aschwanden 2015)</span>,
+incrementally incorporating open data science practices and tools into
+scientific workflows has the potential to alleviate many of the troubles
+plaguing science, including collaboration and preserving institutional
+memory <span class="citation">(G. Wilson et al. 2016)</span>. Further,
+sharing openly is fundamental to truly expediting scientific progress
+because others can build directly off previous work if well-documented,
+re-usable code are available <span class="citation">(Wolkovich, Regetz,
+and O’Connor 2012; McKiernan et al. 2016; Broman 2016; Boland,
+Karczewski, and Tatonetti 2017)</span>. Until quite recently, making
+research open required a great deal of extra work for researchers and
+was less likely to be done. Now, with available tools, the benefits of
+openness can be a byproduct of time-saving efficiencies, because tools
+that reduce data headaches also result in science that is more
+transparent, reproducible, collaborative, and freely accessible to
+others.</p>
+<p>Ecologists and environmental scientists arguably have a heightened
+responsibility for transparency and openness, as data products provide
+important snapshots of systems that may be forever altered due to
+climate change and other human pressures <span
+class="citation">(Wolkovich, Regetz, and O’Connor 2012; Reichman, Jones,
+and Schildhauer 2011)</span>. There is particular urgency for efficiency
+and transparency, as well as opportunity to democratise science in
+fields that operate at the interface of science and policy. Individuals
+play an important part by promoting good practices and creating
+supportive communities <span class="citation">(Wolkovich, Regetz, and
+O’Connor 2012; Mills 2015; McKiernan et al. 2016)</span>. But it is also
+critical for the broader science community to build a culture where
+openness and reproducibility are valued, formally taught, and practiced,
+where we all agree that they are worth the investment.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+</div>
+<div id="acknowledgements" class="section level1">
+<h1>Acknowledgements</h1>
+<p>The Ocean Health Index is a collaboration between Conservation
+International and the National Center for Ecological Analysis and
+Synthesis at the University of California at Santa Barbara. We thank
+Johanna Polsenberg, Steve Katona, Erich Pacheco, and Lindsay Mosher who
+are our partners at Conservation International. We thank all past
+contributors and funders that have supported the Ocean Health Index,
+including Beau and Heather Wrigley and The Pacific Life Foundation. We
+also thank all the individuals and groups that openly make their data,
+tools, and tutorials freely available to others. Finally, we thank
+Hadley Wickham, Karthik Ram, Kara Woo, and Mark Schildhauer for friendly
+review of the developing manuscript.</p>
+<p>See <a
+href="http://ohi-science.org/betterscienceinlesstime">ohi-science.org/betterscienceinlesstime</a>
+as an example of a website built with RMarkdown and the RStudio-GitHub
+workflow, and for links and resources referenced in the paper.</p>
+</div>
+<div id="author-contributions" class="section level1">
+<h1>Author Contributions</h1>
+<p>All authors developed concepts and wrote the paper.</p>
+</div>
+<div id="competing-interests" class="section level1">
+<h1>Competing interests</h1>
+<p>The authors declare no competing financial interests.</p>
+</div>
+<div id="corresponding-author" class="section level1">
+<h1>Corresponding author</h1>
+<p>Correspondence to Julia Lowndes: lowndes@nceas.ucsb.edu</p>
+</div>
+<div id="figures" class="section level1">
+<h1>Figures</h1>
+<div id="figure-1" class="section level2">
+<h2>Figure 1</h2>
+<p><strong>Better science in less time, illustrated by the Ocean Health
+Index project</strong>. Every year since 2012 we have repeated Ocean
+Health Index (OHI) methods to track change in global ocean health <span
+class="citation">(Halpern et al. 2012; Lowndes 2017)</span>. Increased
+reproducibility and collaboration has reduced the amount of time
+required to repeat methods (size of bubbles) with updated data annually,
+allowing us to focus on improving methods each year (biggest innovations
+written as text). The original assessment in 2012 focused solely on
+scientific methods (e.g., obtaining and analyzing data; developing
+models; calculating and presenting results (dark shading)). In 2013, by
+necessity we gave more focus to data science (e.g., data organisation
+and wrangling; coding; versioning; documentation (light shading)), using
+open data science tools. We established <code>R</code> as the main
+language for all data preparation and modeling (using RStudio), which
+drastically decreased the time involved to complete the assessment. In
+2014, we adopted Git and GitHub for version control, project management,
+and collaboration. This further decreased the time required to repeat
+the assessment. We also created the OHI Toolbox, which includes our
+<code>R</code> package <code>ohicore</code> for core analytical
+operations used in all OHI assessments. In subsequent years we have
+continued (and plan to continue) this trajectory towards better science
+in less time by improving code with principles of tidy data <span
+class="citation">(Wickham and Grolemund 2016)</span>; standardising file
+and data structure; and focusing more on communication, in part by
+creating websites with the same open data science tools and workflow.
+See text and Table 1 for more details.</p>
+</div>
+</div>
+<div id="tables" class="section level1">
+<h1>Tables</h1>
+<div id="table-1" class="section level2">
+<h2>Table 1</h2>
+<p><strong>Summary of the primary open data science tools used to
+upgrade reproducibility, collaboration, and communication, by
+task</strong>. The transition to using open data science tools was
+incremental (see Figure 1). All tasks are accomplished with the
+RStudio–GitHub workflow that is underpinned by R and Git. This workflow
+streamlines collaboration by capturing each individual’s contribution to
+the project – thus taking care of bookkeeping – for tasks from data
+processing and analysis to creating documents and websites with embedded
+results that are updatable. Note that collaboration is not only for labs
+and teams, but also for each individual’s ‘future self’.</p>
+<pre><code>## New names:
+## Rows: 9 Columns: 5
+## ── Column specification
+## ──────────────────────────────────────────────────────── Delimiter: &quot;,&quot; chr
+## (5): ...1, Task, Then, Now, Primary open data science tools
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## • `` -&gt; `...1`</code></pre>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="21%" />
+<col width="19%" />
+<col width="38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Task</th>
+<th align="left">Then</th>
+<th align="left">Now</th>
+<th align="left">Primary open data science tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Reproducibility</td>
+<td align="left">data preparation</td>
+<td align="left">manually (i.e., Excel)</td>
+<td align="left">coded in <code>R</code></td>
+<td align="left"><code>R</code> packages: <code>tidyverse</code>
+(<code>dplyr</code>, <code>tidyr</code>, <code>ggplot2</code>).
+Documentation: R Markdown</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">modeling</td>
+<td align="left">multiple programming languages</td>
+<td align="left"><code>R</code> functions and <code>ohicore</code>
+package</td>
+<td align="left"><code>R</code> packages: <code>tidyverse</code>,
+<code>devtools</code>, <code>roxygen2</code>, <code>git2r</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">version control</td>
+<td align="left">file duplication and renaming</td>
+<td align="left">Git</td>
+<td align="left">Git; interface with Git and GitHub primarily through
+RStudio</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">organisation</td>
+<td align="left">individual conventions</td>
+<td align="left">standardised team convention</td>
+<td align="left">RStudio projects, GitHub repositories. File structure
+protocols</td>
+</tr>
+<tr class="odd">
+<td align="left">Collaboration</td>
+<td align="left">coding</td>
+<td align="left">separate languages and conventions</td>
+<td align="left"><code>R</code>; standardised team convention</td>
+<td align="left">Principles of tidy data; <code>tidyverse</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">workflow and project management</td>
+<td align="left">individual conventions</td>
+<td align="left">(simplified) GitHub workflow</td>
+<td align="left">GitHub, RStudio</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">internal collaboration</td>
+<td align="left">email</td>
+<td align="left">centralised, archived conversations</td>
+<td align="left">GitHub issues</td>
+</tr>
+<tr class="even">
+<td align="left">Communication</td>
+<td align="left">sharing data</td>
+<td align="left">ftp download</td>
+<td align="left">all versions and Releases available online</td>
+<td align="left">ohi-science.org/ohi-global</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">sharing methods</td>
+<td align="left">published manuscript and supplementary material</td>
+<td align="left">published on our website</td>
+<td align="left">ohi-science.org website, with linked R Markdown outputs
+(webpages, presentations, etc)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="boxes" class="section level1">
+<h1>Boxes</h1>
+<div id="box-1" class="section level2">
+<h2>Box 1</h2>
+<p><strong>Resources to learn open data science tools.</strong> These
+are some of the free, online resources that we used to learn and develop
+a workflow with <code>R</code>, RStudio, Git, and GitHub. These
+resources exposed us to what was possible, and helped us build skills to
+incorporate concepts and tools into our own workflow. This is by no
+means an exhaustive list. See also Box 2 for strategies of how to get
+started.</p>
+<p><strong>Primarily <code>R</code></strong></p>
+<p><strong>R for Data Science</strong> book by Hadley Wickham and
+Garrett Grolemund<br />
+        (<a href="http://r4ds.had.co.nz">r4ds.had.co.nz</a>)<br />
+<strong>RStudio’s webinars</strong> on-demand videos by RStudio<br />
+        (<a
+href="https://www.rstudio.com/resources/webinars/">rstudio.com/resources/webinars</a>)<br />
+<strong>RStudio’s cheatsheets</strong> PDFs by RStudio<br />
+        (<a
+href="https://www.rstudio.com/resources/cheatsheets/">rstudio.com/resources/cheatsheets</a>)<br />
+<strong>CRAN Task Views</strong> to identify useful packages by category
+of task<br />
+        (cran.r-project.org/web/views)<br />
+<strong>R Packages</strong> book by Hadley Wickham<br />
+        (<a href="http://r-pkgs.had.co.nz/">r-pkgs.had.co.nz</a>)</p>
+<p><strong>Combination RStudio-GitHub</strong></p>
+<p><strong>Happy Git With R</strong> short-course by Jenny Bryan<br />
+        (<a
+href="http://happygitwithr.com/">happygitwithr.com</a>)<br />
+<strong>UBC Stats545: Data Wrangling, Exploration, and Analysis with
+R</strong> university course by Jenny Bryan<br />
+        (<a href="https://stat545.com">stat545.com</a>)<br />
+<strong>Software Carpentry</strong> workshops, teaching and learning
+communities<br />
+        (<a
+href="http://software-carpentry.org/">software-carpentry.org</a>)<br />
+            example 2-day course: “Reproducible Science with RStudio and
+GitHub”<br />
+            <a
+href="http://jules32.github.io/2016-07-12-Oxford/overview/">jules32.github.io/2016-07-12-Oxford/overview</a></p>
+<p><strong>Community discussion</strong></p>
+<p><strong>#rstats on Twitter</strong> online discussions<br />
+        (<a
+href="twitter.com/search?q=%23rstats&amp;src=typd">twitter.com/search?q=%23rstats&amp;src=typd</a>)<br />
+<strong>Not So Standard Deviations</strong> podcast by Roger Peng and
+Hilary Parker<br />
+        (<a
+href="https://soundcloud.com/nssd-podcast">soundcloud.com/nssd-podcast</a>)<br />
+<strong>R-Bloggers</strong> blog<br />
+        (<a href="https://www.r-bloggers.com">r-bloggers.com</a>)<br />
+<strong>RStudio</strong> blog<br />
+        (<a href="https://blog.rstudio.org/">blog.rstudio.org</a>)<br />
+<strong>Data Carpentry</strong> blog<br />
+        (<a
+href="www.datacarpentry.org/blog">datacarpentry.org/blog</a>)</p>
+</div>
+<div id="box-2" class="section level2">
+<h2>Box 2</h2>
+<p><strong>Strategies to learn in an intentional way.</strong> The
+resources listed in Box 1 have helped us learn open data science
+principles and tools in an intentional way: We felt empowered
+(vs. panicked), we learned to think ahead (vs. quick fixes for single
+purposes), and we learned with a community (vs. in isolation). There is
+a whole ecosystem of open data science principles, practices, and tools
+(including <code>R</code>, RStudio, Git, and GitHub) and no single way
+to begin learning. These are a few strategies you can consider as you
+get engaged.</p>
+<p><strong>Self-paced learning</strong><br />
+Box 1 lists resources to learn open data science principles and tools
+that you can use at your own pace. The books and courses provide
+in-depth philosophies and are good for initial learning as well as for
+reference later on. Webinars and podcasts are generally under an
+hour.</p>
+<p><strong>Join and/or create communities</strong><br />
+Learning together and supporting each other peer-to-peer can be more fun
+and rewarding. You can become a “champion” for others by showing
+leadership as you learn. Start off by watching a webinar with a friend
+or group during lunch or a happy hour. Learn enough about a useful R
+package to share in your lab meetings; you learn best by teaching. In
+traditional journal clubs or lab meetings, discuss an academic article
+on importance of reproducibility, collaboration, and coding <span
+class="citation">(Baker 2017; J. M. Perkel 2014; White et al. 2013;
+Perez-Riverol et al. 2016)</span>. Search if your institution or city
+has local Meetup.com groups, or create your own.</p>
+<p>Additionally, join or keep tabs on communities online. Mozilla Study
+Groups are a network of ‘journal-clubs’ where scientists teach
+scientists computing skills (<a
+href="https://science.mozilla.org/programs/studygroups/join">science.mozilla.org/programs/studygroups/join</a>).
+rOpenSci is a developer collective building R-based tools to facilitate
+open science (<a href="https://ropensci.org/">ropensci.org</a>). Also
+look on Twitter for #rstats discussions and then follow individuals from
+those conversations.</p>
+<p><strong>Ask for help</strong><br />
+Local and online communities are a great resource to ask when you need
+help. Expecting that someone has already asked your question can help
+you both articulate the problem clearly and identify useful answers.
+Often, pasting error messages directly into Google will get you to the
+best answers quickly. Many answers come from online forums, including <a
+href="http://stackoverflow.com/">StackOverflow.com</a> <span
+class="citation">(Baker 2017)</span>, or even Twitter itself (e.g., ‘How
+Twitter Improved My Ecological Model’) <span class="citation">(Rbloggers
+2015)</span>.</p>
+<p><strong>Attend in-person workshops and conferences</strong><br />
+In-person workshops can be extremely valuable and give you an
+opportunity to get direct help from instructors and helpers. Software
+Carpentry and Data Carpentry run 2-day bootcamps that teach skills for
+research computing; you can attend a scheduled workshop or request your
+own (<a
+href="https://software-carpentry.org/">software-carpentry.org</a>; <a
+href="http://www.datacarpentry.org/">datacarpentry.org</a>). Attend
+conferences like useR (example: <a
+href="http://www.user2017.brussels/">user2017.brussels</a>) both for
+skill-building and to learn how others are using these tools.</p>
+<p><strong>Watch presentations from past conferences</strong><br />
+More and more, slide decks and videos of presentations are appearing
+online. For example, you can see presentations from the the 2016 useR
+conference (<a href="http://user2016.org/">user2016.org</a>) and the
+2017 RStudio conference (<a
+href="https://www.rstudio.com/conference">rstudio.com/conference</a>).</p>
+<p><strong>Read Blogs</strong></p>
+<p>There are many individuals who blog about open data science concepts,
+<code>R</code> packages, workflows, etc. Try Googling a package you’re
+using, or going to the website of someone you are following on
+Twitter.</p>
+</div>
+</div>
+<div id="references-1" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
+<div id="ref-allaire_rmarkdown:_2016" class="csl-entry">
+Allaire, J. J., Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang,
+Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2016.
+<span>“Rmarkdown: Dynamic Documents for r.”</span> <a
+href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.
+</div>
+<div id="ref-aschwanden_science_2015" class="csl-entry">
+Aschwanden, Christie. 2015. <span>“Science Isn’t Broken.
+<span>FiveThirtyEight</span>.”</span> August 19, 2015. <a
+href="https://fivethirtyeight.com/features/science-isnt-broken/">https://fivethirtyeight.com/features/science-isnt-broken/</a>.
+</div>
+<div id="ref-baker_over_2015" class="csl-entry">
+Baker, Monya. 2015. <span>“Over Half of Psychology Studies Fail
+Reproducibility Test.”</span> <em>Nature</em>, August. <a
+href="https://doi.org/10.1038/nature.2015.18248">https://doi.org/10.1038/nature.2015.18248</a>.
+</div>
+<div id="ref-baker_1500_2016" class="csl-entry">
+———. 2016a. <span>“1,500 Scientists Lift the Lid on
+Reproducibility.”</span> <em>Nature</em> 533 (7604): 452–54. <a
+href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>.
+</div>
+<div id="ref-baker_why_2016" class="csl-entry">
+———. 2016b. <span>“Why Scientists Must Share Their Research
+Code.”</span> <em>Nature</em>, September. <a
+href="https://doi.org/10.1038/nature.2016.20504">https://doi.org/10.1038/nature.2016.20504</a>.
+</div>
+<div id="ref-baker_scientific_2017" class="csl-entry">
+———. 2017. <span>“Scientific Computing: Code Alert.”</span>
+<em>Nature</em> 541 (7638): 563–65. <a
+href="https://doi.org/10.1038/nj7638-563a">https://doi.org/10.1038/nj7638-563a</a>.
+</div>
+<div id="ref-baker_cancer_2017" class="csl-entry">
+Baker, Monya, and Elie Dolgin. 2017. <span>“Cancer Reproducibility
+Project Releases First Results.”</span> <em>Nature News</em> 541 (7637):
+269. <a
+href="https://doi.org/10.1038/541269a">https://doi.org/10.1038/541269a</a>.
+</div>
+<div id="ref-barnes_publish_2010" class="csl-entry">
+Barnes, Nick. 2010. <span>“Publish Your Computer Code: It Is Good
+Enough.”</span> <em>Nature</em> 467 (7317): 753. <a
+href="http://search.proquest.com/openview/920d61b7360c59dd04185c0f13bb92ad/1?pq-origsite=gscholar&amp;cbl=40569">http://search.proquest.com/openview/920d61b7360c59dd04185c0f13bb92ad/1?pq-origsite=gscholar&amp;cbl=40569</a>.
+</div>
+<div id="ref-barone_unmet_2017" class="csl-entry">
+Barone, Lindsay, Jason Williams, and David Micklos. 2017. <span>“Unmet
+Needs for Analyzing Biological Big Data: A Survey of 704
+<span>NSF</span> Principal Investigators.”</span>
+<em><span>bioRxiv</span></em>, February, 108555. <a
+href="https://doi.org/10.1101/108555">https://doi.org/10.1101/108555</a>.
+</div>
+<div id="ref-blischak_quick_2016" class="csl-entry">
+Blischak, John D., Emily R. Davenport, and Greg Wilson. 2016. <span>“A
+Quick Introduction to Version Control with Git and
+<span>GitHub</span>.”</span> <em><span>PLOS</span> Comput Biol</em> 12
+(1): e1004668. <a
+href="https://doi.org/10.1371/journal.pcbi.1004668">https://doi.org/10.1371/journal.pcbi.1004668</a>.
+</div>
+<div id="ref-boettiger_building_2015" class="csl-entry">
+Boettiger, Carl, Scott Chamberlain, Edmund Hart, and Karthik Ram. 2015.
+<span>“Building Software, Building Community: Lessons from the <span
+class="nocase">rOpenSci</span> Project.”</span> <em>Journal of Open
+Research Software</em> 3 (1). <a
+href="https://doi.org/10.5334/jors.bu">https://doi.org/10.5334/jors.bu</a>.
+</div>
+<div id="ref-boland_ten_2017" class="csl-entry">
+Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti.
+2017. <span>“Ten Simple Rules to Enable Multi-Site Collaborations
+Through Data Sharing.”</span> <em><span>PLOS</span> Computational
+Biology</em> 13 (1): e1005278. <a
+href="https://doi.org/10.1371/journal.pcbi.1005278">https://doi.org/10.1371/journal.pcbi.1005278</a>.
+</div>
+<div id="ref-broman_initial_2016" class="csl-entry">
+Broman, Karl. 2016. <span>“Initial Steps Toward Reproducible
+Research.”</span> 2016. <a
+href="http://kbroman.org/steps2rr/">http://kbroman.org/steps2rr/</a>.
+</div>
+<div id="ref-buck_solving_2015" class="csl-entry">
+Buck, Stuart. 2015. <span>“Solving Reproducibility.”</span>
+<em>Science</em> 348 (6242): 1403–3. <a
+href="https://doi.org/10.1126/science.aac8041">https://doi.org/10.1126/science.aac8041</a>.
+</div>
+<div id="ref-casadevall_reproducible_2010" class="csl-entry">
+Casadevall, Arturo, and Ferric C. Fang. 2010. <span>“Reproducible
+Science.”</span> <em>Infection and Immunity</em> 78: 4972–75. <a
+href="https://doi.org/doi:10.1128/IAI.00908-10">https://doi.org/doi:10.1128/IAI.00908-10</a>.
+</div>
+<div id="ref-check_hayden_mozilla_2013" class="csl-entry">
+Check Hayden, Erika. 2013. <span>“Mozilla Plan Seeks to Debug Scientific
+Code.”</span> <em>Nature News</em> 501 (7468): 472. <a
+href="https://doi.org/10.1038/501472a">https://doi.org/10.1038/501472a</a>.
+</div>
+<div id="ref-collaboration_estimating_2015" class="csl-entry">
+Collaboration, Open Science. 2015. <span>“Estimating the Reproducibility
+of Psychological Science.”</span> <em>Science</em> 349 (6251): aac4716.
+<a
+href="https://doi.org/10.1126/science.aac4716">https://doi.org/10.1126/science.aac4716</a>.
+</div>
+<div id="ref-duhigg_what_2016" class="csl-entry">
+Duhigg, Charles. 2016. <span>“What Google Learned from Its Quest to
+Build the Perfect Team.”</span> <em>The New York Times</em>, February.
+<a
+href="http://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html">http://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html</a>.
+</div>
+<div id="ref-esri_arcgis_2016" class="csl-entry">
+ESRI. 2016. <span>“<span>ArcGIS</span> Platform.”</span> <a
+href="http://www.esri.com/software/arcgis">http://www.esri.com/software/arcgis</a>.
+</div>
+<div id="ref-fischetti_how_2014" class="csl-entry">
+Fischetti, Tony. 2014. <span>“How Dplyr Replaced My Most Common r
+Idioms. <span>StatsBlogs</span>.”</span> 2014. <a
+href="http://www.onthelambda.com/2014/02/10/how-dplyr-replaced-my-most-common-r-idioms/">http://www.onthelambda.com/2014/02/10/how-dplyr-replaced-my-most-common-r-idioms/</a>.
+</div>
+<div id="ref-fitzjohn_reproducible_2014" class="csl-entry">
+FitzJohn, Rich, Matt Pennell, Amy Zanne, and Will Cornell. 2014.
+<span>“Reproducible Research Is Still a Challenge.
+<span>ROpenSci</span>.”</span> Website. 2014. <a
+href="https:///blog/2014/06/09/reproducibility">/blog/2014/06/09/reproducibility</a>.
+</div>
+<div id="ref-frazier_mapping_2016" class="csl-entry">
+Frazier, Melanie, Catherine Longo, and Benjamin S. Halpern. 2016.
+<span>“Mapping Uncertainty Due to Missing Data in the Global Ocean
+Health Index.”</span> <em><span>PLOS</span> <span>ONE</span></em> 11
+(8): e0160377. <a
+href="https://doi.org/10.1371/journal.pone.0160377">https://doi.org/10.1371/journal.pone.0160377</a>.
+</div>
+<div id="ref-frew_environmental_2012" class="csl-entry">
+Frew, J. E., and J. Dozier. 2012. <span>“Environmental
+Informatics.”</span> <em>Annual Review of Environment and Resources</em>
+37 (1): 449–72. <a
+href="https://doi.org/10.1146/annurev-environ-042711-121244">https://doi.org/10.1146/annurev-environ-042711-121244</a>.
+</div>
+<div id="ref-github_github:_2016" class="csl-entry">
+GitHub. 2016. <span>“<span>GitHub</span>: A Collaborative Online
+Platform to Build Software.”</span> <span>GitHub</span>. <a
+href="https://github.com">https://github.com</a>.
+</div>
+<div id="ref-goldfuss_nations_2016" class="csl-entry">
+Goldfuss, C., and Holdren. 2016. <span>“The Nation’s First Ocean Plans.
+The White House of President Barack Obama.”</span> December 7, 2016. <a
+href="https://obamawhitehouse.archives.gov/blog/2016/12/07/nations-first-ocean-plans">https://obamawhitehouse.archives.gov/blog/2016/12/07/nations-first-ocean-plans</a>.
+</div>
+<div id="ref-goodman_ten_2014" class="csl-entry">
+Goodman, Alyssa, Alberto Pepe, Alexander W. Blocker, Christine L.
+Borgman, Kyle Cranmer, Merce Crosas, Rosanne Di Stefano, et al. 2014.
+<span>“Ten Simple Rules for the Care and Feeding of Scientific
+Data.”</span> <em><span>PLOS</span> Computational Biology</em> 10 (4):
+e1003542. <a
+href="https://doi.org/10.1371/journal.pcbi.1003542">https://doi.org/10.1371/journal.pcbi.1003542</a>.
+</div>
+<div id="ref-haddock_practical_2011" class="csl-entry">
+Haddock, Steven H. D., and Casey W. Dunn. 2011. <em>Practical Computing
+for Biologists</em>. 1st ed. Sunderland, Massachusetts,
+<span>USA</span>: Sinauer Associates, Inc.
+</div>
+<div id="ref-halpern_index_2012" class="csl-entry">
+Halpern, Benjamin S., Catherine Longo, Darren Hardy, Karen L. McLeod,
+Jameal F. Samhouri, Steven K. Katona, Kristin Kleisner, et al. 2012.
+<span>“An Index to Assess the Health and Benefits of the Global
+Ocean.”</span> <em>Nature</em>. <a
+href="https://doi.org/10.1038/nature11397">https://doi.org/10.1038/nature11397</a>.
+</div>
+<div id="ref-halpern_patterns_2015" class="csl-entry">
+Halpern, Benjamin S., Catherine Longo, Julia S. Stewart Lowndes,
+Benjamin D. Best, Melanie Frazier, Steven K. Katona, Kristin M.
+Kleisner, Andrew A. Rosenberg, Courtney Scarborough, and Elizabeth R.
+Selig. 2015. <span>“Patterns and Emerging Trends in Global Ocean
+Health.”</span> <em><span>PLoS</span> <span>ONE</span></em> 10 (3):
+e0117863. <a
+href="https://doi.org/10.1371/journal.pone.0117863">https://doi.org/10.1371/journal.pone.0117863</a>.
+</div>
+<div id="ref-hampton_tao_2015" class="csl-entry">
+Hampton, Stephanie E., Sean S. Anderson, Sarah C. Bagby, Corinna Gries,
+Xueying Han, Edmund M. Hart, Matthew B. Jones, et al. 2015. <span>“The
+Tao of Open Science for Ecology.”</span> <em>Ecosphere</em> 6 (7): 1–13.
+<a
+href="https://doi.org/10.1890/ES14-00402.1">https://doi.org/10.1890/ES14-00402.1</a>.
+</div>
+<div id="ref-hampton_big_2013" class="csl-entry">
+Hampton, Stephanie E, Carly A Strasser, Joshua J Tewksbury, Wendy K
+Gram, Amber E Budden, Archer L Batcheller, Clifford S Duke, and John H
+Porter. 2013. <span>“Big Data and the Future of Ecology.”</span>
+<em>Frontiers in Ecology and the Environment</em> 11 (3): 156–62. <a
+href="https://doi.org/10.1890/120103">https://doi.org/10.1890/120103</a>.
+</div>
+<div id="ref-ocean_health_index_five_2016" class="csl-entry">
+Index, Ocean Health. 2016a. <span>“Five Years of Global Ocean Health
+Index Assessments.”</span> 2016. <a
+href="http://ohi-science.org/ohi-global/">http://ohi-science.org/ohi-global/</a>.
+</div>
+<div id="ref-ocean_health_index_ocean_2016" class="csl-entry">
+———. 2016b. <span>“Ocean Health Index Ohicore Package.”</span> National
+Center for Ecological Analysis; Synthesis, University of California,
+Santa Barbara. <a
+href="https://github.com/OHI-Science/ohicore/releases/edit/v2016.1">https://github.com/OHI-Science/ohicore/releases/edit/v2016.1</a>.
+</div>
+<div id="ref-jones_new_2006" class="csl-entry">
+Jones, Matthew B., Mark P. Schildhauer, O. J. Reichman, and Shawn
+Bowers. 2006. <span>“The New Bioinformatics: Integrating Ecological Data
+from the Gene to the Biosphere.”</span> <em>Annual Review of Ecology,
+Evolution, and Systematics</em> 37: 519–44. <a
+href="http://www.jstor.org/stable/30033842">http://www.jstor.org/stable/30033842</a>.
+</div>
+<div id="ref-kervin_common_2013" class="csl-entry">
+Kervin, Karina, William Michener, and Robert Cook. 2013. <span>“Common
+Errors in Ecological Data Sharing.”</span> <em>Journal of
+<span>eScience</span> Librarianship</em> 2 (2). <a
+href="https://doi.org/10.7191/jeslib.2013.1024">https://doi.org/10.7191/jeslib.2013.1024</a>.
+</div>
+<div id="ref-kidwell_badges_2016" class="csl-entry">
+Kidwell, Mallory C., Ljiljana B. Lazarević, Erica Baranski, Tom E.
+Hardwicke, Sarah Piechowski, Lina-Sophia Falkenberg, Curtis Kennett, et
+al. 2016. <span>“Badges to Acknowledge Open Practices: A Simple,
+Low-Cost, Effective Method for Increasing Transparency.”</span>
+<em><span>PLOS</span> Biology</em> 14 (5): e1002456. <a
+href="https://doi.org/10.1371/journal.pbio.1002456">https://doi.org/10.1371/journal.pbio.1002456</a>.
+</div>
+<div id="ref-kratz_data_2014" class="csl-entry">
+Kratz, John, and Carly Strasser. 2014. <span>“Data Publication Consensus
+and Controversies.”</span> <em>F1000Research</em>, October. <a
+href="https://doi.org/10.12688/f1000research.3979.3">https://doi.org/10.12688/f1000research.3979.3</a>.
+</div>
+<div id="ref-lewandowsky_research_2016" class="csl-entry">
+Lewandowsky, Stephan, and Dorothy Bishop. 2016. <span>“Research
+Integrity: Don’t Let Transparency Damage Science.”</span> <em>Nature
+News</em> 529 (7587): 459. <a
+href="https://doi.org/10.1038/529459a">https://doi.org/10.1038/529459a</a>.
+</div>
+<div id="ref-lohr_for_2014" class="csl-entry">
+Lohr, Steve. 2014. <span>“For Big-Data Scientists, <span>‘Janitor
+Work’</span> Is Key Hurdle to Insights.”</span> <em>The New York
+Times</em>, August. <a
+href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html</a>.
+</div>
+<div id="ref-lowndes_biography_2017" class="csl-entry">
+Lowndes, Julia S. Stewart. 2017. <span>“A Biography of the Ocean Health
+Index. <span>OHI</span>-Science.”</span> 2017. <a
+href="http://ohi-science.org/news/Biography-OHI">http://ohi-science.org/news/Biography-OHI</a>.
+</div>
+<div id="ref-lowndes_best_2015" class="csl-entry">
+Lowndes, Julia S. Stewart, Erich J. Pacheco, Benjamin D. Best, Courtney
+Scarborough, Catherine Longo, Steven K. Katona, and Benjamin S. Halpern.
+2015. <span>“Best Practices for Assessing Ocean Health in Multiple
+Contexts Using Tailorable Frameworks.”</span>
+<em><span>PeerJ</span></em> 3 (December): e1503. <a
+href="https://doi.org/10.7717/peerj.1503">https://doi.org/10.7717/peerj.1503</a>.
+</div>
+<div id="ref-martinez_reproducibility_2014" class="csl-entry">
+Martinez, Ciera, Jeff Hollister, Ben Marwick, Eduard Szöcs, Sam Zeitlin,
+Bruno P. Kinoshita, Stephanie Wykstra, Jeff Leek, Nick Reich, and Billy
+Meinke. 2014. <span>“Reproducibility in Science: A Guide to Enhancing
+Reproducibility in Scientific Results and Writing.”</span> <a
+href="http://ropensci.github.io/reproducibility-guide/">http://ropensci.github.io/reproducibility-guide/</a>.
+</div>
+<div id="ref-mckiernan_how_2016" class="csl-entry">
+McKiernan, Erin C., Philip E. Bourne, C. Titus Brown, Stuart Buck, Amye
+Kenall, Jennifer Lin, Damon McDougall, et al. 2016. <span>“How Open
+Science Helps Researchers Succeed.”</span> <em><span>eLife</span></em> 5
+(July): e16800. <a
+href="https://doi.org/10.7554/eLife.16800">https://doi.org/10.7554/eLife.16800</a>.
+</div>
+<div id="ref-michener_ten_2015" class="csl-entry">
+Michener, William K. 2015. <span>“Ten Simple Rules for Creating a Good
+Data Management Plan.”</span> <em><span>PLOS</span> Computational
+Biology</em> 11 (10): e1004525. <a
+href="https://doi.org/10.1371/journal.pcbi.1004525">https://doi.org/10.1371/journal.pcbi.1004525</a>.
+</div>
+<div id="ref-michener_ecoinformatics:_2012" class="csl-entry">
+Michener, William K., and Matthew B. Jones. 2012. <span>“Ecoinformatics:
+Supporting Ecology as a Data-Intensive Science.”</span> <em>Trends in
+Ecology &amp; Evolution</em> 27 (2): 85–93. <a
+href="https://doi.org/10.1016/j.tree.2011.11.016">https://doi.org/10.1016/j.tree.2011.11.016</a>.
+</div>
+<div id="ref-mills_introducing_2015" class="csl-entry">
+Mills, Bill. 2015. <span>“Introducing Mozilla Science Study Groups.
+Mozilla Science.”</span> 2015. <a
+href="https://science.mozilla.org/blog/introducing-mozilla-science-study-groups">https://science.mozilla.org/blog/introducing-mozilla-science-study-groups</a>.
+</div>
+<div id="ref-mislan_elevating_2016" class="csl-entry">
+Mislan, K. A. S., Jeffrey M. Heer, and Ethan P. White. 2016.
+<span>“Elevating the Status of Code in Ecology.”</span> <em>Trends in
+Ecology &amp; Evolution</em> 31 (1): 4–7. <a
+href="https://doi.org/10.1016/j.tree.2015.11.006">https://doi.org/10.1016/j.tree.2015.11.006</a>.
+</div>
+<div id="ref-munafo_manifesto_2017" class="csl-entry">
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S.
+Button, Christopher D. Chambers, Nathalie Percie du Sert, Uri Simonsohn,
+Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017.
+<span>“A Manifesto for Reproducible Science.”</span> <em>Nature Human
+Behaviour</em> 1 (January): 0021. <a
+href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>.
+</div>
+<div id="ref-nosek_promoting_2015" class="csl-entry">
+Nosek, B. A., G. Alter, G. C. Banks, D. Borsboom, S. D. Bowman, S. J.
+Breckler, S. Buck, et al. 2015. <span>“Promoting an Open Research
+Culture.”</span> <em>Science</em> 348 (6242): 1422–25. <a
+href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a>.
+</div>
+<div id="ref-perez-riverol_ten_2016" class="csl-entry">
+Perez-Riverol, Yasset, Laurent Gatto, Rui Wang, Timo Sachsenberg, Julian
+Uszkoreit, Felipe da Veiga Leprevost, Christian Fufezan, et al. 2016.
+<span>“Ten Simple Rules for Taking Advantage of Git and
+<span>GitHub</span>.”</span> <em><span>PLOS</span> Comput Biol</em> 12
+(7): e1004947. <a
+href="https://doi.org/10.1371/journal.pcbi.1004947">https://doi.org/10.1371/journal.pcbi.1004947</a>.
+</div>
+<div id="ref-perkel_democratic_2016" class="csl-entry">
+Perkel, Jeffrey. 2016. <span>“Democratic Databases: Science on
+<span>GitHub</span>.”</span> <em>Nature</em> 538 (7623): 127–28. <a
+href="https://doi.org/10.1038/538127a">https://doi.org/10.1038/538127a</a>.
+</div>
+<div id="ref-perkel_scientific_2014" class="csl-entry">
+Perkel, Jeffrey M. 2014. <span>“Scientific Writing: The Online
+Cooperative.”</span> <em>Nature</em> 514 (7520): 127–28. <a
+href="https://doi.org/10.1038/514127a">https://doi.org/10.1038/514127a</a>.
+</div>
+<div id="ref-ram_git_2013" class="csl-entry">
+Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility
+and Increased Transparency in Science.”</span> <em>Source Code for
+Biology and Medicine</em> 8: 7. <a
+href="https://doi.org/10.1186/1751-0473-8-7">https://doi.org/10.1186/1751-0473-8-7</a>.
+</div>
+<div id="ref-rbloggers_how_2015" class="csl-entry">
+Rbloggers. 2015. <span>“How Twitter Improved My Ecological Model.
+Rbloggers.”</span> 2015. <a
+href="https://www.r-bloggers.com/how-twitter-improved-my-ecological-model/">https://www.r-bloggers.com/how-twitter-improved-my-ecological-model/</a>.
+</div>
+<div id="ref-reichman_challenges_2011" class="csl-entry">
+Reichman, O. J., Matthew B. Jones, and Mark P. Schildhauer. 2011.
+<span>“Challenges and Opportunities of Open Data in Ecology.”</span>
+<em>Science</em> 331 (6018): 703–5. <a
+href="https://doi.org/10.1126/science.1197962">https://doi.org/10.1126/science.1197962</a>.
+</div>
+<div id="ref-sandve_ten_2013" class="csl-entry">
+Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig.
+2013. <span>“Ten Simple Rules for Reproducible Computational
+Research.”</span> <em><span>PLOS</span> Computational Biology</em> 9
+(10): e1003285. <a
+href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
+</div>
+<div id="ref-seltenrich_scaling_2016" class="csl-entry">
+Seltenrich, Nate. 2016. <span>“Scaling the Heights of Data
+Science.”</span> <em>Breakthroughs: The Magazine of the <span>UC</span>
+Berkeley College of Natural Resources</em> Fall. <a
+href="https://nature.berkeley.edu/breakthroughs/opensci-data">https://nature.berkeley.edu/breakthroughs/opensci-data</a>.
+</div>
+<div id="ref-shade_computing_2015" class="csl-entry">
+Shade, Ashley, and Tracy K. Teal. 2015. <span>“Computing Workflows for
+Biologists: A Roadmap.”</span> <em><span>PLOS</span> Biol</em> 13 (11):
+e1002303. <a
+href="https://doi.org/10.1371/journal.pbio.1002303">https://doi.org/10.1371/journal.pbio.1002303</a>.
+</div>
+<div id="ref-git_team_git_2016" class="csl-entry">
+Team, Git. 2016. <span>“Git Version Control System.”</span> git. <a
+href="https://git-scm.com/">https://git-scm.com/</a>.
+</div>
+<div id="ref-rstudio_team_r_2016" class="csl-entry">
+Team, RStudio. 2016a. <span>“R Markdown.”</span> 2016. <a
+href="http://rmarkdown.rstudio.com/">http://rmarkdown.rstudio.com/</a>.
+</div>
+<div id="ref-rstudio_team_rstudio:_2016" class="csl-entry">
+———. 2016b. <span>“<span>RStudio</span>: Integrated Development for
+r.”</span> Boston: <span>RStudio</span>, Inc. <a
+href="https://www.rstudio.com">www.rstudio.com</a>.
+</div>
+<div id="ref-the_python_team_python.org_2016" class="csl-entry">
+Team, The Python. 2016. <span>“Python.org.”</span> <a
+href="https://www.python.org/">https://www.python.org/</a>.
+</div>
+<div id="ref-the_qgis_team_qgis_2016" class="csl-entry">
+Team, The QGIS. 2016. <span>“<span>QGIS</span> Project.”</span> <a
+href="http://www.qgis.org/en/site/">http://www.qgis.org/en/site/</a>.
+</div>
+<div id="ref-the_r_core_team_r:_2016" class="csl-entry">
+Team, The R Core. 2016. <span>“R: A Language and Environment for
+Statistical Computing.”</span> Vienna, Austria: R Foundation for
+Statistical Computing. <a
+href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-tuyl_water_2016" class="csl-entry">
+Tuyl, Steven Van, and Amanda L. Whitmire. 2016. <span>“Water, Water,
+Everywhere: Defining and Assessing Data Sharing in Academia.”</span>
+<em><span>PLOS</span> <span>ONE</span></em> 11 (2): e0147942. <a
+href="https://doi.org/10.1371/journal.pone.0147942">https://doi.org/10.1371/journal.pone.0147942</a>.
+</div>
+<div id="ref-white_nine_2013" class="csl-entry">
+White, Ethan P., Elita Baldridge, Zachary T. Brym, Kenneth J. Locey,
+Daniel J. McGlinn, and Sarah R. Supp. 2013. <span>“Nine Simple Ways to
+Make It Easier to (Re)use Your Data.”</span> <em>Ideas in Ecology and
+Evolution</em> 6 (2). <a
+href="http://ojs.library.queensu.ca/index.php/IEE/article/view/4608">http://ojs.library.queensu.ca/index.php/IEE/article/view/4608</a>.
+</div>
+<div id="ref-wickham_tidy_2014" class="csl-entry">
+Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of
+Statistical Software</em> 59 (10): 1–23. <a
+href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+</div>
+<div id="ref-wickham_r_2015" class="csl-entry">
+———. 2015. <em>R Packages</em>. O’Reilly. <a
+href="http://r-pkgs.had.co.nz/">http://r-pkgs.had.co.nz/</a>.
+</div>
+<div id="ref-wickham_tidyverse:_2016" class="csl-entry">
+———. 2016. <span>“Tidyverse: Easily Install and Load ’Tidyverse’
+Packages.”</span> <a
+href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+</div>
+<div id="ref-wickham_tidyverse_2017" class="csl-entry">
+———. 2017. <span>“Tidyverse Website • Tidyweb.”</span> 2017. <a
+href="http://tidyverse.org/">http://tidyverse.org/</a>.
+</div>
+<div id="ref-wickham_devtools:_2016" class="csl-entry">
+Wickham, Hadley, and Winston Chang. 2016. <span>“Devtools: Tools to Make
+Developing r Packages Easier.”</span> <a
+href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.
+</div>
+<div id="ref-wickham_roxygen2:_2015" class="csl-entry">
+Wickham, Hadley, Peter Danenberg, and Manuel Eugster. 2015.
+<span>“Roxygen2: In-Source Documentation for r.”</span> <a
+href="https://CRAN.R-project.org/package=roxygen2">https://CRAN.R-project.org/package=roxygen2</a>.
+</div>
+<div id="ref-wickham_r_2016" class="csl-entry">
+Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data
+Science</em>. O’Reilly. <a
+href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/</a>.
+</div>
+<div id="ref-wilson_software_2016" class="csl-entry">
+Wilson, Greg. 2016. <span>“Software Carpentry: Lessons Learned.”</span>
+<em>F1000Research</em>, January. <a
+href="https://doi.org/10.12688/f1000research.3-62.v2">https://doi.org/10.12688/f1000research.3-62.v2</a>.
+</div>
+<div id="ref-wilson_software_2006" class="csl-entry">
+Wilson, Greg V. 2006a. <span>“Software Carpentry: Getting Scientists to
+Write Better Code by Making Them More Productive.”</span> <em>Computing
+in Science and Engineering</em>, 66–69.
+</div>
+<div id="ref-wilson_wheres_2006" class="csl-entry">
+———. 2006b. <span>“Where’s the Real Bottleneck in Scientific
+Computing?”</span> <em>Sigma Xi, The Scientific Research Society</em>
+Jan-Feb: 5–6. <a
+href="http://www.americanscientist.org/libraries/documents/200512511610_307.pdf">http://www.americanscientist.org/libraries/documents/200512511610_307.pdf</a>.
+</div>
+<div id="ref-wilson_best_2014" class="csl-entry">
+Wilson, Greg, D. A. Aruliah, C. Titus Brown, Neil P. Chue Hong, Matt
+Davis, Richard T. Guy, Steven H. D. Haddock, et al. 2014. <span>“Best
+Practices for Scientific Computing.”</span> <em><span>PLOS</span>
+Biol</em> 12 (1): e1001745. <a
+href="https://doi.org/10.1371/journal.pbio.1001745">https://doi.org/10.1371/journal.pbio.1001745</a>.
+</div>
+<div id="ref-wilson_good_2016" class="csl-entry">
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex
+Nederbragt, and Tracy K. Teal. 2016. <span>“Good Enough Practices in
+Scientific Computing.”</span> <em><span>arXiv</span>:1609.00037
+[Cs]</em>, August. <a
+href="http://arxiv.org/abs/1609.00037">http://arxiv.org/abs/1609.00037</a>.
+</div>
+<div id="ref-wolkovich_advances_2012" class="csl-entry">
+Wolkovich, Elizabeth M., James Regetz, and Mary I. O’Connor. 2012.
+<span>“Advances in Global Change Research Require Open Science by
+Individual Researchers.”</span> <em>Global Change Biology</em> 18 (7):
+2102–10. <a
+href="https://doi.org/10.1111/j.1365-2486.2012.02693.x">https://doi.org/10.1111/j.1365-2486.2012.02693.x</a>.
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

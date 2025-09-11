@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title></title>
+<title>our_story.knit</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -41,37 +55,11 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
-</head>
 
-<body>
+
+
 
 <style type = "text/css">
 .main-container {
@@ -79,58 +67,71 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
 }
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
+.dropdown-submenu {
+  position: relative;
 }
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
 }
-
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
 }
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
 }
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
 }
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu.pull-left {
+  float: none;
 }
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -140,27 +141,91 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
-
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -168,7 +233,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -191,7 +256,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -211,30 +276,79 @@ Put in your css file or directly in rmarkdown--->
 <p><br></p>
 <div id="our-story" class="section level2">
 <h2>Our story</h2>
-<p>Over the past four years we have dramatically improved how we do science by embracing open data science practices and tools. We now emphasize communication and work in ways that are more reproducible, streamlined, transparent, collaborative, and open. We’re sharing our story in a publication in <em>Nature Ecology &amp; Evolution</em> because although the transformation to open data science seemed intimidating, we are living proof that it’s possible and we want to encourage others to adopt these practices in their own work.</p>
+<p>Over the past four years we have dramatically improved how we do
+science by embracing open data science practices and tools. We now
+emphasize communication and work in ways that are more reproducible,
+streamlined, transparent, collaborative, and open. We’re sharing our
+story in a publication in <em>Nature Ecology &amp; Evolution</em>
+because although the transformation to open data science seemed
+intimidating, we are living proof that it’s possible and we want to
+encourage others to adopt these practices in their own work.</p>
 <p><br></p>
 <div id="publication" class="section level4">
 <h4>Publication</h4>
-<p><a href="https://www.nature.com/articles/s41559-017-0160"><strong>Our path to better science in less time using open data science tools</strong></a> (<strong>Lowndes <em>et al.</em> 2017, <em>Nature Ecology and Evolution</em></strong>)</p>
-<p><font size="2">   Citation: Lowndes JSS, Best BD, Scarborough C, Afflerbach JC, Frazier MR, O’Hara CC, Jiang N, Halpern BS (2017).<br />
-   Our path to better science in less time using open data science tools. <em>Nature Ecology &amp; Evolution</em>, 1. Article number: 0160.<br />
-   <a href="https://www.nature.com/articles/s41559-017-0160">doi:10.1038/s41559-017-0160</a> </font></p>
+<p><a href="https://www.nature.com/articles/s41559-017-0160"><strong>Our
+path to better science in less time using open data science
+tools</strong></a> (<strong>Lowndes <em>et al.</em> 2017, <em>Nature
+Ecology and Evolution</em></strong>)</p>
+<p><font size="2">   Citation: Lowndes JSS, Best BD, Scarborough C,
+Afflerbach JC, Frazier MR, O’Hara CC, Jiang N, Halpern BS (2017).<br />
+   Our path to better science in less time using open data science
+tools. <em>Nature Ecology &amp; Evolution</em>, 1. Article number:
+0160.<br />
+   <a
+href="https://www.nature.com/articles/s41559-017-0160">doi:10.1038/s41559-017-0160</a>
+</font></p>
 </div>
 <div id="media" class="section level4">
 <h4>Media</h4>
 <ul>
-<li><a href="http://blogs.nature.com/naturejobs/2017/05/23/techblog-julia-stewart-lowndes/">My digital toolbox: Julia Stewart Lowndes</a> (Perkel 2017, <em>Nature</em>)</li>
-<li><a href="http://www.lastwordonnothing.com/2017/05/24/the-common-language-of-conservation/">The Common Language of Conservation</a> (Nijhuis 2017, <em>The Last Word On Nothing</em>)</li>
-<li><a href="https://www.quantamagazine.org/awash-in-sea-of-data-ecologists-turn-to-open-access-tools-20170524/">Awash in Sea of Data, Ecologists Turn to Open Access Tools</a> (Rennie 2017, <em>Quanta Magazine</em>)</li>
-<li><a href="https://www.wired.com/2017/05/ecologists-drowning-sea-data-open-access-tools-help">Ecologists Are Drowning in Sea of Data. These Tools Could Help</a> (Rennie 2017, <em>WIRED</em>)</li>
-<li><a href="http://www.news.ucsb.edu/2017/017990/better-science-faster">Better Science Faster</a> (Cohen 2017, <em>UCSB Current</em>)</li>
-<li><a href="https://phys.org/news/2017-05-scientists-complex-marine-ocean-health.html">Scientists transform how complex marine data from the Ocean Health Index is synthesized, communicated</a> (Cohen 2017, <em>Phys.org</em>)</li>
-<li><a href="https://www.sciencedaily.com/releases/2017/05/170523144113.htm">Transforming how complex marine data is synthesized</a> (University of California - Santa Barbara 2017, <em>ScienceDaily</em>)</li>
-<li><a href="https://www.noozhawk.com/article/ucsb_science">UCSB Scientists Making Waves in Coastal Management</a> (University of California - Santa Barbara 2017, <em>NOOZHAWK</em>)</li>
-<li><a href="http://blog.conservation.org/2017/06/for-better-faster-ocean-science-researchers-look-to-the-cloud/">For better, faster ocean science, researchers look to the cloud</a> (Mosher 2017, <em>Conservation International blog</em>)</li>
-<li><a href="http://ohi-science.org/news/better-science-faster">Better science faster — our <em>Nature Ecology &amp; Evolution</em> pub</a> (Lowndes 2017, <em>OHI-Science blog</em>)</li>
-<li><a href="https://www.youtube.com/watch?v=x4uzVAZvFCA">Ocean Health Index: Better Science In Less Time</a> (Lowndes 2017, <em>NCEAS Roundtable webcast</em>)</li>
-<li><a href="https://ropensci.org/blog/2018/02/09/rprofile-julia-stewart-lowndes/">.rprofile: Julia Stewart Lowndes</a> (Kross &amp; O’Briant 2018, <em>rOpenSci blog</em>) (reposted by <a href="https://www.r-bloggers.com/rprofile-julia-stewart-lowndes/">R-bloggers</a>) <!---- [Scientists Programming](http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html) (McNamara 2018 *Personal blog*)---></li>
+<li><a
+href="http://blogs.nature.com/naturejobs/2017/05/23/techblog-julia-stewart-lowndes/">My
+digital toolbox: Julia Stewart Lowndes</a> (Perkel 2017,
+<em>Nature</em>)</li>
+<li><a
+href="http://www.lastwordonnothing.com/2017/05/24/the-common-language-of-conservation/">The
+Common Language of Conservation</a> (Nijhuis 2017, <em>The Last Word On
+Nothing</em>)</li>
+<li><a
+href="https://www.quantamagazine.org/awash-in-sea-of-data-ecologists-turn-to-open-access-tools-20170524/">Awash
+in Sea of Data, Ecologists Turn to Open Access Tools</a> (Rennie 2017,
+<em>Quanta Magazine</em>)</li>
+<li><a
+href="https://www.wired.com/2017/05/ecologists-drowning-sea-data-open-access-tools-help">Ecologists
+Are Drowning in Sea of Data. These Tools Could Help</a> (Rennie 2017,
+<em>WIRED</em>)</li>
+<li><a
+href="http://www.news.ucsb.edu/2017/017990/better-science-faster">Better
+Science Faster</a> (Cohen 2017, <em>UCSB Current</em>)</li>
+<li><a
+href="https://phys.org/news/2017-05-scientists-complex-marine-ocean-health.html">Scientists
+transform how complex marine data from the Ocean Health Index is
+synthesized, communicated</a> (Cohen 2017, <em>Phys.org</em>)</li>
+<li><a
+href="https://www.sciencedaily.com/releases/2017/05/170523144113.htm">Transforming
+how complex marine data is synthesized</a> (University of California -
+Santa Barbara 2017, <em>ScienceDaily</em>)</li>
+<li><a href="https://www.noozhawk.com/article/ucsb_science">UCSB
+Scientists Making Waves in Coastal Management</a> (University of
+California - Santa Barbara 2017, <em>NOOZHAWK</em>)</li>
+<li><a
+href="http://blog.conservation.org/2017/06/for-better-faster-ocean-science-researchers-look-to-the-cloud/">For
+better, faster ocean science, researchers look to the cloud</a> (Mosher
+2017, <em>Conservation International blog</em>)</li>
+<li><a href="http://ohi-science.org/news/better-science-faster">Better
+science faster — our <em>Nature Ecology &amp; Evolution</em> pub</a>
+(Lowndes 2017, <em>OHI-Science blog</em>)</li>
+<li><a href="https://www.youtube.com/watch?v=x4uzVAZvFCA">Ocean Health
+Index: Better Science In Less Time</a> (Lowndes 2017, <em>NCEAS
+Roundtable webcast</em>)</li>
+<li><a
+href="https://ropensci.org/blog/2018/02/09/rprofile-julia-stewart-lowndes/">.rprofile:
+Julia Stewart Lowndes</a> (Kross &amp; O’Briant 2018, <em>rOpenSci
+blog</em>) (reposted by <a
+href="https://www.r-bloggers.com/rprofile-julia-stewart-lowndes/">R-bloggers</a>)
+<!---- [Scientists Programming](http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html) (McNamara 2018 *Personal blog*)---></li>
 </ul>
 <!---
 https://www.openchannels.org/news/news/julia-stewart-lowndes-interview-ocean-health-index-and-improving-science-management?utm_source=OpenChannels+Community+Members&utm_campaign=91c04dadaf-Weekly_Update_05_26_2017&utm_medium=email&utm_term=0_96f5655e1e-91c04dadaf-107336605
@@ -245,14 +359,41 @@ http://www.unep.org/nairobiconvention/marine-and-coastal-news-round-western-indi
 <div id="invited-seminars-and-keynote-lectures" class="section level4">
 <h4>Invited seminars and keynote lectures</h4>
 <ul>
-<li><a href="https://docs.google.com/presentation/d/14TteMSsHbzcEXG9zs9_mAOv0ivURTeJd7PewkSVqX2M/edit?usp=sharing">The power of open science: experience from the Ocean Health Index</a> (seminar, National University of Samoa, <em>2018-05-22</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/1frhNFr-Lf5KZCzJtYMRSim2-iZ72zAJZ__0YrqAdbs8/edit?usp=sharing">The power of open science: experience from the Ocean Health Index</a> (seminar, Moss Landing Marine Labs, USA <em>2018-04-05</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit?usp=sharing">The power of open science: experience from the Ocean Health Index</a> (keynote, Royal Belgian Institute of Natural Sciences, Brussels, Belgium <em>2018-02-27</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/1CVK8HRDubFU4UEduBK5q6JJebhbyVjB6SpTpjZI6q6Y/edit?usp=sharing">Better science in less time using open data science tools</a> (seminar, California State University Monterey Bay, USA <em>2017-12-04</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/141gf6dIkQsOXJ74xWEeMFYOQEL41lZydywRRf_4RBPE/edit">Reproducible Research: Better science in less time</a> (webinar, DataONE, USA <em>2017-10-10</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/1IkxMgJwtJ17n51ENGudmL9rRmhgh3njGB0ivrracZIg/edit?usp=sharing">Better science in less time using data science tools: How open data science tools have improved our science</a> (seminar, California Polytechnical University, USA <em>2017-09-29</em>)</li>
-<li><a href="">Better science in less time — open data science for marine science and management [</a><a href="https://www.youtube.com/watch?v=x4uzVAZvFCA"><strong>video</strong>]</a> (seminar, NCEAS, USA <em>2017-05-24</em>)</li>
-<li><a href="https://docs.google.com/presentation/d/1KDwUPVI12ioYzkhzzhnUEZbFJObuDzHPPSaOaN77Ye8/edit?usp=sharing">Transforming how we approach marine science for management</a> <a href="">[</a><a href="https://www.openchannels.org/webinars/2017/using-ocean-health-index-integrated-tool-implementing-ebm-and-coastal-management"><strong>video</strong>]</a> (webinar, EBM Tools Network, USA <em>2017-05-02</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/14TteMSsHbzcEXG9zs9_mAOv0ivURTeJd7PewkSVqX2M/edit?usp=sharing">The
+power of open science: experience from the Ocean Health Index</a>
+(seminar, National University of Samoa, <em>2018-05-22</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/1frhNFr-Lf5KZCzJtYMRSim2-iZ72zAJZ__0YrqAdbs8/edit?usp=sharing">The
+power of open science: experience from the Ocean Health Index</a>
+(seminar, Moss Landing Marine Labs, USA <em>2018-04-05</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit?usp=sharing">The
+power of open science: experience from the Ocean Health Index</a>
+(keynote, Royal Belgian Institute of Natural Sciences, Brussels, Belgium
+<em>2018-02-27</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/1CVK8HRDubFU4UEduBK5q6JJebhbyVjB6SpTpjZI6q6Y/edit?usp=sharing">Better
+science in less time using open data science tools</a> (seminar,
+California State University Monterey Bay, USA <em>2017-12-04</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/141gf6dIkQsOXJ74xWEeMFYOQEL41lZydywRRf_4RBPE/edit">Reproducible
+Research: Better science in less time</a> (webinar, DataONE, USA
+<em>2017-10-10</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/1IkxMgJwtJ17n51ENGudmL9rRmhgh3njGB0ivrracZIg/edit?usp=sharing">Better
+science in less time using data science tools: How open data science
+tools have improved our science</a> (seminar, California Polytechnical
+University, USA <em>2017-09-29</em>)</li>
+<li><a href="">Better science in less time — open data science for
+marine science and management [</a><a
+href="https://www.youtube.com/watch?v=x4uzVAZvFCA"><strong>video</strong>]</a>
+(seminar, NCEAS, USA <em>2017-05-24</em>)</li>
+<li><a
+href="https://docs.google.com/presentation/d/1KDwUPVI12ioYzkhzzhnUEZbFJObuDzHPPSaOaN77Ye8/edit?usp=sharing">Transforming
+how we approach marine science for management</a> <a href="">[</a><a
+href="https://www.openchannels.org/webinars/2017/using-ocean-health-index-integrated-tool-implementing-ebm-and-coastal-management"><strong>video</strong>]</a>
+(webinar, EBM Tools Network, USA <em>2017-05-02</em>)</li>
 </ul>
 <p><br> <br></p>
 </div>
@@ -263,19 +404,38 @@ http://www.unep.org/nairobiconvention/marine-and-coastal-news-round-western-indi
 <div class="col2">
 <p><img src="https://docs.google.com/drawings/d/1MMQi0lGkVIBJV-ItZvEaLoiJZkgsm-lOoE1eNcjZY8w/pub?w=960&h=816" width="400px"></p>
 <p><br> <br></p>
-<p>With the <a href="http://ohi-science.org">Ocean Health Index</a>, we’ve been measuring and tracking the health of <a href="http://ohi-science.org/ohi-global/">global oceans every year since 2012</a>. By becoming more efficient and reproducible, we’ve greatly reduced the time involved to repeat our work, which lets us focus more on science.</p>
-<p>And since it’s all open online, anyone can build directly off our work without reinventing the wheel. Currently there are <a href="http://ohi-science.org/projects/ohi-assessments/">20 groups around the world</a> building off our science and our code to assess ocean health in their own jurisdictions.</p>
+<p>With the <a href="http://ohi-science.org">Ocean Health Index</a>,
+we’ve been measuring and tracking the health of <a
+href="http://ohi-science.org/ohi-global/">global oceans every year since
+2012</a>. By becoming more efficient and reproducible, we’ve greatly
+reduced the time involved to repeat our work, which lets us focus more
+on science.</p>
+<p>And since it’s all open online, anyone can build directly off our
+work without reinventing the wheel. Currently there are <a
+href="http://ohi-science.org/projects/ohi-assessments/">20 groups around
+the world</a> building off our science and our code to assess ocean
+health in their own jurisdictions.</p>
 </div>
 <p><br></p>
 </div>
 <div id="the-ocean-health-index" class="section level2">
 <h2>The Ocean Health Index</h2>
-<p>The Ocean Health Index (OHI) is a scientific framework to quantify and track the health of our oceans. We are an academic-nonprofit partnership from the <a href="https://www.nceas.ucsb.edu/">National Center for Ecological Analysis and Synthesis (NCEAS)</a> and <a href="http://www.conservation.org/Pages/default.aspx">Conservation International</a>.</p>
-<p>Open data science tools enable us to work efficiently and emphasize communication for science and management. Learn more at our overview website <a href="www.oceanhealthindex.org">oceanhealthindex.org</a> and our science website <a href="http://ohi-science.org">ohi-science.org</a>.</p>
+<p>The Ocean Health Index (OHI) is a scientific framework to quantify
+and track the health of our oceans. We are an academic-nonprofit
+partnership from the <a href="https://www.nceas.ucsb.edu/">National
+Center for Ecological Analysis and Synthesis (NCEAS)</a> and <a
+href="http://www.conservation.org/Pages/default.aspx">Conservation
+International</a>.</p>
+<p>Open data science tools enable us to work efficiently and emphasize
+communication for science and management. Learn more at our overview
+website <a href="www.oceanhealthindex.org">oceanhealthindex.org</a> and
+our science website <a
+href="http://ohi-science.org">ohi-science.org</a>.</p>
 <center>
 <img src="figures/open-science-graphic.png" width="500px">
 </center>
-<p><br> <a href="http://ohi-science.org"><img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150" /></a></p>
+<p><br> <a href="http://ohi-science.org"><img
+src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=150" /></a></p>
 <!---- 
 - Press
 - Blog
@@ -291,7 +451,7 @@ http://www.unep.org/nairobiconvention/marine-and-coastal-news-round-western-indi
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -299,6 +459,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

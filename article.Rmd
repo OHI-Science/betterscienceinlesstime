@@ -1,0 +1,30 @@
+---
+title: ""
+output:
+  html_document
+bibliography: manuscript/bibliography.bib  
+---
+
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
+
+<br>
+
+# Our path to better science in less time using open data science tools
+
+This article was published in May 2017 at Nature Ecology & Evolution (DOI: [10.1038/s41559-017-0160](https://doi.org/10.1038/s41559-017-0160).
+Below is the full text of the article ([source repository](https://github.com/OHI-Science/betterscienceinlesstime)).
+
+
+## Article text.
+```{r, child='manuscript/better_science_in_less_time.Rmd', results='asis', echo=FALSE}
+```
+
