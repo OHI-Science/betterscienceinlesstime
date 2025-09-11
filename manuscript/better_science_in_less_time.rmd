@@ -2,7 +2,6 @@
 title: "Our path to better science in less time using open data science tools"
 csl: nature.csl
 output:
-  word_document: default
   pdf_document: default
   html_document: default
 bibliography: bibliography.bib
@@ -281,6 +280,9 @@ Correspondence to Julia Lowndes: lowndes\@nceas.ucsb.edu
 # Figures
 
 ## Figure 1
+
+<img src="https://docs.google.com/drawings/d/1MMQi0lGkVIBJV-ItZvEaLoiJZkgsm-lOoE1eNcjZY8w/pub?w=960&h=816" width="400px">
+
 
 **Better science in less time, illustrated by the Ocean Health Index project**. Every year since 2012 we have repeated Ocean Health Index (OHI) methods to track change in global ocean health [@halpern_index_2012; @lowndes_biography_2017]. 
 Increased reproducibility and collaboration has reduced the amount of time required to repeat methods (size of bubbles) with updated data annually, allowing us to focus on improving methods each year (biggest innovations written as text). 
